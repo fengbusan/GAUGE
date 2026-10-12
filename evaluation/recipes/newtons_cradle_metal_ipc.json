@@ -1,0 +1,694 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        }
+      },
+      "bodies": [
+        {
+          "name": "ball-1",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/xie-ball-1.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              -1.5707963267948966
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-2",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/xie-ball-2.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-3",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/xie-ball-3.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-4",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/xie-ball-4.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-5",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/xie-ball-5.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "newton's cradle",
+      "regime": "rigid",
+      "material": "metal",
+      "backend": "ipc",
+      "frames": 1027,
+      "body": "ball-5",
+      "drivers": [],
+      "articulated": [
+        {
+          "name": "ball-1",
+          "pivot": [
+            0.448794,
+            0.377852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-2",
+          "pivot": [
+            0.448794,
+            0.399852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-3",
+          "pivot": [
+            0.448794,
+            0.421852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-4",
+          "pivot": [
+            0.448794,
+            0.443852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-5",
+          "pivot": [
+            0.448794,
+            0.465852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        }
+      ],
+      "metric": "cradle",
+      "geometry": {
+        "length_m": 0.13263,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "source": "${DATASET}/assets/mjcf/cradle.xml",
+        "source_sha256": "ccbd15fe87586fcac08e596558c6564b739eda8bad7220f42a424865370df400",
+        "method": "Official MJCF joint axis/local offset, verified against official USD; metadata translations are pivots, not bob centers. No trajectory fit.",
+        "surface_clearance_m": 0.002,
+        "official_surface_clearance_m": 0
+      },
+      "notes": [
+        "User-approved adaptation: 2 mm neighboring sphere surface clearance (22 mm pivot spacing), versus official nominal zero gap (20 mm spacing). Same geometry for IPC-RP and SoftPrimal; d_hat remains 1 mm. Not exact official placement."
+      ],
+      "first_impact_frames": 22,
+      "rest_height": 0.046039,
+      "material_parameter_key": "metal",
+      "case_id": "newtons_cradle_metal_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "93ecade8e2c0589584730d80e40fd5159a8b74b50febc4e264ba879c8f7ea02c",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "metal",
+      "subtask": null,
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 1211,
+      "presentation": {
+        "camera_duration_seconds": 40.319466,
+        "score_frames": 1027,
+        "rollout_frames": 1211,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": [
+        "cradle_gap_adaptation",
+        "event_window_differs"
+      ]
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "bodies": [
+        {
+          "name": "ball-1",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/native-ball-1.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              -1.5707963267948966
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-2",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/native-ball-2.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-3",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/native-ball-3.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-4",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/native-ball-4.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        },
+        {
+          "name": "ball-5",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/newtons_cradle_metal_ipc/assets/native-ball-5.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.0
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.202387
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "newton's cradle",
+      "regime": "rigid",
+      "material": "metal",
+      "backend": "ipc",
+      "frames": 1027,
+      "body": "ball-5",
+      "drivers": [],
+      "articulated": [
+        {
+          "name": "ball-1",
+          "pivot": [
+            0.448794,
+            0.377852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-2",
+          "pivot": [
+            0.448794,
+            0.397852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-3",
+          "pivot": [
+            0.448794,
+            0.417852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-4",
+          "pivot": [
+            0.448794,
+            0.437852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        },
+        {
+          "name": "ball-5",
+          "pivot": [
+            0.448794,
+            0.457852,
+            0.178669
+          ],
+          "axis": [
+            1.0,
+            0.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.13263
+          ]
+        }
+      ],
+      "metric": "cradle",
+      "geometry": {
+        "length_m": 0.13263,
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ],
+        "source": "${DATASET}/assets/mjcf/cradle.xml",
+        "source_sha256": "ccbd15fe87586fcac08e596558c6564b739eda8bad7220f42a424865370df400",
+        "method": "Official MJCF joint axis/local offset, verified against official USD; metadata translations are pivots, not bob centers. No trajectory fit.",
+        "surface_clearance_m": 0.002,
+        "official_surface_clearance_m": 0
+      },
+      "notes": [
+        "User-approved adaptation: 2 mm neighboring sphere surface clearance (22 mm pivot spacing), versus official nominal zero gap (20 mm spacing). Same geometry for IPC-RP and SoftPrimal; d_hat remains 1 mm. Not exact official placement."
+      ],
+      "first_impact_frames": 22,
+      "rest_height": 0.046039,
+      "material_parameter_key": "metal",
+      "case_id": "newtons_cradle_metal_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "454927d32784830e06cadefcad5cc18c937f74c99ece6f0de8534a532d7bc154",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "metal",
+      "subtask": null,
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 1211,
+      "presentation": {
+        "camera_duration_seconds": 40.319466,
+        "score_frames": 1027,
+        "rollout_frames": 1211,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/newton's cradle.json",
+        "metadata_sha256": "e098944baee9d002641ecb6232d68c76b2c958382813ddf40af4bd458c789d45",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": [
+        "cradle_gap_adaptation",
+        "event_window_differs"
+      ]
+    }
+  },
+  "assets": {
+    "xie-ball-1.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.377852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "f2bef01fcb323c54243c38b974c55389de49cd1fb7e1a33f4f4c9cbad7c1cd05"
+    },
+    "xie-ball-2.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.399852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "154177ab38c36a83f365e1f7326247c66363a8c553cba5ec031cdd32716df107"
+    },
+    "xie-ball-3.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.421852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "2b293fc9dae122e4bb4afe9eef5019f960ca27285f43a8af46952fa8163e8927"
+    },
+    "xie-ball-4.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.443852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "497f999a469d44cdcade2118f55e0eba720154c3a4093641262d39b1c06ce41e"
+    },
+    "xie-ball-5.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.465852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "ad157b452dfd03641ceaacacfed20c58491de55bff2d274b8ad04475c43d3651"
+    },
+    "native-ball-1.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.377852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "f2bef01fcb323c54243c38b974c55389de49cd1fb7e1a33f4f4c9cbad7c1cd05"
+    },
+    "native-ball-2.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.397852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "7ada015ef976fbcedb97aa4c9ae8dacb5308732338326422bd79553d36730c42"
+    },
+    "native-ball-3.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.417852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "6c915884a355e9f05be314428abb66a731deee08415bf0dcff119a98ad34017c"
+    },
+    "native-ball-4.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.437852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "4ff87e06cb0b1e16a2c8ae6d164620604c2edef7f13dd56482b23f5da52ae449"
+    },
+    "native-ball-5.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.033\" /><inertia ixx=\"1.3200000000000003e-06\" iyy=\"1.3200000000000003e-06\" izz=\"1.3200000000000003e-06\" /></inertial><collision><geometry><sphere radius=\"0.01\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-2.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.448794 0.457852 0.178669\" /><axis xyz=\"1.0 0.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.13263\" /></joint></robot>",
+      "historical_sha256": "0f873efa6d79d7e1ef036a5b9707e0baf10ac1e049b75e46e010758e6f49ead9"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "effective_defaults": {
+    "enabled": true,
+    "impedance_d": 0.99,
+    "contact_steps_N": 4.0,
+    "d_min": 0.05,
+    "d_max": 0.999,
+    "zeta_min": 0.2,
+    "zeta_max": 0.99,
+    "e_floor": 0.001,
+    "r_min": 1e-12,
+    "r_max": 1000000000.0,
+    "friction_timeconst": 0.01,
+    "friction_impedance_d": 0.6,
+    "friction_impratio": 10.0,
+    "friction_no_reversal": true,
+    "friction_manifold_normalize": false,
+    "v_impact": 0.01,
+    "incident_gravity_factor": 2.0,
+    "d_release_ratio": 0.7,
+    "min_release_age": 2,
+    "episode_ttl": 4,
+    "max_iters": 80,
+    "grad_tol": 1e-07,
+    "rel_energy_tol": 1e-09,
+    "lbfgs_history": 10,
+    "line_search_max_iters": 20,
+    "armijo_c": 0.0001,
+    "step_shrink": 0.5,
+    "initial_step": 1.0,
+    "incident_velocity_gate": true,
+    "single_step_bias_ratio": 0.05,
+    "normal_model": "single_step_impact",
+    "mode": "incident_gate"
+  },
+  "unused_in_single_step": [
+    "contact_steps_N"
+  ],
+  "source_commit": "dad1b93f661083d35c2fa7a574709d65ab694947",
+  "header_sha256": "8aa195d9dfc48c126a522eabffa0e5b6a26aef4fd1f1cb10d55f6c2300225b18",
+  "parser_sha256": "e7fe2e28520ef2b5759a3a6f65598da2526e85fbb83d86b219c28e80a31924c8",
+  "override": {
+    "enabled": true
+  }
+}

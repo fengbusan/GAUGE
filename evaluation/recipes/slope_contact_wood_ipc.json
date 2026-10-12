@@ -1,0 +1,485 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        },
+        "ground_height": 0.005622,
+        "ground_material": {
+          "friction": 0.388428,
+          "restitution": 0.370309
+        },
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5
+      },
+      "bodies": [
+        {
+          "name": "teh",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/slope_contact_wood_ipc/assets/xie-teh.obj",
+            "mass": 0.0839,
+            "inertia": [
+              [
+                7.341288192118999e-05,
+                -3.3860196227651195e-38,
+                1.4831422500000002e-05
+              ],
+              [
+                -3.3860196227651195e-38,
+                5.243709769949999e-05,
+                -1.568050566927341e-37
+              ],
+              [
+                1.4831422500000002e-05,
+                -1.568050566927341e-37,
+                6.292497962068998e-05
+              ]
+            ],
+            "center_of_mass": [
+              3.176389554854204e-19,
+              -1.2705558219416816e-18,
+              2.8587505993687835e-18
+            ],
+            "restitution": 0.370309,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.504278,
+              0.408961,
+              0.18063200000000001,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.388428,
+            "restitution": 0.370309
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "base",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/slope_contact_wood_ipc/assets/xie-base.obj",
+            "mass": 0.9969,
+            "inertia": [
+              [
+                0.003895950710244582,
+                1.4803718192193525e-21,
+                0.0002461387088243801
+              ],
+              [
+                1.4803718192193525e-21,
+                0.003795023964949392,
+                -8.374209496227479e-21
+              ],
+              [
+                0.0002461387088243801,
+                -8.374209496227479e-21,
+                0.0016210071132105018
+              ]
+            ],
+            "center_of_mass": [
+              -0.0032141363636363617,
+              -4.620137649638995e-19,
+              -0.0068181818181818205
+            ],
+            "restitution": 0.370309,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "kinematic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.468923,
+              0.408961,
+              0.105622,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.388428,
+            "restitution": 0.370309
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "slope contact",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": null,
+      "backend": "ipc",
+      "frames": 10,
+      "body": "teh",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/slope contact/json/wood/1.json",
+        "data/rigid/slope contact/json/wood/2.json",
+        "data/rigid/slope contact/json/wood/3.json",
+        "data/rigid/slope contact/json/wood/4.json",
+        "data/rigid/slope contact/json/wood/5.json",
+        "data/rigid/slope contact/json/wood/6.json",
+        "data/rigid/slope contact/json/wood/7.json",
+        "data/rigid/slope contact/json/wood/8.json",
+        "data/rigid/slope contact/json/wood/9.json",
+        "data/rigid/slope contact/json/wood/10.json",
+        "data/rigid/slope contact/json/wood/11.json",
+        "data/rigid/slope contact/json/wood/12.json",
+        "data/rigid/slope contact/json/wood/13.json",
+        "data/rigid/slope contact/json/wood/14.json",
+        "data/rigid/slope contact/json/wood/15.json",
+        "data/rigid/slope contact/json/wood/16.json",
+        "data/rigid/slope contact/json/wood/17.json",
+        "data/rigid/slope contact/json/wood/18.json",
+        "data/rigid/slope contact/json/wood/19.json",
+        "data/rigid/slope contact/json/wood/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "slope_contact_wood_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "229b31a8bca4de0fcd2a963389918eef9af978db9c4b15fc0ae64d1c87a12d64",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 188,
+      "presentation": {
+        "camera_duration_seconds": 6.205273,
+        "score_frames": 10,
+        "rollout_frames": 188,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": [
+        "material_label_cross_match"
+      ]
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "ground_height": 0.005622,
+        "ground_material": {
+          "friction": 0.388428,
+          "restitution": 0.370309
+        }
+      },
+      "bodies": [
+        {
+          "name": "teh",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/slope_contact_wood_ipc/assets/native-teh.obj",
+            "mass": 0.0839,
+            "inertia": [
+              [
+                7.341288192118999e-05,
+                -3.3860196227651195e-38,
+                1.4831422500000002e-05
+              ],
+              [
+                -3.3860196227651195e-38,
+                5.243709769949999e-05,
+                -1.568050566927341e-37
+              ],
+              [
+                1.4831422500000002e-05,
+                -1.568050566927341e-37,
+                6.292497962068998e-05
+              ]
+            ],
+            "center_of_mass": [
+              3.176389554854204e-19,
+              -1.2705558219416816e-18,
+              2.8587505993687835e-18
+            ],
+            "restitution": 0.370309,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.504278,
+              0.408961,
+              0.180622,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.388428,
+            "restitution": 0.370309
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "base",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/slope_contact_wood_ipc/assets/native-base.obj",
+            "mass": 0.9969,
+            "inertia": [
+              [
+                0.003895950710244582,
+                1.4803718192193525e-21,
+                0.0002461387088243801
+              ],
+              [
+                1.4803718192193525e-21,
+                0.003795023964949392,
+                -8.374209496227479e-21
+              ],
+              [
+                0.0002461387088243801,
+                -8.374209496227479e-21,
+                0.0016210071132105018
+              ]
+            ],
+            "center_of_mass": [
+              -0.0032141363636363617,
+              -4.620137649638995e-19,
+              -0.0068181818181818205
+            ],
+            "restitution": 0.370309,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "static",
+          "initial": {
+            "q": [
+              0.468923,
+              0.408961,
+              0.105622,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.388428,
+            "restitution": 0.370309
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "slope contact",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": null,
+      "backend": "ipc",
+      "frames": 10,
+      "body": "teh",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/slope contact/json/wood/1.json",
+        "data/rigid/slope contact/json/wood/2.json",
+        "data/rigid/slope contact/json/wood/3.json",
+        "data/rigid/slope contact/json/wood/4.json",
+        "data/rigid/slope contact/json/wood/5.json",
+        "data/rigid/slope contact/json/wood/6.json",
+        "data/rigid/slope contact/json/wood/7.json",
+        "data/rigid/slope contact/json/wood/8.json",
+        "data/rigid/slope contact/json/wood/9.json",
+        "data/rigid/slope contact/json/wood/10.json",
+        "data/rigid/slope contact/json/wood/11.json",
+        "data/rigid/slope contact/json/wood/12.json",
+        "data/rigid/slope contact/json/wood/13.json",
+        "data/rigid/slope contact/json/wood/14.json",
+        "data/rigid/slope contact/json/wood/15.json",
+        "data/rigid/slope contact/json/wood/16.json",
+        "data/rigid/slope contact/json/wood/17.json",
+        "data/rigid/slope contact/json/wood/18.json",
+        "data/rigid/slope contact/json/wood/19.json",
+        "data/rigid/slope contact/json/wood/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "slope_contact_wood_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "64d09b492cbcd5e4f2b3ff2fdf7f8d74dd700ad4734fa51e1865c33e26e4d5b0",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 188,
+      "presentation": {
+        "camera_duration_seconds": 6.205273,
+        "score_frames": 10,
+        "rollout_frames": 188,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/slope contact.json",
+        "metadata_sha256": "f4d33911cd62ebc1848041cb0cf17a98c05126ebd19de9081c0ffa20ad35aef4",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": [
+        "material_label_cross_match"
+      ]
+    }
+  },
+  "assets": {
+    "xie-teh.obj": {
+      "kind": "generated_text",
+      "text": "v -0.035355 -0.070711 0.025\nv -0.035355 0.070711 0.025\nv 0.035355 -0.0 -0.075\nv 0.035355 0.0 0.025\nf 1 2 3\nf 1 4 2\nf 4 3 2\nf 1 3 4\n",
+      "historical_sha256": "23e8ddb7ec680db7b24ac95145a9e819f4e0818f6b660e3db15988d8c7b9c139"
+    },
+    "xie-base.obj": {
+      "kind": "generated_text",
+      "text": "v 0.0 -0.070711 0.1\nv 0.0 0.070711 0.1\nv -0.070711 0.0 0.1\nv 0.070711 0.0 0.0\nv 0.070711 -0.0 -0.1\nv 0.0 -0.070711 -0.1\nv -0.070711 -0.0 -0.1\nv 0.0 0.070711 -0.1\nf 1 2 3\nf 1 4 2\nf 5 6 7\nf 5 7 8\nf 7 3 2\nf 7 2 8\nf 6 1 3\nf 6 3 7\nf 4 1 6\nf 4 6 5\nf 2 4 5\nf 2 5 8\n",
+      "historical_sha256": "05d63f3a83e3f1a9b4fe7fdcefd5cd1ea94193fb42c58fe89e07588274f91785"
+    },
+    "native-teh.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/teh.obj",
+      "source_sha256": "0ac7bacb9626e146d3f9e25f5bc8126035e04dda158d9d7f136f56e628339a37",
+      "expected_sha256": "0ac7bacb9626e146d3f9e25f5bc8126035e04dda158d9d7f136f56e628339a37"
+    },
+    "native-base.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/tehC.obj",
+      "source_sha256": "e6c87a8a8743fc5e2bda6198f9315a506c5bf6698d7ff5ec2b473e42211f9fe6",
+      "expected_sha256": "e6c87a8a8743fc5e2bda6198f9315a506c5bf6698d7ff5ec2b473e42211f9fe6"
+    }
+  }
+}

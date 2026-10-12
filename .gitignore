@@ -1,0 +1,13 @@
+# Evaluation caches and external dependencies
+evaluation/data/
+evaluation/configs/
+evaluation/results/
+evaluation/_work/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.env
+.env.*
+*.so
+*.whl

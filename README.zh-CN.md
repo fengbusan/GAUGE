@@ -1,3 +1,5 @@
+> 此个人 fork 增加了独立的 [SDK 评测工具](evaluation/README.md)，支持 XiePhysic、Isaac Sim、Genesis 和 Newton。只分发评测代码及配置，不含引擎源码、SDK 或数据集；这是公开说明限制的社区复现，不是官方评测器或认证。以下保留上游项目说明。
+
 <div align="right">
 <a href="README.md">English</a> | 简体中文
 </div>

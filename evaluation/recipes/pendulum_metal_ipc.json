@@ -1,0 +1,288 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        }
+      },
+      "bodies": [
+        {
+          "name": "ball",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/pendulum_metal_ipc/assets/xie-ball.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              1.5707963267948966
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "controller": null,
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.01
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "pendulum",
+      "regime": "rigid",
+      "material": "metal",
+      "backend": "ipc",
+      "frames": 3000,
+      "body": "ball",
+      "drivers": [],
+      "articulated": [
+        {
+          "name": "ball",
+          "pivot": [
+            0.37396,
+            0.49059,
+            0.445133
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.278
+          ]
+        }
+      ],
+      "metric": "pendulum",
+      "geometry": {
+        "length_m": 0.278,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "source": "${DATASET}/assets/mjcf/pendulum.xml",
+        "source_sha256": "e94dab4dc5762bb37658691093b00c4c0e2c121f93cd68d4e94d1a7db28fd9cf",
+        "method": "Official MJCF joint axis/local offset, verified against official USD; metadata translations are pivots, not bob centers. No trajectory fit."
+      },
+      "notes": [
+        "Joint geometry from official MJCF/USD. Mass/friction/restitution from official metadata. Analytic sphere collision at official OBJ radius; original OBJ visual. Massless arm approximation 1e-6kg retained. Common 10um neighboring-bob clearance retained for both backends."
+      ],
+      "period_axis": 0,
+      "energy_equilibrium_z": 0.16713299999999998,
+      "material_parameter_key": "metal",
+      "case_id": "pendulum_metal_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "da35f3aab8ca64e4ad54ba5d63757f5d783ef8adff932130e89dde1727a111c1",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "metal",
+      "subtask": null,
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 3936,
+      "presentation": {
+        "camera_duration_seconds": 131.135417,
+        "score_frames": 3000,
+        "rollout_frames": 3936,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": []
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "bodies": [
+        {
+          "name": "ball",
+          "kind": "rigid",
+          "source": {
+            "type": "urdf",
+            "path": "${PROFILE}/pendulum_metal_ipc/assets/native-ball.urdf",
+            "mesh_base_dir": "${DATASET}/assets/obj",
+            "max_verts_per_link": 1000
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              1.5707963267948966
+            ],
+            "q_dot": [
+              0.0
+            ]
+          },
+          "sdf": {
+            "type": "none"
+          },
+          "contact_material": {
+            "friction": 0.01,
+            "restitution": 0.01
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "pendulum",
+      "regime": "rigid",
+      "material": "metal",
+      "backend": "ipc",
+      "frames": 3000,
+      "body": "ball",
+      "drivers": [],
+      "articulated": [
+        {
+          "name": "ball",
+          "pivot": [
+            0.37396,
+            0.49059,
+            0.445133
+          ],
+          "axis": [
+            0.0,
+            1.0,
+            0.0
+          ],
+          "offset": [
+            0.0,
+            0.0,
+            -0.278
+          ]
+        }
+      ],
+      "metric": "pendulum",
+      "geometry": {
+        "length_m": 0.278,
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ],
+        "source": "${DATASET}/assets/mjcf/pendulum.xml",
+        "source_sha256": "e94dab4dc5762bb37658691093b00c4c0e2c121f93cd68d4e94d1a7db28fd9cf",
+        "method": "Official MJCF joint axis/local offset, verified against official USD; metadata translations are pivots, not bob centers. No trajectory fit."
+      },
+      "notes": [
+        "Joint geometry from official MJCF/USD. Mass/friction/restitution from official metadata. Analytic sphere collision at official OBJ radius; original OBJ visual. Massless arm approximation 1e-6kg retained. Common 10um neighboring-bob clearance retained for both backends."
+      ],
+      "period_axis": 0,
+      "energy_equilibrium_z": 0.16713299999999998,
+      "material_parameter_key": "metal",
+      "case_id": "pendulum_metal_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "173620857c65faedf5c443ae23b9f9abd98f187f2442a40c71c3f745f6d1b34c",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "metal",
+      "subtask": null,
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 3936,
+      "presentation": {
+        "camera_duration_seconds": 131.135417,
+        "score_frames": 3000,
+        "rollout_frames": 3936,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/pendulum.json",
+        "metadata_sha256": "c0936f54b49a30556e7dcf47b059dc9829b3671c59c5b7788725f7805b4a59b1",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": []
+    }
+  },
+  "assets": {
+    "xie-ball.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.3175\" /><inertia ixx=\"0.0001143\" iyy=\"0.0001143\" izz=\"0.0001143\" /></inertial><collision><geometry><sphere radius=\"0.03\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-6.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.37396 0.49059 0.445133\" /><axis xyz=\"0.0 1.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.278\" /></joint></robot>",
+      "historical_sha256": "747b89373474db8a16acc5aa908030e25337ff1f027affb65fb3b9e406ca9a68"
+    },
+    "native-ball.urdf": {
+      "kind": "generated_text",
+      "text": "<robot name=\"gauge_bob\">\n<link name=\"base\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"arm\"><inertial><mass value=\"0.000001\" /><inertia ixx=\"1e-8\" iyy=\"1e-8\" izz=\"1e-8\" /></inertial></link>\n<link name=\"bob\"><inertial><mass value=\"0.3175\" /><inertia ixx=\"0.0001143\" iyy=\"0.0001143\" izz=\"0.0001143\" /></inertial><collision><geometry><sphere radius=\"0.03\" /></geometry></collision><visual><geometry><mesh filename=\"${DATASET}/assets/obj/ball-6.obj\" /></geometry></visual></link>\n<joint name=\"hinge\" type=\"continuous\"><parent link=\"base\" /><child link=\"arm\" /><origin xyz=\"0.37396 0.49059 0.445133\" /><axis xyz=\"0.0 1.0 0.0\" /></joint>\n<joint name=\"bob_fixed\" type=\"fixed\"><parent link=\"arm\" /><child link=\"bob\" /><origin xyz=\"0.0 0.0 -0.278\" /></joint></robot>",
+      "historical_sha256": "747b89373474db8a16acc5aa908030e25337ff1f027affb65fb3b9e406ca9a68"
+    }
+  }
+}

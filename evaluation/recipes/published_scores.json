@@ -1,0 +1,1322 @@
+{
+  "slope_contact_plastic_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope contact",
+      "metric": "RMSE",
+      "baseline_printed": "12.31 (7.62)",
+      "engines": {
+        "IsaacSim": "1.26",
+        "Genesis": "1.6",
+        "Newton": "1.75"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope contact",
+      "metric": "DTW",
+      "baseline_printed": "5.30 (1.84)",
+      "engines": {
+        "IsaacSim": "1.83",
+        "Genesis": "2.57",
+        "Newton": "3.07"
+      }
+    }
+  },
+  "nonsmooth_contact_plastic_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "17.67 (6.19)",
+      "engines": {
+        "IsaacSim": "1.53",
+        "Genesis": "10.04",
+        "Newton": "6.05"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "8.92 (2.44)",
+      "engines": {
+        "IsaacSim": "1.9",
+        "Genesis": "14.37",
+        "Newton": "8.01"
+      }
+    }
+  },
+  "slope_slider_metal_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "38.01 (28.53)",
+      "engines": {
+        "IsaacSim": "0.61",
+        "Genesis": "0.58",
+        "Newton": "1.95"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "9.54 (8.52)",
+      "engines": {
+        "IsaacSim": "0.71",
+        "Genesis": "0.69",
+        "Newton": "2.93"
+      }
+    }
+  },
+  "turntable_metal_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "13.26 (7.43)",
+      "engines": {
+        "IsaacSim": "0.17",
+        "Genesis": "0.57",
+        "Newton": "20.04"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "3.33 (0.81)",
+      "engines": {
+        "IsaacSim": "0.61",
+        "Genesis": "2.01",
+        "Newton": "66.72"
+      }
+    }
+  },
+  "bouncing_ball_soft_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "bouncing ball",
+      "metric": "RMSE",
+      "baseline_printed": "5.29 (3.60)",
+      "engines": {
+        "IsaacSim": "15.63",
+        "Genesis": "22.5",
+        "Newton": "22.71"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "bouncing ball",
+      "metric": "DTW",
+      "baseline_printed": "4.23 (2.87)",
+      "engines": {
+        "IsaacSim": "5.58",
+        "Genesis": "14.58",
+        "Newton": "14.89"
+      }
+    }
+  },
+  "newtons_cradle_metal_ipc": {
+    "LSD": {
+      "table": 5,
+      "task": "newton cradle",
+      "metric": "LSD",
+      "baseline_printed": "0.38 (0.015)",
+      "engines": {
+        "IsaacSim": "0",
+        "Genesis": "—",
+        "Newton": "0"
+      }
+    },
+    "MTE": {
+      "table": 5,
+      "task": "newton cradle",
+      "metric": "MTE",
+      "baseline_printed": "93.02 (2.47)",
+      "engines": {
+        "IsaacSim": "0.2",
+        "Genesis": "—",
+        "Newton": "0.26"
+      }
+    }
+  },
+  "pendulum_metal_ipc": {
+    "PD": {
+      "table": 5,
+      "task": "pendulum",
+      "metric": "PD",
+      "baseline_printed": "1.14 (0.066)",
+      "engines": {
+        "IsaacSim": "1.1",
+        "Genesis": "2.47",
+        "Newton": "1.09"
+      }
+    },
+    "EL": {
+      "table": 5,
+      "task": "pendulum",
+      "metric": "EL",
+      "baseline_printed": "0.00",
+      "engines": {
+        "IsaacSim": "0.034",
+        "Genesis": "-0.041",
+        "Newton": "0.022"
+      }
+    }
+  },
+  "textile_stretching_satin_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.21 (0.42)",
+      "engines": {
+        "IsaacSim": "0.73",
+        "Genesis": "1.51",
+        "Newton": "0.73"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.21 (0.42)",
+      "engines": {
+        "IsaacSim": "0.76",
+        "Genesis": "1.56",
+        "Newton": "0.75"
+      }
+    }
+  },
+  "textile_bending_satin_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "1.92 (0.69)",
+      "engines": {
+        "IsaacSim": "7.94",
+        "Genesis": "11.73",
+        "Newton": "19.9"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "1.20 (0.17)",
+      "engines": {
+        "IsaacSim": "11.78",
+        "Genesis": "17.35",
+        "Newton": "18.82"
+      }
+    }
+  },
+  "textile_flinging_satin_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.016 (0.0056)",
+      "engines": {
+        "IsaacSim": "128.26",
+        "Genesis": "8.54",
+        "Newton": "9.25"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.012 (0.0014)",
+      "engines": {
+        "IsaacSim": "167.31",
+        "Genesis": "11.27",
+        "Newton": "12.12"
+      }
+    }
+  },
+  "foam_stretching_soft_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam stretching",
+      "metric": "RMSE",
+      "baseline_printed": "8.72 (6.94)",
+      "engines": {
+        "IsaacSim": "16.15",
+        "Genesis": "10.05",
+        "Newton": "15.46"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam stretching",
+      "metric": "DTW",
+      "baseline_printed": "8.19 (6.93)",
+      "engines": {
+        "IsaacSim": "17.18",
+        "Genesis": "10.65",
+        "Newton": "16.45"
+      }
+    }
+  },
+  "foam_shearing_soft_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam shearing",
+      "metric": "RMSE",
+      "baseline_printed": "5.60 (0.70)",
+      "engines": {
+        "IsaacSim": "26.13",
+        "Genesis": "15.26",
+        "Newton": "26.57"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam shearing",
+      "metric": "DTW",
+      "baseline_printed": "5.07 (0.59)",
+      "engines": {
+        "IsaacSim": "28.85",
+        "Genesis": "16.74",
+        "Newton": "29.34"
+      }
+    }
+  },
+  "foam_twisting_soft_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam twisting",
+      "metric": "RMSE",
+      "baseline_printed": "8.07 (0.53)",
+      "engines": {
+        "IsaacSim": "17.14",
+        "Genesis": "10.86",
+        "Newton": "16.78"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam twisting",
+      "metric": "DTW",
+      "baseline_printed": "7.48 (0.39)",
+      "engines": {
+        "IsaacSim": "18.47",
+        "Genesis": "11.67",
+        "Newton": "18.07"
+      }
+    }
+  },
+  "foam_bending_soft_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam bending",
+      "metric": "RMSE",
+      "baseline_printed": "7.00 (4.39)",
+      "engines": {
+        "IsaacSim": "10.71",
+        "Genesis": "14.43",
+        "Newton": "10.37"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam bending",
+      "metric": "DTW",
+      "baseline_printed": "3.52 (1.05)",
+      "engines": {
+        "IsaacSim": "21.28",
+        "Genesis": "27.51",
+        "Newton": "20.53"
+      }
+    }
+  },
+  "slope_contact_wood_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope contact",
+      "metric": "RMSE",
+      "baseline_printed": "9.25 (5.17)",
+      "engines": {
+        "IsaacSim": "3.38",
+        "Genesis": "2.98",
+        "Newton": "2.66"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope contact",
+      "metric": "DTW",
+      "baseline_printed": "6.27 (2.48)",
+      "engines": {
+        "IsaacSim": "2.94",
+        "Genesis": "3.05",
+        "Newton": "2.66"
+      }
+    }
+  },
+  "nonsmooth_contact_wood_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "12.51 (6.77)",
+      "engines": {
+        "IsaacSim": "3.51",
+        "Genesis": "3.42",
+        "Newton": "3.61"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "6.38 (1.78)",
+      "engines": {
+        "IsaacSim": "3.59",
+        "Genesis": "3.29",
+        "Newton": "3.3"
+      }
+    }
+  },
+  "nonsmooth_contact_plastic_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "12.94 (5.91)",
+      "engines": {
+        "IsaacSim": "3.42",
+        "Genesis": "3.43",
+        "Newton": "3.01"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "6.48 (1.76)",
+      "engines": {
+        "IsaacSim": "3.75",
+        "Genesis": "3.73",
+        "Newton": "2.93"
+      }
+    }
+  },
+  "nonsmooth_contact_wood_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "14.28 (13.20)",
+      "engines": {
+        "IsaacSim": "2.72",
+        "Genesis": "2.7",
+        "Newton": "2.69"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "7.90 (4.64)",
+      "engines": {
+        "IsaacSim": "3.06",
+        "Genesis": "2.98",
+        "Newton": "2.96"
+      }
+    }
+  },
+  "nonsmooth_contact_plastic_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "20.35 (9.02)",
+      "engines": {
+        "IsaacSim": "2.16",
+        "Genesis": "2.8",
+        "Newton": "2.15"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "10.54 (2.99)",
+      "engines": {
+        "IsaacSim": "2.27",
+        "Genesis": "2.76",
+        "Newton": "2.11"
+      }
+    }
+  },
+  "nonsmooth_contact_wood_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "RMSE",
+      "baseline_printed": "16.98 (10.77)",
+      "engines": {
+        "IsaacSim": "2.2",
+        "Genesis": "5.84",
+        "Newton": "2.23"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "nonsmooth contact",
+      "metric": "DTW",
+      "baseline_printed": "8.68 (2.25)",
+      "engines": {
+        "IsaacSim": "2.44",
+        "Genesis": "8.21",
+        "Newton": "3.11"
+      }
+    }
+  },
+  "slope_slider_wood_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "0.59 (0.28)",
+      "engines": {
+        "IsaacSim": "0.019",
+        "Genesis": "0.074",
+        "Newton": "24.68"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "0.59 (0.28)",
+      "engines": {
+        "IsaacSim": "0.017",
+        "Genesis": "0.055",
+        "Newton": "14.12"
+      }
+    }
+  },
+  "slope_slider_plastic_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "1.90 (2.17)",
+      "engines": {
+        "IsaacSim": "0.013",
+        "Genesis": "0.016",
+        "Newton": "6.24"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "1.90 (2.17)",
+      "engines": {
+        "IsaacSim": "0.011",
+        "Genesis": "0.014",
+        "Newton": "4.31"
+      }
+    }
+  },
+  "slope_slider_metal_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "0.86 (0.69)",
+      "engines": {
+        "IsaacSim": "0.078",
+        "Genesis": "0.062",
+        "Newton": "15.08"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "0.86 (0.69)",
+      "engines": {
+        "IsaacSim": "0.067",
+        "Genesis": "0.052",
+        "Newton": "10.63"
+      }
+    }
+  },
+  "slope_slider_wood_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "18.00 (15.89)",
+      "engines": {
+        "IsaacSim": "1.23",
+        "Genesis": "0.53",
+        "Newton": "1.71"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "7.70 (3.69)",
+      "engines": {
+        "IsaacSim": "1.11",
+        "Genesis": "1.05",
+        "Newton": "1.79"
+      }
+    }
+  },
+  "slope_slider_plastic_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "25.01 (25.45)",
+      "engines": {
+        "IsaacSim": "0.48",
+        "Genesis": "0.82",
+        "Newton": "0.51"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "9.13 (5.00)",
+      "engines": {
+        "IsaacSim": "0.87",
+        "Genesis": "1",
+        "Newton": "1.06"
+      }
+    }
+  },
+  "slope_slider_metal_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "32.06 (21.93)",
+      "engines": {
+        "IsaacSim": "1",
+        "Genesis": "0.83",
+        "Newton": "1.15"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "10.87 (4.04)",
+      "engines": {
+        "IsaacSim": "0.45",
+        "Genesis": "0.54",
+        "Newton": "0.9"
+      }
+    }
+  },
+  "slope_slider_wood_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "24.27 (16.85)",
+      "engines": {
+        "IsaacSim": "2.62",
+        "Genesis": "2.62",
+        "Newton": "1.35"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "6.73 (2.56)",
+      "engines": {
+        "IsaacSim": "2.21",
+        "Genesis": "2.24",
+        "Newton": "2.16"
+      }
+    }
+  },
+  "slope_slider_plastic_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "RMSE",
+      "baseline_printed": "49.96 (20.37)",
+      "engines": {
+        "IsaacSim": "1.58",
+        "Genesis": "1.46",
+        "Newton": "0.67"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "slope slider",
+      "metric": "DTW",
+      "baseline_printed": "12.97 (4.94)",
+      "engines": {
+        "IsaacSim": "2.2",
+        "Genesis": "1.83",
+        "Newton": "1.55"
+      }
+    }
+  },
+  "turntable_wood_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "2.01 (1.45)",
+      "engines": {
+        "IsaacSim": "0.32",
+        "Genesis": "0.83",
+        "Newton": "34.37"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "1.40 (0.64)",
+      "engines": {
+        "IsaacSim": "0.43",
+        "Genesis": "1.14",
+        "Newton": "36.33"
+      }
+    }
+  },
+  "turntable_plastic_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "2.00 (2.48)",
+      "engines": {
+        "IsaacSim": "1.22",
+        "Genesis": "1.12",
+        "Newton": "36.04"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "0.97 (0.61)",
+      "engines": {
+        "IsaacSim": "2.19",
+        "Genesis": "2.22",
+        "Newton": "53.08"
+      }
+    }
+  },
+  "turntable_metal_task1_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "3.17 (1.74)",
+      "engines": {
+        "IsaacSim": "0.42",
+        "Genesis": "0.51",
+        "Newton": "17.19"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "1.53 (0.50)",
+      "engines": {
+        "IsaacSim": "0.82",
+        "Genesis": "0.99",
+        "Newton": "28.43"
+      }
+    }
+  },
+  "turntable_wood_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "6.76 (4.65)",
+      "engines": {
+        "IsaacSim": "4.82",
+        "Genesis": "3.69",
+        "Newton": "2.88"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "4.70 (2.68)",
+      "engines": {
+        "IsaacSim": "4.64",
+        "Genesis": "3.56",
+        "Newton": "3.26"
+      }
+    }
+  },
+  "turntable_plastic_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "7.86 (5.21)",
+      "engines": {
+        "IsaacSim": "3.61",
+        "Genesis": "1.57",
+        "Newton": "1.92"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "3.92 (1.58)",
+      "engines": {
+        "IsaacSim": "4.75",
+        "Genesis": "1.96",
+        "Newton": "2.2"
+      }
+    }
+  },
+  "turntable_metal_task2_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "5.76 (4.17)",
+      "engines": {
+        "IsaacSim": "5.7",
+        "Genesis": "3.09",
+        "Newton": "1.97"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "3.60 (1.66)",
+      "engines": {
+        "IsaacSim": "6.06",
+        "Genesis": "3.16",
+        "Newton": "2.84"
+      }
+    }
+  },
+  "turntable_wood_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "27.15 (27.08)",
+      "engines": {
+        "IsaacSim": "1.55",
+        "Genesis": "1.75",
+        "Newton": "9.5"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "14.36 (12.90)",
+      "engines": {
+        "IsaacSim": "0.85",
+        "Genesis": "1.17",
+        "Newton": "15.09"
+      }
+    }
+  },
+  "turntable_plastic_task3_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "RMSE",
+      "baseline_printed": "12.50 (6.49)",
+      "engines": {
+        "IsaacSim": "2.37",
+        "Genesis": "2.47",
+        "Newton": "21.76"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "turntable",
+      "metric": "DTW",
+      "baseline_printed": "3.48 (0.84)",
+      "engines": {
+        "IsaacSim": "1.78",
+        "Genesis": "2.04",
+        "Newton": "66.49"
+      }
+    }
+  },
+  "textile_stretching_rayon_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.024 (0.030)",
+      "engines": {
+        "IsaacSim": "7.43",
+        "Genesis": "12.15",
+        "Newton": "7.34"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.0084 (0.0018)",
+      "engines": {
+        "IsaacSim": "21.06",
+        "Genesis": "34.49",
+        "Newton": "20.8"
+      }
+    }
+  },
+  "textile_stretching_uniform_cloth_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.018 (0.012)",
+      "engines": {
+        "IsaacSim": "6.12",
+        "Genesis": "13.79",
+        "Newton": "—"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.011 (0.0018)",
+      "engines": {
+        "IsaacSim": "10.16",
+        "Genesis": "23.04",
+        "Newton": "—"
+      }
+    }
+  },
+  "textile_stretching_nylon_taslan_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.027 (0.0077)",
+      "engines": {
+        "IsaacSim": "5.9",
+        "Genesis": "12.74",
+        "Newton": "5.7"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.024 (0.0055)",
+      "engines": {
+        "IsaacSim": "6.63",
+        "Genesis": "14.46",
+        "Newton": "6.44"
+      }
+    }
+  },
+  "textile_stretching_oxford_fabric_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.0061 (0.0080)",
+      "engines": {
+        "IsaacSim": "18.05",
+        "Genesis": "51.16",
+        "Newton": "15.93"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.0051 (0.0068)",
+      "engines": {
+        "IsaacSim": "21.1",
+        "Genesis": "61.17",
+        "Newton": "18.9"
+      }
+    }
+  },
+  "textile_stretching_synthetic_leather_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "RMSE",
+      "baseline_printed": "0.017 (0.0072)",
+      "engines": {
+        "IsaacSim": "6.12",
+        "Genesis": "18.21",
+        "Newton": "—"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile stretching",
+      "metric": "DTW",
+      "baseline_printed": "0.0085 (0.0038)",
+      "engines": {
+        "IsaacSim": "11.97",
+        "Genesis": "37.2",
+        "Newton": "—"
+      }
+    }
+  },
+  "textile_bending_rayon_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "1.07 (0.21)",
+      "engines": {
+        "IsaacSim": "7.69",
+        "Genesis": "20.04",
+        "Newton": "37.13"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "0.63 (0.13)",
+      "engines": {
+        "IsaacSim": "11.67",
+        "Genesis": "31.9",
+        "Newton": "58.97"
+      }
+    }
+  },
+  "textile_bending_uniform_cloth_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "1.28 (0.34)",
+      "engines": {
+        "IsaacSim": "7.63",
+        "Genesis": "14.15",
+        "Newton": "36.77"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "0.48 (0.058)",
+      "engines": {
+        "IsaacSim": "17.88",
+        "Genesis": "35.05",
+        "Newton": "90"
+      }
+    }
+  },
+  "textile_bending_nylon_taslan_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "1.94 (0.95)",
+      "engines": {
+        "IsaacSim": "7.98",
+        "Genesis": "9.97",
+        "Newton": "20.02"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "1.37 (0.94)",
+      "engines": {
+        "IsaacSim": "9.57",
+        "Genesis": "12.57",
+        "Newton": "25.19"
+      }
+    }
+  },
+  "textile_bending_oxford_fabric_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "2.47 (1.26)",
+      "engines": {
+        "IsaacSim": "4.78",
+        "Genesis": "7.84",
+        "Newton": "12.53"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "1.96 (0.84)",
+      "engines": {
+        "IsaacSim": "5.29",
+        "Genesis": "8.88",
+        "Newton": "13.6"
+      }
+    }
+  },
+  "textile_bending_synthetic_leather_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "RMSE",
+      "baseline_printed": "1.79 (0.45)",
+      "engines": {
+        "IsaacSim": "12.49",
+        "Genesis": "14.63",
+        "Newton": "21.79"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile bending",
+      "metric": "DTW",
+      "baseline_printed": "1.23 (0.43)",
+      "engines": {
+        "IsaacSim": "16.98",
+        "Genesis": "19.98",
+        "Newton": "21.19"
+      }
+    }
+  },
+  "textile_flinging_rayon_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.024 (0.0087)",
+      "engines": {
+        "IsaacSim": "61.62",
+        "Genesis": "9.31",
+        "Newton": "11.09"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.016 (0.0015)",
+      "engines": {
+        "IsaacSim": "91.62",
+        "Genesis": "14.36",
+        "Newton": "16.66"
+      }
+    }
+  },
+  "textile_flinging_uniform_cloth_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.016 (0.0067)",
+      "engines": {
+        "IsaacSim": "78.06",
+        "Genesis": "7.11",
+        "Newton": "18.35"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.012 (0.0019)",
+      "engines": {
+        "IsaacSim": "105.17",
+        "Genesis": "9.77",
+        "Newton": "22.22"
+      }
+    }
+  },
+  "textile_flinging_nylon_taslan_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.021 (0.020)",
+      "engines": {
+        "IsaacSim": "104.87",
+        "Genesis": "3.66",
+        "Newton": "11.13"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.0095 (0.0022)",
+      "engines": {
+        "IsaacSim": "222.9",
+        "Genesis": "7.94",
+        "Newton": "20.56"
+      }
+    }
+  },
+  "textile_flinging_oxford_fabric_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.013 (0.0097)",
+      "engines": {
+        "IsaacSim": "115.3",
+        "Genesis": "5.3",
+        "Newton": "15.46"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.0095 (0.0014)",
+      "engines": {
+        "IsaacSim": "148.27",
+        "Genesis": "7.22",
+        "Newton": "17.85"
+      }
+    }
+  },
+  "textile_flinging_synthetic_leather_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "RMSE",
+      "baseline_printed": "0.0072 (0.00051)",
+      "engines": {
+        "IsaacSim": "77.49",
+        "Genesis": "6.91",
+        "Newton": "27.65"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "textile flinging",
+      "metric": "DTW",
+      "baseline_printed": "0.0063 (0.00023)",
+      "engines": {
+        "IsaacSim": "84.39",
+        "Genesis": "7.89",
+        "Newton": "25.72"
+      }
+    }
+  },
+  "foam_stretching_hard_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam stretching",
+      "metric": "RMSE",
+      "baseline_printed": "21.28 (12.52)",
+      "engines": {
+        "IsaacSim": "11.29",
+        "Genesis": "1.74",
+        "Newton": "10.75"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam stretching",
+      "metric": "DTW",
+      "baseline_printed": "21.07 (12.35)",
+      "engines": {
+        "IsaacSim": "11.41",
+        "Genesis": "1.75",
+        "Newton": "10.86"
+      }
+    }
+  },
+  "foam_shearing_hard_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam shearing",
+      "metric": "RMSE",
+      "baseline_printed": "6.25 (3.53)",
+      "engines": {
+        "IsaacSim": "38.57",
+        "Genesis": "6.12",
+        "Newton": "36.67"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam shearing",
+      "metric": "DTW",
+      "baseline_printed": "5.08 (2.01)",
+      "engines": {
+        "IsaacSim": "47.46",
+        "Genesis": "7.53",
+        "Newton": "45.12"
+      }
+    }
+  },
+  "foam_twisting_hard_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam twisting",
+      "metric": "RMSE",
+      "baseline_printed": "7.08 (2.63)",
+      "engines": {
+        "IsaacSim": "32.41",
+        "Genesis": "4.7",
+        "Newton": "30.12"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam twisting",
+      "metric": "DTW",
+      "baseline_printed": "5.64 (1.18)",
+      "engines": {
+        "IsaacSim": "40.66",
+        "Genesis": "5.86",
+        "Newton": "37.76"
+      }
+    }
+  },
+  "foam_bending_hard_ipc": {
+    "RMSE": {
+      "table": 5,
+      "task": "foam bending",
+      "metric": "RMSE",
+      "baseline_printed": "2.85 (0.52)",
+      "engines": {
+        "IsaacSim": "58.39",
+        "Genesis": "9.96",
+        "Newton": "55.78"
+      }
+    },
+    "DTW": {
+      "table": 5,
+      "task": "foam bending",
+      "metric": "DTW",
+      "baseline_printed": "2.28 (0.21)",
+      "engines": {
+        "IsaacSim": "72.88",
+        "Genesis": "12.41",
+        "Newton": "69.62"
+      }
+    }
+  }
+}

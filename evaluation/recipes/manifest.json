@@ -1,0 +1,446 @@
+{
+  "version": "sdk_harness_v1",
+  "dataset_revision": "9e0acb70fecc0d4161660264d9a4b08d8f56d45a",
+  "cases": [
+    {
+      "case_id": "bouncing_ball_soft_ipc",
+      "regime": "rigid",
+      "task": "bouncing ball",
+      "material": "soft",
+      "score_frames": 18,
+      "rollout_frames": 159
+    },
+    {
+      "case_id": "foam_bending_hard_ipc",
+      "regime": "deformable",
+      "task": "foam bending",
+      "material": "hard",
+      "score_frames": 33,
+      "rollout_frames": 138
+    },
+    {
+      "case_id": "foam_bending_soft_ipc",
+      "regime": "deformable",
+      "task": "foam bending",
+      "material": "soft",
+      "score_frames": 35,
+      "rollout_frames": 121
+    },
+    {
+      "case_id": "foam_shearing_hard_ipc",
+      "regime": "deformable",
+      "task": "foam shearing",
+      "material": "hard",
+      "score_frames": 38,
+      "rollout_frames": 335
+    },
+    {
+      "case_id": "foam_shearing_soft_ipc",
+      "regime": "deformable",
+      "task": "foam shearing",
+      "material": "soft",
+      "score_frames": 37,
+      "rollout_frames": 128
+    },
+    {
+      "case_id": "foam_stretching_hard_ipc",
+      "regime": "deformable",
+      "task": "foam stretching",
+      "material": "hard",
+      "score_frames": 30,
+      "rollout_frames": 118
+    },
+    {
+      "case_id": "foam_stretching_soft_ipc",
+      "regime": "deformable",
+      "task": "foam stretching",
+      "material": "soft",
+      "score_frames": 30,
+      "rollout_frames": 99
+    },
+    {
+      "case_id": "foam_twisting_hard_ipc",
+      "regime": "deformable",
+      "task": "foam twisting",
+      "material": "hard",
+      "score_frames": 69,
+      "rollout_frames": 410
+    },
+    {
+      "case_id": "foam_twisting_soft_ipc",
+      "regime": "deformable",
+      "task": "foam twisting",
+      "material": "soft",
+      "score_frames": 65,
+      "rollout_frames": 120
+    },
+    {
+      "case_id": "newtons_cradle_metal_ipc",
+      "regime": "rigid",
+      "task": "newton's cradle",
+      "material": "metal",
+      "score_frames": 1027,
+      "rollout_frames": 1211
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task1_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "plastic",
+      "score_frames": 11,
+      "rollout_frames": 137
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task2_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "plastic",
+      "score_frames": 9,
+      "rollout_frames": 101
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task3_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "plastic",
+      "score_frames": 20,
+      "rollout_frames": 109
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task1_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "wood",
+      "score_frames": 11,
+      "rollout_frames": 113
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task2_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "wood",
+      "score_frames": 8,
+      "rollout_frames": 97
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task3_ipc",
+      "regime": "rigid",
+      "task": "nonsmooth contact",
+      "material": "wood",
+      "score_frames": 13,
+      "rollout_frames": 99
+    },
+    {
+      "case_id": "pendulum_metal_ipc",
+      "regime": "rigid",
+      "task": "pendulum",
+      "material": "metal",
+      "score_frames": 3000,
+      "rollout_frames": 3936
+    },
+    {
+      "case_id": "slope_contact_plastic_ipc",
+      "regime": "rigid",
+      "task": "slope contact",
+      "material": "plastic",
+      "score_frames": 10,
+      "rollout_frames": 145
+    },
+    {
+      "case_id": "slope_contact_wood_ipc",
+      "regime": "rigid",
+      "task": "slope contact",
+      "material": "wood",
+      "score_frames": 10,
+      "rollout_frames": 188
+    },
+    {
+      "case_id": "slope_slider_metal_task1_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "metal",
+      "score_frames": 9,
+      "rollout_frames": 256
+    },
+    {
+      "case_id": "slope_slider_metal_task2_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "metal",
+      "score_frames": 19,
+      "rollout_frames": 533
+    },
+    {
+      "case_id": "slope_slider_metal_task3_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "metal",
+      "score_frames": 60,
+      "rollout_frames": 172
+    },
+    {
+      "case_id": "slope_slider_plastic_task1_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "plastic",
+      "score_frames": 9,
+      "rollout_frames": 304
+    },
+    {
+      "case_id": "slope_slider_plastic_task2_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "plastic",
+      "score_frames": 17,
+      "rollout_frames": 350
+    },
+    {
+      "case_id": "slope_slider_plastic_task3_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "plastic",
+      "score_frames": 46,
+      "rollout_frames": 280
+    },
+    {
+      "case_id": "slope_slider_wood_task1_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "wood",
+      "score_frames": 9,
+      "rollout_frames": 393
+    },
+    {
+      "case_id": "slope_slider_wood_task2_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "wood",
+      "score_frames": 19,
+      "rollout_frames": 263
+    },
+    {
+      "case_id": "slope_slider_wood_task3_ipc",
+      "regime": "rigid",
+      "task": "slope slider",
+      "material": "wood",
+      "score_frames": 46,
+      "rollout_frames": 155
+    },
+    {
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "nylon taslan",
+      "score_frames": 187,
+      "rollout_frames": 452
+    },
+    {
+      "case_id": "textile_bending_oxford_fabric_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "Oxford fabric",
+      "score_frames": 145,
+      "rollout_frames": 534
+    },
+    {
+      "case_id": "textile_bending_rayon_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "rayon",
+      "score_frames": 379,
+      "rollout_frames": 630
+    },
+    {
+      "case_id": "textile_bending_satin_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "satin",
+      "score_frames": 335,
+      "rollout_frames": 459
+    },
+    {
+      "case_id": "textile_bending_synthetic_leather_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "synthetic leather",
+      "score_frames": 302,
+      "rollout_frames": 879
+    },
+    {
+      "case_id": "textile_bending_uniform_cloth_ipc",
+      "regime": "textile",
+      "task": "textile bending",
+      "material": "uniform cloth",
+      "score_frames": 302,
+      "rollout_frames": 976
+    },
+    {
+      "case_id": "textile_flinging_nylon_taslan_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "nylon taslan",
+      "score_frames": 204,
+      "rollout_frames": 458
+    },
+    {
+      "case_id": "textile_flinging_oxford_fabric_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "Oxford fabric",
+      "score_frames": 187,
+      "rollout_frames": 405
+    },
+    {
+      "case_id": "textile_flinging_rayon_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "rayon",
+      "score_frames": 303,
+      "rollout_frames": 500
+    },
+    {
+      "case_id": "textile_flinging_satin_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "satin",
+      "score_frames": 562,
+      "rollout_frames": 699
+    },
+    {
+      "case_id": "textile_flinging_synthetic_leather_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "synthetic leather",
+      "score_frames": 219,
+      "rollout_frames": 553
+    },
+    {
+      "case_id": "textile_flinging_uniform_cloth_ipc",
+      "regime": "textile",
+      "task": "textile flinging",
+      "material": "uniform cloth",
+      "score_frames": 444,
+      "rollout_frames": 642
+    },
+    {
+      "case_id": "textile_stretching_nylon_taslan_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "nylon taslan",
+      "score_frames": 448,
+      "rollout_frames": 552
+    },
+    {
+      "case_id": "textile_stretching_oxford_fabric_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "Oxford fabric",
+      "score_frames": 423,
+      "rollout_frames": 706
+    },
+    {
+      "case_id": "textile_stretching_rayon_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "rayon",
+      "score_frames": 432,
+      "rollout_frames": 554
+    },
+    {
+      "case_id": "textile_stretching_satin_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "satin",
+      "score_frames": 380,
+      "rollout_frames": 545
+    },
+    {
+      "case_id": "textile_stretching_synthetic_leather_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "synthetic leather",
+      "score_frames": 441,
+      "rollout_frames": 634
+    },
+    {
+      "case_id": "textile_stretching_uniform_cloth_ipc",
+      "regime": "textile",
+      "task": "textile stretching",
+      "material": "uniform cloth",
+      "score_frames": 432,
+      "rollout_frames": 531
+    },
+    {
+      "case_id": "turntable_metal_task1_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "metal",
+      "score_frames": 95,
+      "rollout_frames": 269
+    },
+    {
+      "case_id": "turntable_metal_task2_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "metal",
+      "score_frames": 17,
+      "rollout_frames": 125
+    },
+    {
+      "case_id": "turntable_metal_task3_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "metal",
+      "score_frames": 95,
+      "rollout_frames": 237
+    },
+    {
+      "case_id": "turntable_plastic_task1_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "plastic",
+      "score_frames": 95,
+      "rollout_frames": 262
+    },
+    {
+      "case_id": "turntable_plastic_task2_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "plastic",
+      "score_frames": 17,
+      "rollout_frames": 71
+    },
+    {
+      "case_id": "turntable_plastic_task3_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "plastic",
+      "score_frames": 95,
+      "rollout_frames": 196
+    },
+    {
+      "case_id": "turntable_wood_task1_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "wood",
+      "score_frames": 95,
+      "rollout_frames": 237
+    },
+    {
+      "case_id": "turntable_wood_task2_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "wood",
+      "score_frames": 18,
+      "rollout_frames": 85
+    },
+    {
+      "case_id": "turntable_wood_task3_ipc",
+      "regime": "rigid",
+      "task": "turntable",
+      "material": "wood",
+      "score_frames": 95,
+      "rollout_frames": 305
+    }
+  ]
+}

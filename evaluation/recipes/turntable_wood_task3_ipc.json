@@ -1,0 +1,519 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        },
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5
+      },
+      "bodies": [
+        {
+          "name": "cube",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/turntable_wood_task3_ipc/assets/xie-cube.obj",
+            "mass": 0.0903,
+            "inertia": [
+              [
+                3.762500000000089e-05,
+                3.2445384045568225e-22,
+                3.452749070518311e-21
+              ],
+              [
+                3.2445384045568225e-22,
+                3.7625000000000915e-05,
+                4.780442196066463e-22
+              ],
+              [
+                3.452749070518311e-21,
+                4.780442196066463e-22,
+                3.762500000000089e-05
+              ]
+            ],
+            "center_of_mass": [
+              -8.571659097580747e-19,
+              1.118968573631108e-18,
+              5.70506468477823e-18
+            ],
+            "restitution": 0.285485,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.478844,
+              0.407497,
+              0.21269100000000002,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.378789,
+            "restitution": 0.285485
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "plate",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/turntable_wood_task3_ipc/assets/xie-plate.obj",
+            "mass": 0.7216,
+            "inertia": [
+              [
+                0.004057061482119657,
+                1.2445235299320642e-21,
+                2.95197034329123e-37
+              ],
+              [
+                1.2445235299320642e-21,
+                0.004057061482119655,
+                2.459975286076025e-37
+              ],
+              [
+                2.95197034329123e-37,
+                2.459975286076025e-37,
+                0.008066016297572646
+              ]
+            ],
+            "center_of_mass": [
+              9.045294901069722e-19,
+              7.537745750891434e-19,
+              4.522647450534861e-19
+            ],
+            "restitution": 0.225054,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "controller": {
+            "type": "pd_implicit",
+            "mode": "implicit_energy",
+            "gravity_compensation": true,
+            "gains": {
+              "default": {
+                "kp": 100000.0,
+                "kd": 100.0
+              }
+            }
+          },
+          "initial": {
+            "q": [
+              0.474748,
+              0.482441,
+              0.177681,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.322256,
+            "restitution": 0.225054
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "turntable",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": 3,
+      "backend": "ipc",
+      "frames": 95,
+      "body": "cube",
+      "drivers": [
+        {
+          "name": "plate",
+          "fps": 30,
+          "mode": "pd",
+          "measurement_anchor": [
+            0.474748,
+            0.482441,
+            0.177681,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measurement_name": "plate"
+        }
+      ],
+      "trial_paths": [
+        "data/rigid/turntable/json/wood/task-3/1.json",
+        "data/rigid/turntable/json/wood/task-3/2.json",
+        "data/rigid/turntable/json/wood/task-3/3.json",
+        "data/rigid/turntable/json/wood/task-3/4.json",
+        "data/rigid/turntable/json/wood/task-3/5.json",
+        "data/rigid/turntable/json/wood/task-3/6.json",
+        "data/rigid/turntable/json/wood/task-3/7.json",
+        "data/rigid/turntable/json/wood/task-3/8.json",
+        "data/rigid/turntable/json/wood/task-3/9.json",
+        "data/rigid/turntable/json/wood/task-3/10.json",
+        "data/rigid/turntable/json/wood/task-3/11.json",
+        "data/rigid/turntable/json/wood/task-3/12.json",
+        "data/rigid/turntable/json/wood/task-3/13.json",
+        "data/rigid/turntable/json/wood/task-3/14.json",
+        "data/rigid/turntable/json/wood/task-3/15.json",
+        "data/rigid/turntable/json/wood/task-3/16.json",
+        "data/rigid/turntable/json/wood/task-3/17.json",
+        "data/rigid/turntable/json/wood/task-3/18.json",
+        "data/rigid/turntable/json/wood/task-3/19.json",
+        "data/rigid/turntable/json/wood/task-3/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "turntable_wood_task3_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "b608c5f65bddcc359673e84fc74eda3b9b7ba4bf9dfd949103d0fc9849c5149c",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "collision_asset_hashes": {
+        "workspace-relative:/configs/gauge_full_v1/geometry/cube.obj": "74916b108e6738d0b9154254fe304ca52f1fd3756afedb5396c7228258e863ad"
+      },
+      "rollout_frames": 305,
+      "presentation": {
+        "camera_duration_seconds": 10.115755,
+        "score_frames": 95,
+        "rollout_frames": 305,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": 5.633333333333334,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": []
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": false,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ]
+      },
+      "bodies": [
+        {
+          "name": "cube",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/turntable_wood_task3_ipc/assets/native-cube.obj",
+            "mass": 0.0903,
+            "inertia": [
+              [
+                3.762500000000089e-05,
+                3.2445384045568225e-22,
+                3.452749070518311e-21
+              ],
+              [
+                3.2445384045568225e-22,
+                3.7625000000000915e-05,
+                4.780442196066463e-22
+              ],
+              [
+                3.452749070518311e-21,
+                4.780442196066463e-22,
+                3.762500000000089e-05
+              ]
+            ],
+            "center_of_mass": [
+              -8.571659097580747e-19,
+              1.118968573631108e-18,
+              5.70506468477823e-18
+            ],
+            "restitution": 0.285485,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.478844,
+              0.407497,
+              0.212681,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.378789,
+            "restitution": 0.285485
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "plate",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/turntable_wood_task3_ipc/assets/native-plate.obj",
+            "mass": 0.7216,
+            "inertia": [
+              [
+                0.004057061482119657,
+                1.2445235299320642e-21,
+                2.95197034329123e-37
+              ],
+              [
+                1.2445235299320642e-21,
+                0.004057061482119655,
+                2.459975286076025e-37
+              ],
+              [
+                2.95197034329123e-37,
+                2.459975286076025e-37,
+                0.008066016297572646
+              ]
+            ],
+            "center_of_mass": [
+              9.045294901069722e-19,
+              7.537745750891434e-19,
+              4.522647450534861e-19
+            ],
+            "restitution": 0.225054,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "kinematic",
+          "initial": {
+            "q": [
+              0.474748,
+              0.482441,
+              0.177681,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.322256,
+            "restitution": 0.225054
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "turntable",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": 3,
+      "backend": "ipc",
+      "frames": 95,
+      "body": "cube",
+      "drivers": [
+        {
+          "name": "plate",
+          "fps": 30,
+          "mode": "kinematic",
+          "measurement_anchor": [
+            0.474748,
+            0.482441,
+            0.177681,
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measurement_name": "plate"
+        }
+      ],
+      "trial_paths": [
+        "data/rigid/turntable/json/wood/task-3/1.json",
+        "data/rigid/turntable/json/wood/task-3/2.json",
+        "data/rigid/turntable/json/wood/task-3/3.json",
+        "data/rigid/turntable/json/wood/task-3/4.json",
+        "data/rigid/turntable/json/wood/task-3/5.json",
+        "data/rigid/turntable/json/wood/task-3/6.json",
+        "data/rigid/turntable/json/wood/task-3/7.json",
+        "data/rigid/turntable/json/wood/task-3/8.json",
+        "data/rigid/turntable/json/wood/task-3/9.json",
+        "data/rigid/turntable/json/wood/task-3/10.json",
+        "data/rigid/turntable/json/wood/task-3/11.json",
+        "data/rigid/turntable/json/wood/task-3/12.json",
+        "data/rigid/turntable/json/wood/task-3/13.json",
+        "data/rigid/turntable/json/wood/task-3/14.json",
+        "data/rigid/turntable/json/wood/task-3/15.json",
+        "data/rigid/turntable/json/wood/task-3/16.json",
+        "data/rigid/turntable/json/wood/task-3/17.json",
+        "data/rigid/turntable/json/wood/task-3/18.json",
+        "data/rigid/turntable/json/wood/task-3/19.json",
+        "data/rigid/turntable/json/wood/task-3/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "turntable_wood_task3_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "79b9ac2ac29c8386c45c021162abbc68c3d0d86fbe01a5d17b6d31593633d6cd",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "collision_asset_hashes": {
+        "workspace-relative:/configs/gauge_full_v1/geometry/cube.obj": "74916b108e6738d0b9154254fe304ca52f1fd3756afedb5396c7228258e863ad"
+      },
+      "rollout_frames": 305,
+      "presentation": {
+        "camera_duration_seconds": 10.115755,
+        "score_frames": 95,
+        "rollout_frames": 305,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": 5.633333333333334,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/turntable.json",
+        "metadata_sha256": "f9ecaf6809a6831baf40c6d39f5b205c7f930277ec628eadacf83408319d4454",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": []
+    }
+  },
+  "assets": {
+    "xie-cube.obj": {
+      "kind": "generated_text",
+      "text": "v -0.025 -0.025 -0.025\nv -0.025 -0.025 0.025\nv -0.025 0.025 -0.025\nv -0.025 0.025 0.025\nv 0.025 -0.025 -0.025\nv 0.025 -0.025 0.025\nv 0.025 0.025 -0.025\nv 0.025 0.025 0.025\nf 1 4 3\nf 1 2 4\nf 5 7 8\nf 5 8 6\nf 1 5 6\nf 1 6 2\nf 3 8 7\nf 3 4 8\nf 1 7 5\nf 1 3 7\nf 2 6 8\nf 2 8 4\n",
+      "historical_sha256": "74916b108e6738d0b9154254fe304ca52f1fd3756afedb5396c7228258e863ad"
+    },
+    "xie-plate.obj": {
+      "kind": "generated_text",
+      "text": "v 0.0 0.15 -0.01\nv 0.0 0.15 0.01\nv 0.029264 0.147118 0.01\nv 0.029264 0.147118 -0.01\nv 0.057403 0.138582 0.01\nv 0.057403 0.138582 -0.01\nv 0.083336 0.12472 0.01\nv 0.083336 0.12472 -0.01\nv 0.106066 0.106066 0.01\nv 0.106066 0.106066 -0.01\nv 0.12472 0.083336 0.01\nv 0.12472 0.083336 -0.01\nv 0.138582 0.057403 0.01\nv 0.138582 0.057403 -0.01\nv 0.147118 0.029264 0.01\nv 0.147118 0.029264 -0.01\nv 0.15 0.0 0.01\nv 0.15 -0.0 -0.01\nv 0.147118 -0.029264 0.01\nv 0.147118 -0.029264 -0.01\nv 0.138582 -0.057403 0.01\nv 0.138582 -0.057403 -0.01\nv 0.12472 -0.083336 0.01\nv 0.12472 -0.083336 -0.01\nv 0.106066 -0.106066 0.01\nv 0.106066 -0.106066 -0.01\nv 0.083336 -0.12472 0.01\nv 0.083336 -0.12472 -0.01\nv 0.057403 -0.138582 0.01\nv 0.057403 -0.138582 -0.01\nv 0.029264 -0.147118 0.01\nv 0.029264 -0.147118 -0.01\nv 0.0 -0.15 0.01\nv 0.0 -0.15 -0.01\nv -0.029264 -0.147118 0.01\nv -0.029264 -0.147118 -0.01\nv -0.057403 -0.138582 0.01\nv -0.057403 -0.138582 -0.01\nv -0.083336 -0.12472 0.01\nv -0.083336 -0.12472 -0.01\nv -0.106066 -0.106066 0.01\nv -0.106066 -0.106066 -0.01\nv -0.12472 -0.083336 0.01\nv -0.12472 -0.083336 -0.01\nv -0.138582 -0.057403 0.01\nv -0.138582 -0.057403 -0.01\nv -0.147118 -0.029264 0.01\nv -0.147118 -0.029264 -0.01\nv -0.15 0.0 0.01\nv -0.15 -0.0 -0.01\nv -0.147118 0.029264 0.01\nv -0.147118 0.029264 -0.01\nv -0.138582 0.057403 0.01\nv -0.138582 0.057403 -0.01\nv -0.12472 0.083336 0.01\nv -0.12472 0.083336 -0.01\nv -0.106066 0.106066 0.01\nv -0.106066 0.106066 -0.01\nv -0.083336 0.12472 0.01\nv -0.083336 0.12472 -0.01\nv -0.057403 0.138582 0.01\nv -0.057403 0.138582 -0.01\nv -0.029264 0.147118 0.01\nv -0.029264 0.147118 -0.01\nf 1 2 3\nf 1 3 4\nf 4 3 5\nf 4 5 6\nf 6 5 7\nf 6 7 8\nf 8 7 9\nf 8 9 10\nf 10 9 11\nf 10 11 12\nf 12 11 13\nf 12 13 14\nf 14 13 15\nf 14 15 16\nf 16 15 17\nf 16 17 18\nf 18 17 19\nf 18 19 20\nf 20 19 21\nf 20 21 22\nf 22 21 23\nf 22 23 24\nf 24 23 25\nf 24 25 26\nf 26 25 27\nf 26 27 28\nf 28 27 29\nf 28 29 30\nf 30 29 31\nf 30 31 32\nf 32 31 33\nf 32 33 34\nf 34 33 35\nf 34 35 36\nf 36 35 37\nf 36 37 38\nf 38 37 39\nf 38 39 40\nf 40 39 41\nf 40 41 42\nf 42 41 43\nf 42 43 44\nf 44 43 45\nf 44 45 46\nf 46 45 47\nf 46 47 48\nf 48 47 49\nf 48 49 50\nf 50 49 51\nf 50 51 52\nf 52 51 53\nf 52 53 54\nf 54 53 55\nf 54 55 56\nf 56 55 57\nf 56 57 58\nf 58 57 59\nf 58 59 60\nf 60 59 61\nf 60 61 62\nf 5 3 2\nf 2 63 61\nf 61 59 57\nf 57 55 53\nf 53 51 49\nf 49 47 45\nf 45 43 41\nf 41 39 37\nf 37 35 33\nf 33 31 29\nf 29 27 25\nf 25 23 21\nf 21 19 17\nf 17 15 13\nf 13 11 9\nf 9 7 5\nf 5 2 61\nf 61 57 53\nf 53 49 45\nf 45 41 37\nf 37 33 29\nf 29 25 21\nf 21 17 13\nf 13 9 5\nf 5 61 53\nf 53 45 37\nf 37 29 21\nf 21 13 5\nf 5 53 37\nf 37 21 5\nf 62 61 63\nf 62 63 64\nf 64 63 2\nf 64 2 1\nf 64 1 4\nf 4 6 8\nf 8 10 12\nf 12 14 16\nf 16 18 20\nf 20 22 24\nf 24 26 28\nf 28 30 32\nf 32 34 36\nf 36 38 40\nf 40 42 44\nf 44 46 48\nf 48 50 52\nf 52 54 56\nf 56 58 60\nf 60 62 64\nf 64 4 8\nf 8 12 16\nf 16 20 24\nf 24 28 32\nf 32 36 40\nf 40 44 48\nf 48 52 56\nf 56 60 64\nf 64 8 16\nf 16 24 32\nf 32 40 48\nf 48 56 64\nf 64 16 32\nf 32 48 64\n",
+      "historical_sha256": "fe025ab61b9de41967bff45161f425ef2591ff90bda5211207ad4f480df80f45"
+    },
+    "native-cube.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/cube.obj",
+      "source_sha256": "976df1b24fd977f375ad0702df07921d1cd75040ad238d60f0d449caad0a57f6",
+      "expected_sha256": "976df1b24fd977f375ad0702df07921d1cd75040ad238d60f0d449caad0a57f6"
+    },
+    "native-plate.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/plate.obj",
+      "source_sha256": "25b4af848999d8d05e6525b51256a4b3f91ce8b1fe8a14b42e775a78170a4705",
+      "expected_sha256": "25b4af848999d8d05e6525b51256a4b3f91ce8b1fe8a14b42e775a78170a4705"
+    }
+  }
+}

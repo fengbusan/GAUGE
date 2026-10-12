@@ -1,0 +1,295 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        },
+        "ground_height": 0.013297,
+        "ground_material": {
+          "friction": 0.808698,
+          "restitution": 0.576733
+        },
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5
+      },
+      "bodies": [
+        {
+          "name": "ball",
+          "kind": "rigid",
+          "source": {
+            "type": "primitive_sphere",
+            "radius": 0.03,
+            "mass": 0.121,
+            "restitution": 0.576733
+          },
+          "motion": "dynamic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.418911,
+              0.435316,
+              0.451033,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.808698,
+            "restitution": 0.576733
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "bouncing ball",
+      "regime": "rigid",
+      "material": "soft",
+      "subtask": null,
+      "backend": "ipc",
+      "frames": 18,
+      "body": "ball",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/bouncing ball/json/1.json",
+        "data/rigid/bouncing ball/json/2.json",
+        "data/rigid/bouncing ball/json/3.json",
+        "data/rigid/bouncing ball/json/4.json",
+        "data/rigid/bouncing ball/json/5.json",
+        "data/rigid/bouncing ball/json/6.json",
+        "data/rigid/bouncing ball/json/7.json",
+        "data/rigid/bouncing ball/json/8.json",
+        "data/rigid/bouncing ball/json/9.json",
+        "data/rigid/bouncing ball/json/10.json",
+        "data/rigid/bouncing ball/json/11.json",
+        "data/rigid/bouncing ball/json/12.json",
+        "data/rigid/bouncing ball/json/13.json",
+        "data/rigid/bouncing ball/json/14.json",
+        "data/rigid/bouncing ball/json/15.json",
+        "data/rigid/bouncing ball/json/16.json",
+        "data/rigid/bouncing ball/json/17.json",
+        "data/rigid/bouncing ball/json/18.json",
+        "data/rigid/bouncing ball/json/19.json",
+        "data/rigid/bouncing ball/json/20.json",
+        "data/rigid/bouncing ball/json/21.json",
+        "data/rigid/bouncing ball/json/22.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "soft",
+      "case_id": "bouncing_ball_soft_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "af4fd0e65ade364944235c24c3c7bef17288befe02983772540381210a9b22e6",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "rubber",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 159,
+      "presentation": {
+        "camera_duration_seconds": 5.247331,
+        "score_frames": 18,
+        "rollout_frames": 159,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": []
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "ground_height": 0.013297,
+        "ground_material": {
+          "friction": 0.808698,
+          "restitution": 0.576733
+        }
+      },
+      "bodies": [
+        {
+          "name": "ball",
+          "kind": "rigid",
+          "source": {
+            "type": "primitive_sphere",
+            "radius": 0.03,
+            "mass": 0.121,
+            "restitution": 0.576733
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.418911,
+              0.435316,
+              0.451023,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.808698,
+            "restitution": 0.576733
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "bouncing ball",
+      "regime": "rigid",
+      "material": "soft",
+      "subtask": null,
+      "backend": "ipc",
+      "frames": 18,
+      "body": "ball",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/bouncing ball/json/1.json",
+        "data/rigid/bouncing ball/json/2.json",
+        "data/rigid/bouncing ball/json/3.json",
+        "data/rigid/bouncing ball/json/4.json",
+        "data/rigid/bouncing ball/json/5.json",
+        "data/rigid/bouncing ball/json/6.json",
+        "data/rigid/bouncing ball/json/7.json",
+        "data/rigid/bouncing ball/json/8.json",
+        "data/rigid/bouncing ball/json/9.json",
+        "data/rigid/bouncing ball/json/10.json",
+        "data/rigid/bouncing ball/json/11.json",
+        "data/rigid/bouncing ball/json/12.json",
+        "data/rigid/bouncing ball/json/13.json",
+        "data/rigid/bouncing ball/json/14.json",
+        "data/rigid/bouncing ball/json/15.json",
+        "data/rigid/bouncing ball/json/16.json",
+        "data/rigid/bouncing ball/json/17.json",
+        "data/rigid/bouncing ball/json/18.json",
+        "data/rigid/bouncing ball/json/19.json",
+        "data/rigid/bouncing ball/json/20.json",
+        "data/rigid/bouncing ball/json/21.json",
+        "data/rigid/bouncing ball/json/22.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "soft",
+      "case_id": "bouncing_ball_soft_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "4865bfe9197e21791dfa06ff8655d5e0f82f45eb8e9139a4c2b9f2c5fa0219a7",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "rubber",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 159,
+      "presentation": {
+        "camera_duration_seconds": 5.247331,
+        "score_frames": 18,
+        "rollout_frames": 159,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/bouncing ball.json",
+        "metadata_sha256": "d2156173ae82f40cd730657d84df173eae058a0f7372a4f119dcf0b97587c180",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": []
+    }
+  },
+  "assets": {}
+}

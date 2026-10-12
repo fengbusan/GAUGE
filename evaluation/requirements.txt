@@ -1,0 +1,4 @@
+numpy>=1.26,<3
+scipy>=1.11,<2
+usd-core>=25.5,<27
+pytest>=7,<9

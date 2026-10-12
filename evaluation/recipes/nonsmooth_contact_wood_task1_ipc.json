@@ -1,0 +1,481 @@
+{
+  "xie": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "integrator": "symplectic_euler",
+        "d_hat": 0.001,
+        "contact_thickness": 0.0,
+        "barrier_power": 1.0,
+        "adaptive_kappa": true,
+        "kappa": 10000.0,
+        "kappa_init": 10000.0,
+        "kappa_min": 100.0,
+        "kappa_max": 100000000.0,
+        "friction_eps_v": 0.01,
+        "max_newton_iters": 80,
+        "max_line_search_iters": 32,
+        "newton_tol": 1e-07,
+        "newton_rel_tol": 1e-06,
+        "newton_velocity_tol": 0.0001,
+        "use_gauss_newton": true,
+        "ccd_mode": "toi",
+        "contact_detection": {
+          "ccd_candidate_mode": "trajectory",
+          "allow_self_contact": false
+        },
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "verbose": false,
+        "reduced_primal_recovery": {
+          "enabled": true
+        },
+        "contact_solver": {
+          "model": "ipc_barrier"
+        },
+        "ground_height": 0.005423,
+        "ground_material": {
+          "friction": 0.273673,
+          "restitution": 0.329297
+        },
+        "friction_mu": 0.0,
+        "line_search_scale": 0.5
+      },
+      "bodies": [
+        {
+          "name": "pyramid",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/nonsmooth_contact_wood_task1_ipc/assets/xie-pyramid.obj",
+            "mass": 0.0433,
+            "inertia": [
+              [
+                2.1650000000000018e-05,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                2.1650000000000018e-05,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0825000000000006e-05
+              ]
+            ],
+            "center_of_mass": [
+              0.0,
+              0.0,
+              -0.024999999999999998
+            ],
+            "restitution": 0.329297,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.419851,
+              0.430966,
+              0.164686,
+              0.9924038765061041,
+              -0.08682408883346517,
+              0.08682408883346517,
+              0.007596123493895969
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.273673,
+            "restitution": 0.329297
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "squarebase",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/nonsmooth_contact_wood_task1_ipc/assets/xie-squarebase.obj",
+            "mass": 0.1146,
+            "inertia": [
+              [
+                0.00011160953443877547,
+                0.0,
+                -6.71689564378488e-22
+              ],
+              [
+                0.0,
+                0.00011160953443877547,
+                6.71689564378488e-22
+              ],
+              [
+                -6.71689564378488e-22,
+                6.71689564378488e-22,
+                0.00021146428571428567
+              ]
+            ],
+            "center_of_mass": [
+              0.0,
+              0.0,
+              -0.013392857142857147
+            ],
+            "restitution": 0.329297,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "kinematic",
+          "controller": null,
+          "initial": {
+            "q": [
+              0.41031,
+              0.429903,
+              0.030423,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.273673,
+            "restitution": 0.329297
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "nonsmooth contact",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": 1,
+      "backend": "ipc",
+      "frames": 11,
+      "body": "pyramid",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/nonsmooth contact/json/wood/task-1/1.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/2.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/3.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/4.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/5.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/6.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/7.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/8.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/9.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/10.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/11.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/12.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/13.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/14.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/15.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/16.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/17.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/18.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/19.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "nonsmooth_contact_wood_task1_ipc",
+      "profile": "gauge_0513_authored_v6",
+      "scene_sha256": "96a9fad238bb0206e03496bfd8d88b9cbaa1634fa61626d414d606ac43d058d1",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 113,
+      "presentation": {
+        "camera_duration_seconds": 3.711784,
+        "score_frames": 11,
+        "rollout_frames": 113,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "comparison_flags": []
+    }
+  },
+  "native": {
+    "scene": {
+      "version": 1,
+      "dt": 0.005555555555555556,
+      "gravity": [
+        0,
+        0,
+        -9.81
+      ],
+      "device": "cpu",
+      "solver": {
+        "ground_enabled": true,
+        "ground_normal": [
+          0,
+          0,
+          1
+        ],
+        "ground_height": 0.005423,
+        "ground_material": {
+          "friction": 0.273673,
+          "restitution": 0.329297
+        }
+      },
+      "bodies": [
+        {
+          "name": "pyramid",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/nonsmooth_contact_wood_task1_ipc/assets/native-pyramid.obj",
+            "mass": 0.0433,
+            "inertia": [
+              [
+                2.1650000000000018e-05,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                2.1650000000000018e-05,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0825000000000006e-05
+              ]
+            ],
+            "center_of_mass": [
+              0.0,
+              0.0,
+              -0.024999999999999998
+            ],
+            "restitution": 0.329297,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "dynamic",
+          "initial": {
+            "q": [
+              0.419851,
+              0.430966,
+              0.164676,
+              0.9924038765061041,
+              -0.08682408883346517,
+              0.08682408883346517,
+              0.007596123493895969
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.273673,
+            "restitution": 0.329297
+          },
+          "sdf": {
+            "type": "none"
+          }
+        },
+        {
+          "name": "squarebase",
+          "kind": "rigid",
+          "source": {
+            "type": "mesh_obj",
+            "path": "${PROFILE}/nonsmooth_contact_wood_task1_ipc/assets/native-squarebase.obj",
+            "mass": 0.1146,
+            "inertia": [
+              [
+                0.00011160953443877547,
+                0.0,
+                -6.71689564378488e-22
+              ],
+              [
+                0.0,
+                0.00011160953443877547,
+                6.71689564378488e-22
+              ],
+              [
+                -6.71689564378488e-22,
+                6.71689564378488e-22,
+                0.00021146428571428567
+              ]
+            ],
+            "center_of_mass": [
+              0.0,
+              0.0,
+              -0.013392857142857147
+            ],
+            "restitution": 0.329297,
+            "collision_representation": "triangle_surface"
+          },
+          "motion": "static",
+          "initial": {
+            "q": [
+              0.41031,
+              0.429903,
+              0.030423,
+              1.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "q_dot": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "contact_material": {
+            "friction": 0.273673,
+            "restitution": 0.329297
+          },
+          "sdf": {
+            "type": "none"
+          }
+        }
+      ]
+    },
+    "evaluation": {
+      "task": "nonsmooth contact",
+      "regime": "rigid",
+      "material": "wood",
+      "subtask": 1,
+      "backend": "ipc",
+      "frames": 11,
+      "body": "pyramid",
+      "drivers": [],
+      "trial_paths": [
+        "data/rigid/nonsmooth contact/json/wood/task-1/1.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/2.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/3.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/4.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/5.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/6.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/7.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/8.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/9.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/10.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/11.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/12.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/13.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/14.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/15.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/16.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/17.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/18.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/19.json",
+        "data/rigid/nonsmooth contact/json/wood/task-1/20.json"
+      ],
+      "metric": "position_mm",
+      "notes": [
+        "Metadata initial poses; zero release velocities; 10um common upward clearance."
+      ],
+      "material_parameter_key": "wood",
+      "case_id": "nonsmooth_contact_wood_task1_ipc",
+      "profile": "thirdparty_official_v5",
+      "scene_sha256": "6cb5bb8fb3218aa262be541cd6271d4ba886fb31f36a45439af20e9f3fef1c57",
+      "physics_hz": 180,
+      "samples_hz": 30,
+      "official_material": "wood",
+      "assets_provenance": "Pinned official OBJ / MJCF / metadata, see policy.json",
+      "rollout_frames": 113,
+      "presentation": {
+        "camera_duration_seconds": 3.711784,
+        "score_frames": 11,
+        "rollout_frames": 113,
+        "driver_after_record": "Hold the final recorded target; continue dynamic simulation. No invented apparatus movement.",
+        "time_alignment": "Independent clocks; no verified camera/mocap onset mapping.",
+        "horizon_rule": "max(scoring frames, first-trial full mocap frames, ceil(camera duration * 30)+1)"
+      },
+      "driver_end_seconds": null,
+      "parameter_audit": "results/official_parameter_audit/metadata_usd_comparison.json",
+      "scoring_version": "paper_formula_v5",
+      "official_equivalence_verified": false,
+      "asset_provenance": {
+        "policy": "Official-derived rigid assets retained, including approved exact 12-triangle boxes and 2 mm cradle gap"
+      },
+      "native_protocol": {
+        "metadata": "${DATASET}/metadata/rigid/nonsmooth contact.json",
+        "metadata_sha256": "13b52ab841de198f3df1cfa2d6d5f9b93c4bc17696052f7b3882ac809e3b1dbd",
+        "motion_flags": "direct official fixed/kinematic flags; no PD",
+        "cradle_gap": "unmodified official pivot positions; no Xie 2 mm adaptation",
+        "publication_status": "independent implementation of released paper and metadata; official executable scorer/runner not released"
+      },
+      "comparison_flags": []
+    }
+  },
+  "assets": {
+    "xie-pyramid.obj": {
+      "kind": "generated_text",
+      "text": "v -0.025 -0.025 0.0\nv -0.0 0.0 -0.1\nv 0.025 -0.025 -0.0\nv 0.025 0.025 -0.0\nv -0.025 0.025 0.0\nf 1 2 3\nf 3 2 4\nf 4 5 1\nf 4 1 3\nf 5 2 1\nf 4 2 5\n",
+      "historical_sha256": "0b8f70a3d18aeb16c6e64d7c37844aab348e5f63addbdc845f15642da1a5a00a"
+    },
+    "xie-squarebase.obj": {
+      "kind": "generated_text",
+      "text": "v -0.05 -0.05 -0.025\nv -0.05 -0.05 0.0\nv -0.05 0.05 0.0\nv -0.05 0.05 -0.025\nv 0.05 0.05 0.0\nv 0.05 0.05 -0.025\nv 0.05 -0.05 0.0\nv 0.05 -0.05 -0.025\nv -0.025 0.025 0.0\nv 0.025 -0.025 0.0\nv -0.025 -0.025 0.0\nv 0.025 0.025 0.0\nv -0.025 -0.025 -0.0125\nv -0.025 0.025 -0.0125\nv 0.025 0.025 -0.0125\nv 0.025 -0.025 -0.0125\nf 1 2 3\nf 1 3 4\nf 4 3 5\nf 4 5 6\nf 6 5 7\nf 6 7 8\nf 8 7 2\nf 8 2 1\nf 4 6 8\nf 4 8 1\nf 9 3 2\nf 2 7 10\nf 11 9 2\nf 2 10 11\nf 10 7 5\nf 5 3 9\nf 12 10 5\nf 5 9 12\nf 11 13 14\nf 11 14 9\nf 9 14 15\nf 9 15 12\nf 15 16 10\nf 15 10 12\nf 16 13 11\nf 16 11 10\nf 14 13 16\nf 14 16 15\n",
+      "historical_sha256": "0667a3e0515e3cba34812626dc00f3291a1206a94a0233f11e76535cc48bdfc3"
+    },
+    "native-pyramid.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/pyramid.obj",
+      "source_sha256": "fa768d585446b1a5ebf7b5542a7eb9ab6127acc06696fca18931ecefa745c52d",
+      "expected_sha256": "fa768d585446b1a5ebf7b5542a7eb9ab6127acc06696fca18931ecefa745c52d"
+    },
+    "native-squarebase.obj": {
+      "kind": "copy_dataset",
+      "source": "${DATASET}/assets/obj/squarebase.obj",
+      "source_sha256": "e94d76eb761db846bda972a5425e32a9317158868e1f244baf5764493c131ea5",
+      "expected_sha256": "e94d76eb761db846bda972a5425e32a9317158868e1f244baf5764493c131ea5"
+    }
+  }
+}
