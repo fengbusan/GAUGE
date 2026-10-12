@@ -2,7 +2,7 @@
 
 This is a community evaluation harness in a personal fork of [InternRobotics/GAUGE](https://github.com/InternRobotics/GAUGE). It is **not the author's released evaluator** and does not certify official-equivalent scores.
 
-The 55 cases expand the paper's 14 mechanisms across materials and subtasks: 29 rigid, 18 textile, and 8 volumetric deformable cases. XiePhysic uses IPC for all cases, with **RP enabled at native SDK defaults for rigid bodies only**. SoftPrimal is excluded. SDKs, engine source, dataset files, rendered videos, credentials, and workstation deployment scripts are not distributed here.
+The 55 cases expand the paper's 14 mechanisms across materials and subtasks: 29 rigid, 18 textile, and 8 volumetric deformable cases. The original XiePhysic profile uses IPC for all cases, with **RP enabled at native SDK defaults for rigid bodies only**. The optional 0.5.14 profile uses SAP with RP disabled. SoftPrimal is excluded. SDKs, engine source, dataset files, rendered videos, credentials, and workstation deployment scripts are not distributed here.
 
 ## Quick start
 
@@ -66,5 +66,32 @@ Known native limitations:
 `evaluation/scripts/` contains preparation, SDK adapters, serial execution and shared scoring. `evaluation/recipes/` contains only portable configuration recipes, small generated apparatus descriptions, asset/trial hashes and printed reference numbers. `evaluation/tests/` checks metric semantics, geometry units, driver endpoints, and ranking ties. All writable caches/results are ignored by Git.
 
 Harness contributions are offered under the repository's MIT license. External engine SDKs and the [GAUGE Dataset](https://huggingface.co/datasets/InternRobotics/GAUGE-Dataset) retain their own licenses/terms; nothing here grants redistribution rights over those external dependencies.
+
+## SAP 0.5.14 comparison
+
+SAP requires the independently installed **0.5.14 prerelease** SDK. Select it explicitly; never relabel 0.5.13 trajectories as SAP. JSON scene defaults apply: `velocity_primal/frozen_sap`, BDF1, RP disabled, 10 inner iterations / 10 line searches, relative tolerance 0.001, velocity tolerance 0.05, swept point candidates enabled, beta 1 and sigma 0.0001. Linear selection is auto with fixed-budget convergence and Block Jacobi. The SDK's USD pure-rigid policy is different (80/30 with discrete candidates); `--sap-policy usd` is provided only for explicit diagnostics.
+
+```bash
+export GAUGE_XIE_SDK_PATH=/path/to/installed-0.5.14-sdk
+export GAUGE_XIE_SDK_VERSION=0.5.14
+# Optionally require the exact chosen release binary hash:
+export GAUGE_XIE_SDK_SHA256=YOUR_NATIVE_BINARY_SHA256
+python scripts/prepare_sap.py --profile xie_sap_native_0514_v3 --normalize-rigid-topology
+python scripts/run_suite.py --engine xiephysic --profile xie_sap_native_0514_v3 \
+  --result-key xie_sap_native_v3 --record-state
+python scripts/score.py --xie-profile xie_sap_native_0514_v3 \
+  --xie-result-key xie_sap_native_v3 --report-name sap_scores.json
+python scripts/prepare_replay.py
+/path/to/isaac-sim/python.sh scripts/render_isaac.py \
+  --jobs "$GAUGE_WORKSPACE/results/sap_native_replay/jobs.json"
+```
+
+Assets, measured material parameters, time steps, PD adaptation, marker mapping and score windows remain frozen. The optional topology normalization separates disconnected rigid vertex fans **without changing any triangle's coordinates, order or winding**. It does not remove faces, weld points, use convex hulls, bake SDFs, or alter mass/inertia. For the official stretching frame this splits four shared vertex IDs (252 → 256); the native SAP admission check rejects its original nonmanifold vertex topology before solving. Per-asset source/output hashes and exact-coordinate checks are recorded. Nonmanifold edges remain explicit errors requiring asset review.
+
+Each physical step records native backend, strict/best-effort convergence and original failure diagnostics in `diagnostics.jsonl`. Native step rejection is distinct from adapter exceptions. A completed rollout does not by itself certify correct contact behavior. Immutable recordings may be reused between profiles only when both physical scene hashes and every non-bookkeeping evaluation field match; their original profile and receipts are retained.
+
+Replay uses recorded SDK forward kinematics and surface topology, with no physics stepping in Isaac. Analytical spheres may use the official equal-radius display mesh. Rendering follows physics serially on shared GPUs. Comparisons with previous-version IPC or previously recorded native peers must disclose those version/batch differences, including the historical Isaac textile material limitation above. Engine source and SDK binaries remain outside this repository.
+
+The separate [SAP validation receipt](sap_0514_validation.json) records this prerelease's 55/55 completed full rollouts, 70 CPU checks, exact runtime identity and lossless normalization. It also discloses accepted best-effort steps and score-reproduction limits; completion is not a claim of official-equivalent physics or scores.
 
 Release packaging checks are recorded in [validation.json](validation.json): 67 CPU tests, all 110 input roundtrips, dataset/mesh hashes, a full Xie 0.5.13 case with identical existing scores, and short Xie RP/Isaac textile SDK smoke runs. This is not a fresh complete four-engine benchmark.

@@ -4,6 +4,17 @@ import numpy as np
 import pytest
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
 from gauge_eval.scoring import competition_ranks, matches_printed, rank_summary
+
+def test_recording_reuse_rejects_changed_physics_drivers_and_windows():
+    from gauge_eval.scoring import validate_reused_evaluation
+    import copy
+    actual={'profile':'previous','scene_sha256':'abc','frames':380,'rollout_frames':500,'marker_vertex_ids':[2,4], 'drivers':[{'positions':[[0,0,0],[1,0,0]]}]}
+    target={**actual,'profile':'normalized','rigid_topology_normalization':[]}
+    validate_reused_evaluation(actual,target)
+    for field,value in [('scene_sha256','different'),('frames',300),('marker_vertex_ids',[4,2]),('drivers',[])]:
+        altered=copy.deepcopy(target);altered[field]=value
+        with pytest.raises(ValueError,match='different physical/evaluation inputs'):
+            validate_reused_evaluation(actual,altered)
 from gauge_eval.observables import observe
 from run_xie import sample_driver
 

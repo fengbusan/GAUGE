@@ -13,6 +13,9 @@ import numpy as np
 from scipy.spatial.transform import Rotation, Slerp
 from gauge_eval.paths import ROOT, DATA
 
+class EngineStepError(RuntimeError):
+    """Native SDK rejection, distinct from Python adapter/import errors."""
+
 def sample_driver(d,t):
     p=np.asarray(d['positions']);rot=Rotation.from_quat(d['quaternions_xyzw'])
     if len(p)<2:
@@ -25,17 +28,24 @@ def sample_driver(d,t):
         linear=np.zeros(3);angular=np.zeros(3)
     return np.r_[(1-a)*p[i]+a*p[i+1],q[3],q[:3]],np.r_[r.inv().apply(linear),r.inv().apply(angular)]
 
-def run(cid,smoke=False,record_state=False):
-    folder=ROOT/'configs/xie_sdk_v1'/cid
+def json_value(value):
+    if isinstance(value,dict):return {str(k):json_value(v) for k,v in value.items()}
+    if isinstance(value,(list,tuple)):return [json_value(v) for v in value]
+    if hasattr(value,'tolist'):return value.tolist()
+    if isinstance(value,np.generic):return value.item()
+    return value
+
+def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiephysic'):
+    folder=ROOT/'configs'/profile/cid
     e=json.loads((folder/'evaluation.json').read_text());scene=json.loads((folder/'scene.json').read_text())
-    out=ROOT/('results/smoke' if smoke else 'results')/'xiephysic'/cid
+    out=ROOT/('results/smoke' if smoke else 'results')/result_key/cid
     out.mkdir(parents=True,exist_ok=True)
-    start=time.monotonic();sim=None;points=[];tracking=[];state_file=None
-    status=dict(engine='xiephysic',case_id=cid,status='running',frames_required=e['rollout_frames'],score_frames=e['frames'],sample_hz=30,physics_hz=round(1/scene['dt']),source_scene_sha256=e['scene_sha256'],source_evaluation_sha256=hashlib.sha256((folder/'evaluation.json').read_bytes()).hexdigest(),official_equivalence_verified=False,rp_enabled=scene['solver'].get('reduced_primal_recovery',{}).get('enabled',False))
+    start=time.monotonic();sim=None;points=[];tracking=[];state_file=None;diagnostics_file=None
+    status=dict(engine=result_key,profile=profile,case_id=cid,status='running',frames_required=e['rollout_frames'],score_frames=e['frames'],sample_hz=30,physics_hz=round(1/scene['dt']),source_scene_sha256=e['scene_sha256'],source_evaluation_sha256=hashlib.sha256((folder/'evaluation.json').read_bytes()).hexdigest(),official_equivalence_verified=False,rp_enabled=scene['solver'].get('reduced_primal_recovery',{}).get('enabled',False),solver=scene['solver']['contact_solver']['model'],physical_steps=0,strictly_converged_steps=0)
     def save():
         status.update(frames_completed=len(points),wall_seconds=time.monotonic()-start)
-        np.save(out/'marker_positions_m.npy',np.asarray(points))
-        (out/'status.json').write_text(json.dumps(status,indent=2))
+        tmp=out/'marker_positions_m.tmp.npy';np.save(tmp,np.asarray(points));tmp.replace(out/'marker_positions_m.npy')
+        tmp=out/'status.json.tmp';tmp.write_text(json.dumps(status,indent=2));tmp.replace(out/'status.json')
     try:
         if hashlib.sha256((folder/'scene.json').read_bytes()).hexdigest()!=e['scene_sha256']:raise ValueError('Scene differs from prepared receipt')
         module=os.environ.get('GAUGE_XIE_SDK_MODULE','xiephy_gpu')
@@ -55,8 +65,13 @@ def run(cid,smoke=False,record_state=False):
         if native:status['sdk_binary_sha256']=hashlib.sha256(native.read_bytes()).hexdigest()
         expected=os.environ.get('GAUGE_XIE_SDK_VERSION','0.5.13')
         if sdk.__version__!=expected:raise ValueError(f'SDK version {sdk.__version__} differs from requested {expected}')
+        expected_sha=os.environ.get('GAUGE_XIE_SDK_SHA256')
+        if expected_sha and status.get('sdk_binary_sha256')!=expected_sha:raise ValueError('SDK binary SHA256 differs from the selected release')
         sim=sdk.Sim.from_json(str(folder/'scene.json'))
-        if record_state:state_file=(out/'state_q.jsonl').open('w')
+        diagnostics_file=(out/'diagnostics.jsonl').open('w')
+        if record_state:
+            state_file=(out/'state_q.jsonl').open('w')
+            (out/'render_topology.json').write_text(json.dumps(json_value(sim.render_topology())))
         def observe():
             snap=sim.snapshot()
             if 'articulated'in e:
@@ -66,9 +81,9 @@ def run(cid,smoke=False,record_state=False):
             if not np.isfinite(p).all():raise FloatingPointError('Nonfinite material markers')
             points.append(p)
             if state_file:
-                state_file.write(json.dumps({'time':float(snap.time),'q':{b['name']:np.asarray(snap.q(b['name'])).tolist() for b in scene['bodies']}})+'\n')
+                state_file.write(json.dumps({'frame':len(points)-1,'time':float(snap.time),'q':{b['name']:np.asarray(snap.q(b['name'])).tolist() for b in scene['bodies']},'rigid_link_poses':{b['name']:json_value(sim.forward_kinematics(b['name'],np.asarray(snap.q(b['name'])).copy())) for b in scene['bodies'] if b['kind']=='rigid'}})+'\n')
                 state_file.flush()
-        observe();substeps=round(1/(30*scene['dt']))
+        observe();save();substeps=round(1/(30*scene['dt']))
         if e['regime']!='rigid':
             target=np.asarray(json.loads((DATA/'metadata'/e['regime']/(e['task']+'.json')).read_text())['markers']['translation'])
             error=float(np.max(np.linalg.norm(points[0]-target,axis=-1)))
@@ -83,18 +98,27 @@ def run(cid,smoke=False,record_state=False):
                     q,qd=sample_driver(d,t)
                     if d.get('mode')!='pd':raise ValueError('Xie moving driver must use the declared PD adaptation')
                     sim.set_control({d['name']:{'q_target':q.tolist(),'qd_target':qd.tolist()}})
-                if not sim.step():raise RuntimeError('SDK step failed')
+                ok=sim.step();snap=sim.snapshot();stats=json_value(snap.newton)
+                status['physical_steps']+=1;status['strictly_converged_steps']+=int(bool(stats.get('strictly_converged')))
+                status['backend_algorithm']=stats.get('backend_algorithm')
+                diagnostics_file.write(json.dumps({'time':float(snap.time),'ok':bool(ok),'newton':stats,'contacts':json_value(snap.contacts),'recovery':json_value(snap.recovery)})+'\n')
+                if not ok:
+                    diagnostics_file.flush();status['last_step_diagnostics']=stats
+                    raise EngineStepError(f"SDK step failed (failure_code={stats.get('failure_code')})")
+                if stats.get('backend_algorithm')!=scene['solver']['contact_solver']['model'] and scene['solver']['contact_solver']['model']=='velocity_primal':raise RuntimeError('Actual backend is not SAP/velocity_primal')
             observe()
             for d in e['drivers']:
                 target,_=sample_driver(d,frame/30);actual=np.asarray(sim.snapshot().q(d['name']))
                 tracking.append({'frame':frame,'body':d['name'],'position_error_m':float(np.linalg.norm(actual[:3]-target[:3])),'rotation_error_rad':float((Rotation.from_quat(actual[[4,5,6,3]])*Rotation.from_quat(target[[4,5,6,3]]).inv()).magnitude())})
-            if frame%30==0:save();print('FRAME',frame,'/',e['rollout_frames'],flush=True)
+            if frame%30==0:
+                diagnostics_file.flush();save();print('FRAME',frame,'/',e['rollout_frames'],'wall_seconds',round(time.monotonic()-start,2),flush=True)
         status['status']='smoke_passed' if smoke else 'completed'
     except Exception as ex:
-        status.update(status='timeout' if isinstance(ex,TimeoutError) else 'numerical_failure' if isinstance(ex,FloatingPointError) else 'adapter_error',error=str(ex),traceback=traceback.format_exc())
+        status.update(status='timeout' if isinstance(ex,TimeoutError) else 'numerical_failure' if isinstance(ex,FloatingPointError) else 'hard_failure' if isinstance(ex,EngineStepError) else 'adapter_error',error=str(ex),traceback=traceback.format_exc())
         traceback.print_exc()
     finally:
         if state_file:state_file.close()
+        if diagnostics_file:diagnostics_file.close()
         if sim:sim.close()
         (out/'control_tracking.json').write_text(json.dumps(tracking))
         save()
@@ -103,5 +127,5 @@ def run(cid,smoke=False,record_state=False):
 if __name__=='__main__':
     def timeout(signum,frame):raise TimeoutError('Case wall budget exceeded')
     signal.signal(signal.SIGTERM,timeout)
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('case');p.add_argument('--smoke',action='store_true');p.add_argument('--record-state',action='store_true')
-    args=p.parse_args();raise SystemExit(run(args.case,args.smoke,args.record_state))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('case');p.add_argument('--smoke',action='store_true');p.add_argument('--record-state',action='store_true');p.add_argument('--profile',default='xie_sdk_v1');p.add_argument('--result-key',default='xiephysic')
+    args=p.parse_args();raise SystemExit(run(args.case,args.smoke,args.record_state,args.profile,args.result_key))

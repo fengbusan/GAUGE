@@ -1,0 +1,46 @@
+{
+  "date": "2026-10-12",
+  "engine": "XiePhysic SAP 0.5.14 prerelease",
+  "engine_revision": "bb229d9cbc15eecf6cc7756004c8bb1ea071f11d",
+  "native_sha256": "4e7ff95a97723945aba8e9e181e7b45c78a2468a349a4ac654f785e7961ff88d",
+  "unit_tests_passed": 70,
+  "scenes": 55,
+  "completed": 55,
+  "regime_counts": {
+    "rigid": 29,
+    "deformable": 8,
+    "textile": 18
+  },
+  "full_recorded_frames": 22966,
+  "physical_steps": 172530,
+  "strict_steps": 171436,
+  "accepted_best_effort_steps": 1094,
+  "conventional_scored_cases": 53,
+  "special_metric_cases_withheld": 2,
+  "baseline_validation": {
+    "matched_mean_and_std": 102,
+    "generic_metric_rows": 106
+  },
+  "scoring_version": "published_table_reproduction_v3",
+  "official_equivalence_verified": false,
+  "frozen_scene_manifest_sha256": "0af7708f0068dfe28533acd1618abbcba8b903b6ace0516d49c1d33b8cae5bd1",
+  "native_policy": "JSON defaults; swept candidates on; frozen_sap; 10/10; relative 0.001; velocity 0.05; beta 1; sigma 0.0001; auto/BJ/fixed-budget linear",
+  "rp": false,
+  "normalization": {
+    "rule": "Split disconnected rigid vertex fans; every triangle coordinate/order/winding exactly retained",
+    "affected_cases": 6,
+    "official_frame_vertices": [
+      252,
+      256
+    ],
+    "changes_to_material_mass_inertia_drivers": false
+  },
+  "reuse": {
+    "cases": 49,
+    "scene_bytes_identical": true,
+    "all_physical_evaluation_fields_identical": true,
+    "original_receipts_retained": true,
+    "normalized_mesh_cases_fresh_full_gpu_runs": 6
+  },
+  "comparison_limit": "Only SAP freshly evaluated. Prior 0.5.13 IPC and native peer scores are separate batches, not same-version ablation. Historical Isaac textile scores predate material API fix. No official evaluator certification."
+}

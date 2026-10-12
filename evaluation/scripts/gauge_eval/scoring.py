@@ -8,6 +8,12 @@ from .observables import observe
 
 METRICS={'RMSE':rmse,'DTW':dtw}
 
+def validate_reused_evaluation(actual, target):
+    """Profile metadata may differ; immutable physics/observation inputs may not."""
+    bookkeeping={'profile','source_base_profile','source_base_scene_sha256','sap_scene_policy','rigid_topology_normalization'}
+    if actual['scene_sha256']!=target['scene_sha256'] or {k:v for k,v in actual.items()if k not in bookkeeping}!={k:v for k,v in target.items()if k not in bookkeeping}:
+        raise ValueError('Reused recording has different physical/evaluation inputs')
+
 def matches_printed(value, token):
     token=Decimal(str(token))
     if not np.isfinite(value) or not token.is_finite():return False
