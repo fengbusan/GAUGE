@@ -1,0 +1,496 @@
+{
+  "date": "2026-10-12",
+  "engine": "XiePhysic SAP 0.5.14 prerelease",
+  "engine_revision": "bb229d9cbc15eecf6cc7756004c8bb1ea071f11d",
+  "native_sha256": "4e7ff95a97723945aba8e9e181e7b45c78a2468a349a4ac654f785e7961ff88d",
+  "unit_tests_passed": 72,
+  "profile": "sap_native_protocol_0514_v4",
+  "scene_protocol": "Native peers fixed/kinematic; no IPC PD or added cradle gap",
+  "requested_parameters": {
+    "strategy": "frozen_sap",
+    "max_inner_iterations": 32,
+    "max_line_search_iterations": 12,
+    "swept_point_contacts": true,
+    "endpoint_point_ccd": true,
+    "inner_relative_tolerance": 0.0001,
+    "inner_velocity_tolerance": 0.0001
+  },
+  "pd": false,
+  "rp": false,
+  "cradle_surface_gap_m": 0,
+  "cases": 55,
+  "primary_status_counts": {
+    "completed": 37,
+    "protocol_blocked": 18
+  },
+  "reference_status_counts": {
+    "hard_failure": 11,
+    "completed": 7
+  },
+  "reference_attachment_stiffness_N_m": 100000,
+  "reference_ranking_included": false,
+  "native_driver_tracking_max_m_or_rad": 4.440945197894995e-15,
+  "kinematic_velocity_validation": {
+    "native_kinematic_point_velocity_matches_finite_difference": true,
+    "error_m_s": 2.6431677674795857e-11,
+    "target_pose_error_m": 0.0,
+    "runtime_newton_budget": 32,
+    "runtime_line_search_budget": 12,
+    "pd_or_dynamic_pose_rewrite_used": false
+  },
+  "full_recorded_frames": 14587,
+  "physical_steps": 93360,
+  "strict_steps": 86677,
+  "accepted_best_effort_steps": 6683,
+  "baseline_validation": {
+    "matched_mean_and_std": 102,
+    "generic_metric_rows": 106
+  },
+  "scoring_version": "published_table_reproduction_v3",
+  "official_equivalence_verified": false,
+  "ccd_scope": "Soft/rod position-only local filter; rigid/joint poses not clipped; not global zero penetration or momentum certification",
+  "comparison_limit": "Historical peers not rerun. Isaac cloth scores predate material API fix. Moving exact native soft grip unsupported; compliant reference excluded. 4 special metric rows withheld. Fractions must disclose eligible cohort and full scope.",
+  "frozen_scene_manifest_sha256": "5e1842250da13c2168ee87249c78c74f91c4d819081de65463bcc3518d3fbd49",
+  "primary": [
+    {
+      "case_id": "bouncing_ball_soft_ipc",
+      "status": "completed",
+      "frames": 159,
+      "scene_sha256": "5f96091bf56d1f904a2224c147b9b87ce3940bae99ce4d77f4e4a73c58269441"
+    },
+    {
+      "case_id": "foam_bending_hard_ipc",
+      "status": "completed",
+      "frames": 138,
+      "scene_sha256": "6c2de4f7866f3ebd3e22802b828ae376f938f83f3d078b4f6bf38b6dcb73fbb4"
+    },
+    {
+      "case_id": "foam_bending_soft_ipc",
+      "status": "completed",
+      "frames": 121,
+      "scene_sha256": "3a97ebce8d36b28a9293a7da3fa56c95c174239f83a85a50821e461006e47cd8"
+    },
+    {
+      "case_id": "foam_shearing_hard_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "437aa9588ce820b6fd64bd1d68bed5c499b09cf06d7621bc863f2e8121140e19"
+    },
+    {
+      "case_id": "foam_shearing_soft_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "145ce2becb5c0b1c19bf1d244c301ade7430b16c9c0aeb6d918197165dcdafcc"
+    },
+    {
+      "case_id": "foam_stretching_hard_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "13b4bb2440bbbd42b49610dcd48159b82f882c8d3efa6a29d70892ef0b6863ff"
+    },
+    {
+      "case_id": "foam_stretching_soft_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "c1aa1db57b43b8230a4c88dedaf53f302c92962796c8c14093e94184c43c17ed"
+    },
+    {
+      "case_id": "foam_twisting_hard_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "700cabc633b8eceda8211abf03f759a63717cac83882111d9154cc904430fa6b"
+    },
+    {
+      "case_id": "foam_twisting_soft_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "ffba7c8b0ff17a62cccaabb76f7bb89e196a240dc4d9c21bd62222441dc177c6"
+    },
+    {
+      "case_id": "newtons_cradle_metal_ipc",
+      "status": "completed",
+      "frames": 1211,
+      "scene_sha256": "c6b3656314a8064d59594287a690ad46fd943a77665b17211cd76a0f261f655a"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task1_ipc",
+      "status": "completed",
+      "frames": 137,
+      "scene_sha256": "b562cdacd02c1f9b25cc4587ecc8c30307a642e475f187bf6a51fc65ca26e931"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task2_ipc",
+      "status": "completed",
+      "frames": 101,
+      "scene_sha256": "262c51816905a5d40466c2836708c749bec9ee09496b7ed3f1303def2ba15cd0"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task3_ipc",
+      "status": "completed",
+      "frames": 109,
+      "scene_sha256": "c847e43d5616931bdc571f80f9ff2208f3b25cca5fd2a4827d961d85c11e4176"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task1_ipc",
+      "status": "completed",
+      "frames": 113,
+      "scene_sha256": "866b85e00bd5e21778bd27550680a6a7f79b75cca48c61ea80d6268100a0404f"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task2_ipc",
+      "status": "completed",
+      "frames": 97,
+      "scene_sha256": "36e074348a46388a5f31d0c50704eecf933d1e0ba42a7369f2c13209a08d1f42"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task3_ipc",
+      "status": "completed",
+      "frames": 99,
+      "scene_sha256": "1203f65b6a3aac973d170831445250d2f779938e6cb7210fc7244b038ef2291e"
+    },
+    {
+      "case_id": "pendulum_metal_ipc",
+      "status": "completed",
+      "frames": 3936,
+      "scene_sha256": "b3c83c605fd6f081b8d1a6b94705bd8a7ac1197458fbefe47134e767bb206a0c"
+    },
+    {
+      "case_id": "slope_contact_plastic_ipc",
+      "status": "completed",
+      "frames": 145,
+      "scene_sha256": "f4d467e67c34de73acc95638af1f2611f80ace01a13c22843c4e08db19011f71"
+    },
+    {
+      "case_id": "slope_contact_wood_ipc",
+      "status": "completed",
+      "frames": 188,
+      "scene_sha256": "fc5234451cd3803192cc035ead17d415fad19f063defee665ced10942882d0cd"
+    },
+    {
+      "case_id": "slope_slider_metal_task1_ipc",
+      "status": "completed",
+      "frames": 256,
+      "scene_sha256": "b82014f1346b53570ae43a28f8b73549eb1d1e72bd5a1bb51ce0bd943350d5bc"
+    },
+    {
+      "case_id": "slope_slider_metal_task2_ipc",
+      "status": "completed",
+      "frames": 533,
+      "scene_sha256": "06d656b8ed830da9625a50cc06b7991d52b8f3a9f02bb5599c6002811ec7dd16"
+    },
+    {
+      "case_id": "slope_slider_metal_task3_ipc",
+      "status": "completed",
+      "frames": 172,
+      "scene_sha256": "2f30cd78a8a3734cf1558b6943456251ebd7b8e18f229591f41173e13e7f1625"
+    },
+    {
+      "case_id": "slope_slider_plastic_task1_ipc",
+      "status": "completed",
+      "frames": 304,
+      "scene_sha256": "145c080f6a2391e366beec5ad9ae5cc53130e02a0f5db9d7d397ae0f3bd242cf"
+    },
+    {
+      "case_id": "slope_slider_plastic_task2_ipc",
+      "status": "completed",
+      "frames": 350,
+      "scene_sha256": "3a88687a71b538a91abcf9e76b6383643c2a93b766007d6e8ea1fb7363395952"
+    },
+    {
+      "case_id": "slope_slider_plastic_task3_ipc",
+      "status": "completed",
+      "frames": 280,
+      "scene_sha256": "44ff4365ae12a2c84bd595b48fd37155c5e8c4a8d30e3ef10a962727a5f79b58"
+    },
+    {
+      "case_id": "slope_slider_wood_task1_ipc",
+      "status": "completed",
+      "frames": 393,
+      "scene_sha256": "d38dff7e0e195b7e224c693d87e91eeb27a86c88afba0927076162c474d669c6"
+    },
+    {
+      "case_id": "slope_slider_wood_task2_ipc",
+      "status": "completed",
+      "frames": 263,
+      "scene_sha256": "256658c40e01492d73e42337f7475c34b83df9e62d77028dc2fb4eeeea613ac7"
+    },
+    {
+      "case_id": "slope_slider_wood_task3_ipc",
+      "status": "completed",
+      "frames": 155,
+      "scene_sha256": "ccdb6e070eeef6dea96a514ba1aaea253bb415ca522418332481c0fc999fa257"
+    },
+    {
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "a2d86aaf86e91c6e4238468acfedeef428d710924b14cb756cb156e35a35da40"
+    },
+    {
+      "case_id": "textile_bending_oxford_fabric_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "cfc95247d7f873f14d7e192748ea38a3b042d6362b4b266c852f4b49dc5fc0ee"
+    },
+    {
+      "case_id": "textile_bending_rayon_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "22f62f1c794b84ee3854e53b482eec1c04520051b260cad7e843b81767eaa93a"
+    },
+    {
+      "case_id": "textile_bending_satin_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "9bb4aa415720e69b9f48572ffd0ac34fbe87d18758fc40951f455ab3732d11a6"
+    },
+    {
+      "case_id": "textile_bending_synthetic_leather_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "50905b46b78cd84086334b8c1fc075c74b2036e561ef26d0f237ec7b3656328d"
+    },
+    {
+      "case_id": "textile_bending_uniform_cloth_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "2bebe2c3f7d01cdf2a6cb0acdc26f5c41d55d9cdbf29450bb3bb32a1b9b7a60b"
+    },
+    {
+      "case_id": "textile_flinging_nylon_taslan_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "77af98f23dbdf2a60c9a0afed923bd3772d0b780032afcf66d1c87169a7fa8b1"
+    },
+    {
+      "case_id": "textile_flinging_oxford_fabric_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "51dcbe0ed322f71241cfafd286d9bbe73ec0df08e17b0df50619fa3bdf966484"
+    },
+    {
+      "case_id": "textile_flinging_rayon_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "784155c1c7723450a5982d4fe19ad2e5ac37cd3bc610986566f9724d3d3c74f2"
+    },
+    {
+      "case_id": "textile_flinging_satin_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "fc34bf4b3cb8d8c53206d6fee9fae718fa4eb5c371261baf547937357aea4ab0"
+    },
+    {
+      "case_id": "textile_flinging_synthetic_leather_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "03271d5f2c791ea2942ef6eb755232fc37046c1a7b76db535c12fcafc14ce44b"
+    },
+    {
+      "case_id": "textile_flinging_uniform_cloth_ipc",
+      "status": "protocol_blocked",
+      "frames": 1,
+      "scene_sha256": "76896a444eac1e32463105c719f49339a3e882a4b421af0517896bb3ff4e46eb"
+    },
+    {
+      "case_id": "textile_stretching_nylon_taslan_ipc",
+      "status": "completed",
+      "frames": 552,
+      "scene_sha256": "ac365ce8a75af90e5c9d6d090aa0570a789e8dfb35fc39291abcdae48fbb307d"
+    },
+    {
+      "case_id": "textile_stretching_oxford_fabric_ipc",
+      "status": "completed",
+      "frames": 706,
+      "scene_sha256": "4d16e36c222eb84789864c53f82a7b3cd03a06380f69a923f734da29a76f1662"
+    },
+    {
+      "case_id": "textile_stretching_rayon_ipc",
+      "status": "completed",
+      "frames": 554,
+      "scene_sha256": "8c6795fdd1b904768af883450d09b0e06b288cc54c309a6a90420cfe24d1a11e"
+    },
+    {
+      "case_id": "textile_stretching_satin_ipc",
+      "status": "completed",
+      "frames": 545,
+      "scene_sha256": "f13c246825673f956e55e5675c63366c1256474556bd9b3170b7a4472404f38b"
+    },
+    {
+      "case_id": "textile_stretching_synthetic_leather_ipc",
+      "status": "completed",
+      "frames": 634,
+      "scene_sha256": "6805b3d48fdb9fe992eca7f4332e0f4f4d6d79188f61e32a43c364a203959868"
+    },
+    {
+      "case_id": "textile_stretching_uniform_cloth_ipc",
+      "status": "completed",
+      "frames": 531,
+      "scene_sha256": "d7af456649e8c09b3f4b896c736fc0810da9981a51a6588de81446cf5bd43317"
+    },
+    {
+      "case_id": "turntable_metal_task1_ipc",
+      "status": "completed",
+      "frames": 269,
+      "scene_sha256": "b8ac2f6c93498306155e4672f809dd7427f31dd32c17b53495a696488957bef1"
+    },
+    {
+      "case_id": "turntable_metal_task2_ipc",
+      "status": "completed",
+      "frames": 125,
+      "scene_sha256": "80883a3c0703cc7eeb78b3c4d2366fcee8d3fd7c3a9ea7246b13f2c77e0a001a"
+    },
+    {
+      "case_id": "turntable_metal_task3_ipc",
+      "status": "completed",
+      "frames": 237,
+      "scene_sha256": "4be644d93fbc5a38a073a77b4006ce58b28ad17b044fe77909f525db8dbb126b"
+    },
+    {
+      "case_id": "turntable_plastic_task1_ipc",
+      "status": "completed",
+      "frames": 262,
+      "scene_sha256": "cc482f798a2d6edcf24b0c1e218ffcf948f4cdd164fd0e5e682bbd7ed6a8d5c7"
+    },
+    {
+      "case_id": "turntable_plastic_task2_ipc",
+      "status": "completed",
+      "frames": 71,
+      "scene_sha256": "9bd74caa9ef85a83fb4adf57d9a91743d95c8e5d939396c2dc2af38471c1bc69"
+    },
+    {
+      "case_id": "turntable_plastic_task3_ipc",
+      "status": "completed",
+      "frames": 196,
+      "scene_sha256": "9d81eae6b80d6793b377e404cb2bc88993fee112e69a503002efff67809fe0b4"
+    },
+    {
+      "case_id": "turntable_wood_task1_ipc",
+      "status": "completed",
+      "frames": 237,
+      "scene_sha256": "6384e66f850387f7178f7edb0312dc2733c5debc443c822576d6b1330ed5f0b5"
+    },
+    {
+      "case_id": "turntable_wood_task2_ipc",
+      "status": "completed",
+      "frames": 85,
+      "scene_sha256": "7155e8388aeec5d751b964672c33fac2bee0657c82d5c6b5c859043f22d62a73"
+    },
+    {
+      "case_id": "turntable_wood_task3_ipc",
+      "status": "completed",
+      "frames": 305,
+      "scene_sha256": "3d93a83b4d447dfb8da2955da8d4e31f57c0582cd61bcb90018fc46e61e3cc0d"
+    }
+  ],
+  "reference": [
+    {
+      "case_id": "foam_shearing_hard_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "foam_shearing_soft_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "foam_stretching_hard_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "foam_stretching_soft_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "foam_twisting_hard_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "foam_twisting_soft_ipc",
+      "status": "hard_failure",
+      "frames": 2,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "status": "completed",
+      "frames": 452,
+      "error": null
+    },
+    {
+      "case_id": "textile_bending_oxford_fabric_ipc",
+      "status": "completed",
+      "frames": 534,
+      "error": null
+    },
+    {
+      "case_id": "textile_bending_rayon_ipc",
+      "status": "completed",
+      "frames": 630,
+      "error": null
+    },
+    {
+      "case_id": "textile_bending_satin_ipc",
+      "status": "completed",
+      "frames": 459,
+      "error": null
+    },
+    {
+      "case_id": "textile_bending_synthetic_leather_ipc",
+      "status": "hard_failure",
+      "frames": 859,
+      "error": "SDK step failed (failure_code=8)"
+    },
+    {
+      "case_id": "textile_bending_uniform_cloth_ipc",
+      "status": "completed",
+      "frames": 976,
+      "error": null
+    },
+    {
+      "case_id": "textile_flinging_nylon_taslan_ipc",
+      "status": "completed",
+      "frames": 458,
+      "error": null
+    },
+    {
+      "case_id": "textile_flinging_oxford_fabric_ipc",
+      "status": "hard_failure",
+      "frames": 16,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "textile_flinging_rayon_ipc",
+      "status": "completed",
+      "frames": 500,
+      "error": null
+    },
+    {
+      "case_id": "textile_flinging_satin_ipc",
+      "status": "hard_failure",
+      "frames": 236,
+      "error": "SDK step failed (failure_code=3)"
+    },
+    {
+      "case_id": "textile_flinging_synthetic_leather_ipc",
+      "status": "hard_failure",
+      "frames": 53,
+      "error": "SDK step failed (failure_code=9)"
+    },
+    {
+      "case_id": "textile_flinging_uniform_cloth_ipc",
+      "status": "hard_failure",
+      "frames": 376,
+      "error": "SDK step failed (failure_code=3)"
+    }
+  ]
+}

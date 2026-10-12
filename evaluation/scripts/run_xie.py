@@ -16,6 +16,9 @@ from gauge_eval.paths import ROOT, DATA
 class EngineStepError(RuntimeError):
     """Native SDK rejection, distinct from Python adapter/import errors."""
 
+class ProtocolBlocked(RuntimeError):
+    """Required native semantics are unavailable; no adapter approximation."""
+
 def sample_driver(d,t):
     p=np.asarray(d['positions']);rot=Rotation.from_quat(d['quaternions_xyzw'])
     if len(p)<2:
@@ -68,6 +71,14 @@ def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiep
         expected_sha=os.environ.get('GAUGE_XIE_SDK_SHA256')
         if expected_sha and status.get('sdk_binary_sha256')!=expected_sha:raise ValueError('SDK binary SHA256 differs from the selected release')
         sim=sdk.Sim.from_json(str(folder/'scene.json'))
+        native=e.get('driver_protocol')=='native_kinematic_begin_step'
+        marker_ids=e.get('marker_vertex_ids')
+        if native and e['regime']!='rigid':
+            from scipy.optimize import linear_sum_assignment
+            initial=np.asarray(sim.snapshot().q(e['body'])).reshape(-1,3)
+            target=np.asarray(json.loads((DATA/'metadata'/e['regime']/(e['task']+'.json')).read_text())['markers']['translation'])
+            rows,marker_ids=linear_sum_assignment(np.linalg.norm(target[:,None]-initial[None],axis=-1))
+            if not np.array_equal(rows,np.arange(len(target))):raise ValueError('Incomplete native marker assignment')
         diagnostics_file=(out/'diagnostics.jsonl').open('w')
         if record_state:
             state_file=(out/'state_q.jsonl').open('w')
@@ -77,7 +88,7 @@ def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiep
             if 'articulated'in e:
                 p=np.asarray([np.asarray(b['pivot'])+Rotation.from_rotvec(np.asarray(b['axis'])*snap.q(b['name'])[0]).apply(b['offset']) for b in e['articulated']])
             elif e['regime']=='rigid':p=np.asarray(snap.q(e['body'])[:3])[None].copy()
-            else:p=np.asarray(snap.q(e['body'])).reshape(-1,3)[e['marker_vertex_ids']].copy()
+            else:p=np.asarray(snap.q(e['body'])).reshape(-1,3)[marker_ids].copy()
             if not np.isfinite(p).all():raise FloatingPointError('Nonfinite material markers')
             points.append(p)
             if state_file:
@@ -87,17 +98,31 @@ def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiep
         if e['regime']!='rigid':
             target=np.asarray(json.loads((DATA/'metadata'/e['regime']/(e['task']+'.json')).read_text())['markers']['translation'])
             error=float(np.max(np.linalg.norm(points[0]-target,axis=-1)))
-            mapping={'algorithm':'Frozen Hungarian native vertex IDs; verified against actual initial SDK positions','native_ids':e['marker_vertex_ids'],'max_error_m':error,'passed':error<.01}
+            mapping={'algorithm':'Direct Hungarian unique assignment to native SDK initial positions'if native else'Frozen Hungarian native vertex IDs; verified against actual initial SDK positions','native_ids':json_value(marker_ids),'max_error_m':error,'passed':error<.01}
             (out/'marker_mapping.json').write_text(json.dumps(mapping,indent=2))
             if not mapping['passed']:raise ValueError('Native marker mapping exceeds 1 cm')
         if not np.isclose(substeps*scene['dt'],1/30,rtol=0,atol=1e-12):raise ValueError('dt must divide 30 Hz output interval')
+        if e.get('protocol_blocked_reason'):raise ProtocolBlocked(e['protocol_blocked_reason'])
+        if native:
+            for b in scene['bodies']:
+                c=b.get('controller')or{}
+                if c.get('gravity_compensation')or any(float(g.get(k,0))!=0 for g in c.get('gains',{}).values()for k in ['kp','kd']):
+                    raise ValueError('Native SAP profile contains an active PD/controller adaptation')
+            status.update(driver_protocol=e['driver_protocol'],moving_grip_policy=e.get('moving_grip_policy'),ipc_adaptations_used=False,native_sap_parameters=e['native_sap_parameters'],endpoint_ccd_scope=e['endpoint_ccd_scope'])
         for frame in range(1,min(3,e['rollout_frames']) if smoke else e['rollout_frames']):
             for sub in range(substeps):
                 t=((frame-1)*substeps+sub+1)*scene['dt']
                 for d in e['drivers']:
-                    q,qd=sample_driver(d,t)
-                    if d.get('mode')!='pd':raise ValueError('Xie moving driver must use the declared PD adaptation')
-                    sim.set_control({d['name']:{'q_target':q.tolist(),'qd_target':qd.tolist()}})
+                    q,qd=sample_driver(d,t-scene['dt'] if native else t)
+                    if native:
+                        if d.get('mode')!='kinematic':raise ValueError('Native SAP driver must be kinematic')
+                        # Native SAP owns no boundary q integration. Supply the
+                        # start pose and prescribed twist used by this step,
+                        # then publish the exact end pose for recording below.
+                        sim.set_kinematic_target(d['name'],q.tolist(),qd.tolist())
+                    else:
+                        if d.get('mode')!='pd':raise ValueError('Xie moving driver must use the declared PD adaptation')
+                        sim.set_control({d['name']:{'q_target':q.tolist(),'qd_target':qd.tolist()}})
                 ok=sim.step();snap=sim.snapshot();stats=json_value(snap.newton)
                 status['physical_steps']+=1;status['strictly_converged_steps']+=int(bool(stats.get('strictly_converged')))
                 status['backend_algorithm']=stats.get('backend_algorithm')
@@ -106,6 +131,10 @@ def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiep
                     diagnostics_file.flush();status['last_step_diagnostics']=stats
                     raise EngineStepError(f"SDK step failed (failure_code={stats.get('failure_code')})")
                 if stats.get('backend_algorithm')!=scene['solver']['contact_solver']['model'] and scene['solver']['contact_solver']['model']=='velocity_primal':raise RuntimeError('Actual backend is not SAP/velocity_primal')
+                if native:
+                    for d in e['drivers']:
+                        q,qd=sample_driver(d,t)
+                        sim.set_kinematic_target(d['name'],q.tolist(),qd.tolist())
             observe()
             for d in e['drivers']:
                 target,_=sample_driver(d,frame/30);actual=np.asarray(sim.snapshot().q(d['name']))
@@ -114,7 +143,7 @@ def run(cid,smoke=False,record_state=False,profile='xie_sdk_v1',result_key='xiep
                 diagnostics_file.flush();save();print('FRAME',frame,'/',e['rollout_frames'],'wall_seconds',round(time.monotonic()-start,2),flush=True)
         status['status']='smoke_passed' if smoke else 'completed'
     except Exception as ex:
-        status.update(status='timeout' if isinstance(ex,TimeoutError) else 'numerical_failure' if isinstance(ex,FloatingPointError) else 'hard_failure' if isinstance(ex,EngineStepError) else 'adapter_error',error=str(ex),traceback=traceback.format_exc())
+        status.update(status='protocol_blocked' if isinstance(ex,ProtocolBlocked) else 'timeout' if isinstance(ex,TimeoutError) else 'numerical_failure' if isinstance(ex,FloatingPointError) else 'hard_failure' if isinstance(ex,EngineStepError) else 'adapter_error',error=str(ex),traceback=traceback.format_exc())
         traceback.print_exc()
     finally:
         if state_file:state_file.close()

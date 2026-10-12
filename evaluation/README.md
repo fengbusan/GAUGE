@@ -94,4 +94,28 @@ Replay uses recorded SDK forward kinematics and surface topology, with no physic
 
 The separate [SAP validation receipt](sap_0514_validation.json) records this prerelease's 55/55 completed full rollouts, 70 CPU checks, exact runtime identity and lossless normalization. It also discloses accepted best-effort steps and score-reproduction limits; completion is not a claim of official-equivalent physics or scores.
 
+## Native SAP protocol with a frozen 32/12 budget
+
+`prepare_sap_native.py` starts from the **native-peer recipes**, rather than the IPC adaptations. It maps static actors to stationary SDK kinematic bodies, drives moving actors with native kinematic poses and explicit twists, and retains passive dynamic actors with a null controller. It restores the official Newton's-cradle zero surface gap / 20 mm center spacing. No PD, RP, collision shrinking or gap enlargement is used.
+
+All cases receive the same preselected SAP settings: nonlinear budget **32**, line search **12**, relative and velocity tolerances **1e-4**, swept start candidates and endpoint CCD **enabled**. Beta/sigma, linear policy, measured materials, density, mass/inertia, time steps, bending conversion and scoring remain unchanged. These are custom uniform settings, not the release defaults.
+
+```bash
+python scripts/prepare_sap_native.py --profile sap_native_protocol_0514_v4
+python scripts/run_suite.py --engine xiephysic --profile sap_native_protocol_0514_v4 \
+  --result-key sap_native_v4 --record-state
+python scripts/score.py --xie-profile sap_native_protocol_0514_v4 \
+  --xie-result-key sap_native_v4 --report-name sap_native_v4_scores.json
+```
+
+Convex admission uses original triangle support planes, surface area and volume. Only geometrically equivalent centered boxes become analytical boxes; other exact convex surfaces use the SDK's convex route; concave surfaces remain original meshes. Disconnected rigid vertex fans may be split losslessly. These rules never consult a trajectory or score. Authored USD contact exclusions use the previously audited native ownership mapping, with **zero attachment stiffness** where static hard vertex constraints provide the actual boundary condition. Filtering adds no hidden clamp force.
+
+Native kinematic commands explicitly supply the beginning-of-step pose and body-frame twist used by SAP. The caller publishes the prescribed end pose after stepping; free/dynamic actors are never overwritten. Independent finite differences of a rotating plate's material point validate the velocity convention. Markers use direct Hungarian assignment to actual native initial positions, with a 1 cm admission threshold.
+
+SDK 0.5.14 static `fixed_vertices` are exact stationary Dirichlet boundaries. Its moving soft attachment / position target APIs are compliant; exact moving soft-rigid attachments are explicitly unsupported. The strict protocol records 18 such configurations as `protocol_blocked`. A separate `--moving-grip compliant` profile can evaluate the SDK-native compliant attachment with the **previously declared uniform 100000 N/m** stiffness and a disclosure flag. Those reference scores must not be silently merged into strict-protocol rankings or counted as exact-boundary successes. Unsupported, failed and partial cases never receive zero scores.
+
+Endpoint CCD is a **local soft/rod position filter**; it does not clip rigid/joint poses or generally certify EE/EF/SDF contacts, and velocity is committed separately. Enabling the option does not establish whole-scene zero penetration, momentum conservation or validity of the independently corrected mesh path. Rejection after clipping is retained with its original native diagnostics; no hidden switch-off or parameter tuning is performed.
+
+The [native protocol validation receipt](sap_native_0514_validation.json) records 37 completed strict rollouts and 18 unsupported moving exact grips, plus a separate compliant reference with 7 completed and 11 native step rejections. All 72 CPU checks pass. Driver pose tracking and an independent point-velocity check validate the kinematic mapping. Ranking fractions disclose both eligible common cohorts and the full configuration scope; reduced coverage must not be interpreted as improved overall fidelity.
+
 Release packaging checks are recorded in [validation.json](validation.json): 67 CPU tests, all 110 input roundtrips, dataset/mesh hashes, a full Xie 0.5.13 case with identical existing scores, and short Xie RP/Isaac textile SDK smoke runs. This is not a fresh complete four-engine benchmark.
