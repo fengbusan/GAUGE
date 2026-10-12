@@ -121,3 +121,17 @@ The [native protocol validation receipt](sap_native_0514_validation.json) record
 Release packaging checks are recorded in [validation.json](validation.json): 67 CPU tests, all 110 input roundtrips, dataset/mesh hashes, a full Xie 0.5.13 case with identical existing scores, and short Xie RP/Isaac textile SDK smoke runs. This is not a fresh complete four-engine benchmark.
 
 Ranking follows the public website's two-decimal engine-error display for both local and published comparisons, with competition ties (1, 1, 3). Numeric exports may drop trailing zeroes (1.00 becomes 1); this never reduces an entire row to integer precision. Raw errors, normalization and baseline validation remain unchanged.
+
+## Endpoint CCD off comparison
+
+Pass `--no-endpoint-ccd` to `prepare_sap_native.py` to disable only the SAP endpoint point filter. The default remains enabled. Both strict and compliant-reference profiles retain 32/12, both 1e-4 tolerances, swept-start candidates, materials, native boundaries, drivers and scoring. Never mix the compliant reference into strict rankings.
+
+```bash
+python scripts/prepare_sap_native.py --profile sap_native_no_endpoint_0514_v5 --no-endpoint-ccd
+python scripts/run_suite.py --engine xiephysic --profile sap_native_no_endpoint_0514_v5 \
+  --result-key sap_native_v5 --record-state
+python scripts/score.py --xie-profile sap_native_no_endpoint_0514_v5 \
+  --xie-result-key sap_native_v5 --report-name sap_native_v5_scores.json
+```
+
+The experiment audits every scene/evaluation input against the enabled version. Asset paths may differ only when file bytes match. Physics batches and GPU rendering run serially. Every rollout is regenerated, with source hashes and actual runtime diagnostics retained; disabling CCD is not assumed to fix native grip support or establish valid contact behavior.

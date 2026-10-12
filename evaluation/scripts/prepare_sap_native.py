@@ -8,7 +8,7 @@ from prepare_sap import load_sdk
 from gauge_eval.paths import ROOT, SOURCE
 from gauge_eval.scenes import obj
 from gauge_eval.mesh_topology import split_disconnected_vertex_fans
-from gauge_eval.sap_protocol import freeze_solver, native_geometry_kind, SAP_PARAMETERS
+from gauge_eval.sap_protocol import freeze_solver, native_geometry_kind
 
 def sha(path):
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -17,6 +17,8 @@ def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--profile',default='sap_native_protocol_0514_v4')
     p.add_argument('--moving-grip',choices=['strict','compliant'],default='strict')
+    p.add_argument('--endpoint-ccd',action=argparse.BooleanOptionalAction,default=True,
+                   help='Only toggle SAP endpoint point CCD; keep the other frozen settings')
     a=p.parse_args();sdk=load_sdk();target=ROOT/'configs'/a.profile;target.mkdir(parents=True,exist_ok=True)
     records=[]
     for case in json.loads((SOURCE/'recipes/manifest.json').read_text())['cases']:
@@ -28,7 +30,7 @@ def main():
         # Native-peer recipes omit engine-specific numerical schema fields.
         # Retain the previously audited SAP/SDK material-clearance block, while
         # replacing the boundary/asset protocol and the requested budget.
-        s['solver']=freeze_solver(legacy['solver'])
+        s['solver']=freeze_solver(legacy['solver'],endpoint_ccd=a.endpoint_ccd)
         # Authored USD contact exclusions are independent of boundary force
         # models. Reuse their audited vertex/face translation into SDK-native
         # attachment ownership, with ZERO stiffness for exact static grips.
@@ -93,11 +95,11 @@ def main():
                  collision_mapping=geometry,ipc_adaptations_used=False,
                  cradle_surface_gap_m=0 if e['metric']=='cradle'else None,
                  endpoint_ccd_scope='Soft/rod position-only local filter; rigid/joint poses are not clipped; SDF/EE/EF coverage is limited',
-                 native_sap_parameters=SAP_PARAMETERS)
+                 native_sap_parameters=s['solver']['velocity_primal'])
         (out/'scene.json').write_text(json.dumps(s,indent=2));e['scene_sha256']=sha(out/'scene.json')
         (out/'evaluation.json').write_text(json.dumps(e,indent=2))
         records.append({**case,'scene_sha256':e['scene_sha256'],'evaluation_sha256':sha(out/'evaluation.json'),'protocol_blocked_reason':blocked,'collision_mapping':geometry})
-    receipt={'profile':a.profile,'base_profile':'native_sdk_v1','version':sdk.__version__,'native_sha256':sha(sdk._C.__file__),'solver':'velocity_primal/frozen_sap','requested_parameters':SAP_PARAMETERS,'moving_grip_policy':a.moving_grip,'pd_used':False,'rp_used':False,'cradle_gap_adaptation':False,'no_per_case_score_tuning':True,'cases':records}
+    receipt={'profile':a.profile,'base_profile':'native_sdk_v1','version':sdk.__version__,'native_sha256':sha(sdk._C.__file__),'solver':'velocity_primal/frozen_sap','requested_parameters':freeze_solver({},endpoint_ccd=a.endpoint_ccd)['velocity_primal'],'moving_grip_policy':a.moving_grip,'pd_used':False,'rp_used':False,'cradle_gap_adaptation':False,'no_per_case_score_tuning':True,'cases':records}
     (target/'manifest.json').write_text(json.dumps(receipt,indent=2));print('Frozen',len(records),'native SAP cases;',sum(bool(c['protocol_blocked_reason'])for c in records),'exact-grip protocol blocks')
 
 if __name__=='__main__':main()

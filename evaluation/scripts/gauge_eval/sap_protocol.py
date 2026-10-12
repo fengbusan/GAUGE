@@ -15,7 +15,7 @@ SAP_PARAMETERS = {
 }
 
 
-def freeze_solver(solver):
+def freeze_solver(solver, *, endpoint_ccd=True):
     result = copy.deepcopy(solver)
     result.update(integrator='bdf1', contact_solver={'model': 'velocity_primal'},
                   reduced_primal_recovery={'enabled': False},
@@ -23,6 +23,7 @@ def freeze_solver(solver):
                   velocity_primal=copy.deepcopy(SAP_PARAMETERS),
                   linear_solver={'type': 'auto', 'convergence': 'fixed_iterations',
                                  'preconditioner': {'type': 'block_jacobi'}})
+    result['velocity_primal']['endpoint_point_ccd'] = endpoint_ccd
     return result
 
 

@@ -56,7 +56,7 @@ def main():
                 except (ValueError,FileNotFoundError) as ex:result.update(status='invalid_recording',score_error=str(ex))
             row['engines'][engine]=result
         rows.append(row);print('SCORED',cid,flush=True)
-    report={'scoring_version':'published_table_reproduction_v3','xie_profile':args.xie_profile,'xie_result_key':args.xie_result_key,'official_equivalence_verified':False,'baseline_validation':{'matched_mean_and_std':matched,'generic_metric_rows':count},'rows':rows,'rankings':{source:rank_summary(rows,source)for source in ['published','local']},'ranking_policy':'Per metric and common eligible cases only; half-up rounding to least precise published peer token; competition ranks 1,1,3; no aggregate score; failed/blocked/withheld cases disclosed, never assigned zero.'}
+    report={'scoring_version':'published_table_reproduction_v3','xie_profile':args.xie_profile,'xie_result_key':args.xie_result_key,'official_equivalence_verified':False,'baseline_validation':{'matched_mean_and_std':matched,'generic_metric_rows':count},'rows':rows,'rankings':{source:rank_summary(rows,source)for source in ['published','local']},'ranking_policy':'Per metric and common eligible cases only; half-up rounding to the official website two-decimal display; competition ranks 1,1,3; no aggregate score; failed/blocked/withheld cases disclosed, never assigned zero.'}
     out=ROOT/'results';out.mkdir(exist_ok=True);(out/args.report_name).write_text(json.dumps(report,indent=2,ensure_ascii=False));print(report['baseline_validation'])
     return report
 

@@ -10,6 +10,15 @@ def test_budget_override_retains_material_clearance_and_linear_policy():
     assert result['max_newton_iters']==32 and result['max_line_search_iters']==12
     assert result['reduced_primal_recovery']=={'enabled':False}
 
+def test_endpoint_ccd_toggle_has_no_other_effect():
+    original={'d_hat':.001,'friction_mu':.7,'ground_restitution':.6}
+    enabled=freeze_solver(original)
+    disabled=freeze_solver(original,endpoint_ccd=False)
+    assert disabled['velocity_primal']['endpoint_point_ccd'] is False
+    disabled['velocity_primal']['endpoint_point_ccd']=True
+    assert disabled==enabled
+    assert SAP_PARAMETERS['endpoint_point_ccd'] is True
+
 def test_convex_admission_never_fills_a_concavity_or_moves_a_box():
     from itertools import product
     v=np.array(list(product([-1.,1.],repeat=3)))
