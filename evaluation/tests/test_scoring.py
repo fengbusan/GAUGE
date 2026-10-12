@@ -52,3 +52,12 @@ def test_missing_published_peer_is_excluded_not_zero_ranked():
     result=rank_summary([row],'published')['RMSE']
     assert result['all']['engines']['xiephysic']['first_pct']==100
     assert result['rigid']['n']==1 and result['textile']['n']==0
+
+def test_serialized_integer_does_not_reduce_official_display_precision():
+    row={'case_id':'case','regime':'rigid','ranking_eligible':True,
+         'baseline_audit':{'RMSE':{'mean_matches':True,'std_matches':True}},
+         'published':{'RMSE':{'engines':{'IsaacSim':'1','Genesis':'0.83','Newton':'1.15'}}},
+         'engines':{'xiephysic':{'scores':{'RMSE':{'normalized':0.81045}}}}}
+    result=rank_summary([row],'published')['RMSE']['all']['cases'][0]
+    assert result['decimal_places']==2
+    assert result['ranks']=={'xiephysic':1,'isaac':3,'genesis':2,'newton':4}

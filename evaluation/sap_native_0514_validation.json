@@ -3,7 +3,7 @@
   "engine": "XiePhysic SAP 0.5.14 prerelease",
   "engine_revision": "bb229d9cbc15eecf6cc7756004c8bb1ea071f11d",
   "native_sha256": "4e7ff95a97723945aba8e9e181e7b45c78a2468a349a4ac654f785e7961ff88d",
-  "unit_tests_passed": 72,
+  "unit_tests_passed": 73,
   "profile": "sap_native_protocol_0514_v4",
   "scene_protocol": "Native peers fixed/kinematic; no IPC PD or added cradle gap",
   "requested_parameters": {
@@ -492,5 +492,7 @@
       "frames": 376,
       "error": "SDK step failed (failure_code=3)"
     }
-  ]
+  ],
+  "rank_display_decimals": 2,
+  "rank_precision_source": "https://internrobotics.github.io/GAUGE/#results"
 }

@@ -57,7 +57,11 @@ def rank_summary(rows,source):
                 try:
                     decimals=[Decimal(str(tokens[k]))for k in public_ids.values()]
                     if not all(v.is_finite()for v in decimals):continue
-                    places=min(max(0,-v.as_tuple().exponent)for v in decimals)
+                    # The public results display all engine errors with two
+                    # decimals. Numeric serialization drops trailing zeroes
+                    # (1.00 -> '1'); that must not turn an entire row into an
+                    # integer-precision tie. Ranking never changes raw scores.
+                    places=2
                     if source=='published':
                         own=row['engines']['xiephysic']['scores'][metric]['normalized']
                         values={'xiephysic':own,**{k:float(tokens[v])for k,v in public_ids.items()}}
