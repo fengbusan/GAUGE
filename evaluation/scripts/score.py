@@ -16,7 +16,7 @@ def main():
     rows=[];matched=0;count=0
     for case in cases:
         cid=case['case_id'];ep=ROOT/'configs'/args.xie_profile/cid/'evaluation.json';e=json.loads(ep.read_text());special=e['metric']in ['pendulum','cradle']
-        flags=e['comparison_flags'];row={**case,'comparison_flags':flags,'published':public.get(cid,{}),'engines':{},'ranking_eligible':not special and not set(flags)&{'material_label_alias','material_label_cross_match','event_window_differs','marker_outlier'},'official_equivalence_verified':False}
+        flags=e['comparison_flags'];row={**case,'subtask':e.get('subtask'),'comparison_flags':flags,'published':public.get(cid,{}),'engines':{},'ranking_eligible':not special and not set(flags)&{'material_label_alias','material_label_cross_match','event_window_differs','marker_outlier'},'official_equivalence_verified':False}
         if special:
             row.update(ranking_eligible=False,score_status='withheld_unverified_special_metric')
             for engine in [] if args.references_only else ['xiephysic','isaac','genesis','newton']:
