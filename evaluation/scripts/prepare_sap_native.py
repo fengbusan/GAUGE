@@ -76,7 +76,7 @@ def main():
         blocked=None
         if e.get('controls'):
             if a.moving_grip=='strict':
-                blocked='SDK 0.5.14 has no exact moving soft-rigid grip: native fixed_vertices are static Dirichlet only; moving position/attachment APIs are compliant. No PD, moving fixed-mask rewrite or free-vertex projection used.'
+                blocked=f'SDK {sdk.__version__} has no exact moving soft-rigid grip: native fixed_vertices are static Dirichlet only; moving position/attachment APIs are compliant. No PD, moving fixed-mask rewrite or free-vertex projection used.'
             else:
                 # The already declared, uniform constitutive attachment stiffness
                 # remains unchanged. Only moving grip groups have nonzero stiffness.

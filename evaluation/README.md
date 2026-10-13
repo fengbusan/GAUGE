@@ -135,3 +135,13 @@ python scripts/score.py --xie-profile sap_native_no_endpoint_0514_v5 \
 ```
 
 The experiment audits every scene/evaluation input against the enabled version. Asset paths may differ only when file bytes match. Physics batches and GPU rendering run serially. Every rollout is regenerated, with source hashes and actual runtime diagnostics retained; disabling CCD is not assumed to fix native grip support or establish valid contact behavior.
+
+## SAP 0.5.17 rerun
+
+Select the new SDK with `GAUGE_XIE_SDK_PATH`, `GAUGE_XIE_SDK_VERSION=0.5.17`, and the chosen release's `GAUGE_XIE_SDK_SHA256`. Preparation and rollout both verify the actual imported runtime identity. Keep the native protocol's explicit 32/12 budgets, relative and velocity tolerances of 1e-4, swept candidates enabled and endpoint CCD disabled. CUDA graph execution remains at the release default; disabling graphs is a separate diagnostic, not an unreported benchmark adjustment.
+
+The version comparison retains byte-identical scene inputs from the previous 0.5.14 endpoint-off batch. SDK code and any unauthored release defaults may change; this is an engine-version comparison, not a single-fix ablation. For the current published benchmark, moving soft grips use the native compliant attachment implementation with uniform 100000 N/m stiffness. All completed cases are presented together; exact-grip availability is not an official GAUGE eligibility requirement. This supersedes the earlier strict-grip diagnostic classification above. The result selection is fixed by scene requirements (37 native static/rigid cases plus 18 native moving-grip cases), never by which score is lower. Keep the historical strict-grip interface probe as a diagnostic, not as a task failure. Validate full trajectories, actual backend, strict/best-effort steps, input hashes and marker admission before publishing new scores. Saved 30 Hz tetrahedral checks cannot certify every physical substep. Keep historical third-party results explicitly labeled rather than relabeling them as fresh peer runs.
+
+To reproduce the current moving-grip mapping, explicitly prepare with `--moving-grip compliant --no-endpoint-ccd`. No PD controller is used. Native attachment implementation details remain available in configuration receipts.
+
+The [0.5.17 validation receipt](sap_native_0517_validation.json) records all 55 complete native mappings, both comparison sources, trajectory hashes and convergence counts. This is an independent rerun, not official scoring certification.

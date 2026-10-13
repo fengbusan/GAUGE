@@ -1,0 +1,4057 @@
+{
+  "sdk_version": "0.5.17",
+  "engine_revision": "f630e5140b5118261c9328e1b614d06af74830f3",
+  "native_sha256": "f03aea51b5126388a28c3995854f4e17c922c0b3720e2a89955714e7672c84f3",
+  "runtime_summary": {
+    "physical_steps": 172530,
+    "strict_steps": 143002,
+    "accepted_best_effort_steps": 29528
+  },
+  "rankings": {
+    "local": {
+      "RMSE": {
+        "all": {
+          "n": 13,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 1,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 5,
+              "second": 7,
+              "first_pct": 38.46153846153846,
+              "second_pct": 53.84615384615385
+            },
+            "isaac": {
+              "first": 4,
+              "second": 4,
+              "first_pct": 30.76923076923077,
+              "second_pct": 30.76923076923077
+            },
+            "genesis": {
+              "first": 6,
+              "second": 1,
+              "first_pct": 46.15384615384615,
+              "second_pct": 7.6923076923076925
+            },
+            "newton": {
+              "first": 0,
+              "second": 1,
+              "first_pct": 0.0,
+              "second_pct": 7.6923076923076925
+            }
+          }
+        },
+        "rigid": {
+          "n": 13,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 1,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 5,
+              "second": 7,
+              "first_pct": 38.46153846153846,
+              "second_pct": 53.84615384615385
+            },
+            "isaac": {
+              "first": 4,
+              "second": 4,
+              "first_pct": 30.76923076923077,
+              "second_pct": 30.76923076923077
+            },
+            "genesis": {
+              "first": 6,
+              "second": 1,
+              "first_pct": 46.15384615384615,
+              "second_pct": 7.6923076923076925
+            },
+            "newton": {
+              "first": 0,
+              "second": 1,
+              "first_pct": 0.0,
+              "second_pct": 7.6923076923076925
+            }
+          }
+        },
+        "textile": {
+          "n": 0,
+          "cases": [],
+          "engines": {
+            "xiephysic": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "genesis": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "newton": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            }
+          }
+        },
+        "deformable": {
+          "n": 0,
+          "cases": [],
+          "engines": {
+            "xiephysic": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "genesis": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "newton": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            }
+          }
+        }
+      },
+      "DTW": {
+        "all": {
+          "n": 13,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 3,
+              "second": 7,
+              "first_pct": 23.076923076923077,
+              "second_pct": 53.84615384615385
+            },
+            "isaac": {
+              "first": 5,
+              "second": 3,
+              "first_pct": 38.46153846153846,
+              "second_pct": 23.076923076923077
+            },
+            "genesis": {
+              "first": 4,
+              "second": 3,
+              "first_pct": 30.76923076923077,
+              "second_pct": 23.076923076923077
+            },
+            "newton": {
+              "first": 1,
+              "second": 2,
+              "first_pct": 7.6923076923076925,
+              "second_pct": 15.384615384615385
+            }
+          }
+        },
+        "rigid": {
+          "n": 13,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 3,
+              "second": 7,
+              "first_pct": 23.076923076923077,
+              "second_pct": 53.84615384615385
+            },
+            "isaac": {
+              "first": 5,
+              "second": 3,
+              "first_pct": 38.46153846153846,
+              "second_pct": 23.076923076923077
+            },
+            "genesis": {
+              "first": 4,
+              "second": 3,
+              "first_pct": 30.76923076923077,
+              "second_pct": 23.076923076923077
+            },
+            "newton": {
+              "first": 1,
+              "second": 2,
+              "first_pct": 7.6923076923076925,
+              "second_pct": 15.384615384615385
+            }
+          }
+        },
+        "textile": {
+          "n": 0,
+          "cases": [],
+          "engines": {
+            "xiephysic": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "genesis": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "newton": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            }
+          }
+        },
+        "deformable": {
+          "n": 0,
+          "cases": [],
+          "engines": {
+            "xiephysic": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "genesis": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            },
+            "newton": {
+              "first": 0,
+              "second": 0,
+              "first_pct": null,
+              "second_pct": null
+            }
+          }
+        }
+      }
+    },
+    "published": {
+      "RMSE": {
+        "all": {
+          "n": 45,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_soft_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 3,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_satin_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_satin_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 19,
+              "second": 10,
+              "first_pct": 42.22222222222222,
+              "second_pct": 22.22222222222222
+            },
+            "isaac": {
+              "first": 10,
+              "second": 7,
+              "first_pct": 22.22222222222222,
+              "second_pct": 15.555555555555555
+            },
+            "genesis": {
+              "first": 11,
+              "second": 16,
+              "first_pct": 24.444444444444443,
+              "second_pct": 35.55555555555556
+            },
+            "newton": {
+              "first": 5,
+              "second": 13,
+              "first_pct": 11.11111111111111,
+              "second_pct": 28.88888888888889
+            }
+          }
+        },
+        "rigid": {
+          "n": 25,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 3,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 11,
+              "second": 5,
+              "first_pct": 44.0,
+              "second_pct": 20.0
+            },
+            "isaac": {
+              "first": 7,
+              "second": 5,
+              "first_pct": 28.0,
+              "second_pct": 20.0
+            },
+            "genesis": {
+              "first": 2,
+              "second": 11,
+              "first_pct": 8.0,
+              "second_pct": 44.0
+            },
+            "newton": {
+              "first": 5,
+              "second": 5,
+              "first_pct": 20.0,
+              "second_pct": 20.0
+            }
+          }
+        },
+        "textile": {
+          "n": 12,
+          "cases": [
+            {
+              "case_id": "textile_bending_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_satin_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_satin_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 7,
+              "second": 3,
+              "first_pct": 58.333333333333336,
+              "second_pct": 25.0
+            },
+            "isaac": {
+              "first": 3,
+              "second": 2,
+              "first_pct": 25.0,
+              "second_pct": 16.666666666666668
+            },
+            "genesis": {
+              "first": 2,
+              "second": 5,
+              "first_pct": 16.666666666666668,
+              "second_pct": 41.666666666666664
+            },
+            "newton": {
+              "first": 0,
+              "second": 2,
+              "first_pct": 0.0,
+              "second_pct": 16.666666666666668
+            }
+          }
+        },
+        "deformable": {
+          "n": 8,
+          "cases": [
+            {
+              "case_id": "foam_bending_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_soft_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 1,
+              "second": 2,
+              "first_pct": 12.5,
+              "second_pct": 25.0
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": 0.0,
+              "second_pct": 0.0
+            },
+            "genesis": {
+              "first": 7,
+              "second": 0,
+              "first_pct": 87.5,
+              "second_pct": 0.0
+            },
+            "newton": {
+              "first": 0,
+              "second": 6,
+              "first_pct": 0.0,
+              "second_pct": 75.0
+            }
+          }
+        }
+      },
+      "DTW": {
+        "all": {
+          "n": 45,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_soft_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_satin_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_satin_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 19,
+              "second": 8,
+              "first_pct": 42.22222222222222,
+              "second_pct": 17.77777777777778
+            },
+            "isaac": {
+              "first": 11,
+              "second": 9,
+              "first_pct": 24.444444444444443,
+              "second_pct": 20.0
+            },
+            "genesis": {
+              "first": 13,
+              "second": 13,
+              "first_pct": 28.88888888888889,
+              "second_pct": 28.88888888888889
+            },
+            "newton": {
+              "first": 3,
+              "second": 15,
+              "first_pct": 6.666666666666667,
+              "second_pct": 33.333333333333336
+            }
+          }
+        },
+        "rigid": {
+          "n": 25,
+          "cases": [
+            {
+              "case_id": "bouncing_ball_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 4,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "nonsmooth_contact_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 3,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 2,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "slope_slider_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_metal_task3_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task1_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task2_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_plastic_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task1_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task2_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 1
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "turntable_wood_task3_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 11,
+              "second": 3,
+              "first_pct": 44.0,
+              "second_pct": 12.0
+            },
+            "isaac": {
+              "first": 8,
+              "second": 7,
+              "first_pct": 32.0,
+              "second_pct": 28.0
+            },
+            "genesis": {
+              "first": 4,
+              "second": 8,
+              "first_pct": 16.0,
+              "second_pct": 32.0
+            },
+            "newton": {
+              "first": 3,
+              "second": 7,
+              "first_pct": 12.0,
+              "second_pct": 28.0
+            }
+          }
+        },
+        "textile": {
+          "n": 12,
+          "cases": [
+            {
+              "case_id": "textile_bending_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 1,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_satin_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 2,
+                "genesis": 3,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 4,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_bending_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 1,
+                "genesis": 2,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_satin_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_synthetic_leather_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_flinging_uniform_cloth_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 4,
+                "genesis": 2,
+                "newton": 3
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_nylon_taslan_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "textile_stretching_oxford_fabric_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 7,
+              "second": 3,
+              "first_pct": 58.333333333333336,
+              "second_pct": 25.0
+            },
+            "isaac": {
+              "first": 3,
+              "second": 2,
+              "first_pct": 25.0,
+              "second_pct": 16.666666666666668
+            },
+            "genesis": {
+              "first": 2,
+              "second": 5,
+              "first_pct": 16.666666666666668,
+              "second_pct": 41.666666666666664
+            },
+            "newton": {
+              "first": 0,
+              "second": 2,
+              "first_pct": 0.0,
+              "second_pct": 16.666666666666668
+            }
+          }
+        },
+        "deformable": {
+          "n": 8,
+          "cases": [
+            {
+              "case_id": "foam_bending_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_bending_soft_ipc",
+              "ranks": {
+                "xiephysic": 1,
+                "isaac": 3,
+                "genesis": 4,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_shearing_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 3,
+                "genesis": 1,
+                "newton": 4
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_stretching_soft_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_hard_ipc",
+              "ranks": {
+                "xiephysic": 3,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 2
+              },
+              "decimal_places": 2
+            },
+            {
+              "case_id": "foam_twisting_soft_ipc",
+              "ranks": {
+                "xiephysic": 2,
+                "isaac": 4,
+                "genesis": 1,
+                "newton": 3
+              },
+              "decimal_places": 2
+            }
+          ],
+          "engines": {
+            "xiephysic": {
+              "first": 1,
+              "second": 2,
+              "first_pct": 12.5,
+              "second_pct": 25.0
+            },
+            "isaac": {
+              "first": 0,
+              "second": 0,
+              "first_pct": 0.0,
+              "second_pct": 0.0
+            },
+            "genesis": {
+              "first": 7,
+              "second": 0,
+              "first_pct": 87.5,
+              "second_pct": 0.0
+            },
+            "newton": {
+              "first": 0,
+              "second": 6,
+              "first_pct": 0.0,
+              "second_pct": 75.0
+            }
+          }
+        }
+      }
+    }
+  },
+  "official_equivalence_verified": false,
+  "schema": "sap_native_mapping_0517_v6",
+  "case_count": 55,
+  "completed": 55,
+  "native_moving_attachment_cases": 18,
+  "pd_used": false,
+  "rp_used": false,
+  "cradle_gap_m": 0,
+  "solver_parameters": {
+    "max_inner_iterations": 32,
+    "max_line_search_iterations": 12,
+    "swept_point_contacts": true,
+    "endpoint_point_ccd": false,
+    "inner_relative_tolerance": 0.0001,
+    "inner_velocity_tolerance": 0.0001
+  },
+  "cuda_graphs": "release default enabled",
+  "input_version_audit": {
+    "compared_profile_case_pairs": 110,
+    "scene_bytes_identical_to_0514": true
+  },
+  "baseline_validation": {
+    "matched_mean_and_sample_std": 102,
+    "generic_metric_rows": 106
+  },
+  "cpu_tests_passed": 74,
+  "selection_rule": "37 native static/rigid mappings + 18 native compliant moving-grip mappings, selected by scene requirements before observing scores",
+  "moving_attachment_stiffness_N_m": 100000,
+  "official_grip_requirement": "No extra exact-grip eligibility requirement imposed",
+  "tetrahedral_sampling_limit": "Inversion diagnostics use recorded 30 Hz frames, not every physical substep",
+  "peer_batch": "Historical third-party runs; Isaac textiles predate material API fix",
+  "rows": [
+    {
+      "case_id": "bouncing_ball_soft_ipc",
+      "status": "completed",
+      "frames_completed": 159,
+      "physical_steps": 948,
+      "strictly_converged_steps": 948,
+      "source_scene_sha256": "5b5cb2759c716711617e9e5e441d0e5c543166447954c1c7179567b1fccfd0f3",
+      "trajectory_sha256": "623eddde654a0f83f171b2deab0c933485a3af256139c401dc75e23dcb0e4579",
+      "scores": {
+        "RMSE": {
+          "raw": 69.86633744388224,
+          "real_baseline": 5.293397411149719,
+          "normalized": 13.19877047144045
+        },
+        "DTW": {
+          "raw": 9.555608546166308,
+          "real_baseline": 4.233343681866513,
+          "normalized": 2.257224847370098
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "foam_bending_hard_ipc",
+      "status": "completed",
+      "frames_completed": 138,
+      "physical_steps": 4110,
+      "strictly_converged_steps": 4110,
+      "source_scene_sha256": "ec95a77cbaa05511e9d06872a8de0b2ed51fc4cdb13a3fd4d524c9c2059737c0",
+      "trajectory_sha256": "ac8f011b02c161c7ac4c911f12b95a4bb9189e03c03bb10fbe9e41fd820cf18a",
+      "scores": {
+        "RMSE": {
+          "raw": 166.32738934746985,
+          "real_baseline": 2.8500379419238167,
+          "normalized": 58.35971055009761
+        },
+        "DTW": {
+          "raw": 166.3224417318132,
+          "real_baseline": 2.283297208511862,
+          "normalized": 72.84309774118884
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "foam_bending_soft_ipc",
+      "status": "completed",
+      "frames_completed": 121,
+      "physical_steps": 3600,
+      "strictly_converged_steps": 3600,
+      "source_scene_sha256": "01c2c27f91425e13d299a46a3e9edf93021e69e55871ec28fb349587a5590739",
+      "trajectory_sha256": "152cef8bc45704793d7b46cc9242a4601ca82514cffb539766104ba72902a654",
+      "scores": {
+        "RMSE": {
+          "raw": 71.49524985872009,
+          "real_baseline": 6.99963224029266,
+          "normalized": 10.214143744176312
+        },
+        "DTW": {
+          "raw": 71.0120276648682,
+          "real_baseline": 3.5151967145723866,
+          "normalized": 20.201437766053047
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "foam_shearing_hard_ipc",
+      "status": "completed",
+      "frames_completed": 335,
+      "physical_steps": 10020,
+      "strictly_converged_steps": 10020,
+      "source_scene_sha256": "df75235537bd9bc92a383027295ee04a960c02e9d32a21619c9ab8b923e84f22",
+      "trajectory_sha256": "1a65c43a04d62c34e6db037cbcab1ceaa8161d5f28424d834bbb7065e06bf6e2",
+      "scores": {
+        "RMSE": {
+          "raw": 239.39680887688542,
+          "real_baseline": 6.2521977854092095,
+          "normalized": 38.29002489901505
+        },
+        "DTW": {
+          "raw": 239.39431787462274,
+          "real_baseline": 5.081085703233559,
+          "normalized": 47.114796296837554
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "foam_shearing_soft_ipc",
+      "status": "completed",
+      "frames_completed": 128,
+      "physical_steps": 3810,
+      "strictly_converged_steps": 3810,
+      "source_scene_sha256": "a15bd0f3200d27a07e63d006a05d9ad6527553ded423c8fa28014f95ff65b9c4",
+      "trajectory_sha256": "6c7a638a1aadbb48ffc9863e050f200fac39514f631c1488d77c4b8b255b86d5",
+      "scores": {
+        "RMSE": {
+          "raw": 144.33807964099728,
+          "real_baseline": 5.603326206821112,
+          "normalized": 25.75935690934606
+        },
+        "DTW": {
+          "raw": 144.33353419871125,
+          "real_baseline": 5.074130227458932,
+          "normalized": 28.444980268271884
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "foam_stretching_hard_ipc",
+      "status": "completed",
+      "frames_completed": 118,
+      "physical_steps": 3510,
+      "strictly_converged_steps": 3510,
+      "source_scene_sha256": "8f6ebd3f179cd6a7b00b472288a286aef048a865274b6fc9ded99a77f4db16b5",
+      "trajectory_sha256": "2995a3f549599b1d42e806a9834dc5b9e88931e4c223e44dfafc646a4f8260cf",
+      "scores": {
+        "RMSE": {
+          "raw": 239.30432124952063,
+          "real_baseline": 21.279109426780476,
+          "normalized": 11.245974464906322
+        },
+        "DTW": {
+          "raw": 239.3036112702674,
+          "real_baseline": 21.06510110212488,
+          "normalized": 11.360192866395895
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "foam_stretching_soft_ipc",
+      "status": "completed",
+      "frames_completed": 99,
+      "physical_steps": 2940,
+      "strictly_converged_steps": 2940,
+      "source_scene_sha256": "9143d5761baff4d228c821927861c1b1f673a2ebd02bc744bbd3676bfbebfa8a",
+      "trajectory_sha256": "6ef6a238c33810cedde2a3efeea16db0592845154fc263250d9bc3bf6120a5f1",
+      "scores": {
+        "RMSE": {
+          "raw": 139.7424818396027,
+          "real_baseline": 8.717275238123854,
+          "normalized": 16.030523073133836
+        },
+        "DTW": {
+          "raw": 139.7049845697864,
+          "real_baseline": 8.191717606930682,
+          "normalized": 17.0544190209374
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "foam_twisting_hard_ipc",
+      "status": "completed",
+      "frames_completed": 410,
+      "physical_steps": 12270,
+      "strictly_converged_steps": 12270,
+      "source_scene_sha256": "f72409b137717a9d3874c350654e6d497d323ebd9699bb3e7ac6a35d9f72a9b2",
+      "trajectory_sha256": "fc70e04173d1a428776b34577b4269893632e096c64cf154f3cef916b75a6c35",
+      "scores": {
+        "RMSE": {
+          "raw": 226.28470999259335,
+          "real_baseline": 7.082553237279578,
+          "normalized": 31.94959535235484
+        },
+        "DTW": {
+          "raw": 226.00965129926135,
+          "real_baseline": 5.640558236144203,
+          "normalized": 40.068667290944944
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "foam_twisting_soft_ipc",
+      "status": "completed",
+      "frames_completed": 120,
+      "physical_steps": 3570,
+      "strictly_converged_steps": 3570,
+      "source_scene_sha256": "1649780810e34e899c08992e73fe1a8452b3bc98732a310cefe81669a8d3159b",
+      "trajectory_sha256": "bf1468547d3b863578c198ce76d782c931f5ec39aedb3f73b43fd0e733029334",
+      "scores": {
+        "RMSE": {
+          "raw": 134.44692611575118,
+          "real_baseline": 8.073152302620203,
+          "normalized": 16.6535847555007
+        },
+        "DTW": {
+          "raw": 134.17516460702,
+          "real_baseline": 7.480885376564818,
+          "normalized": 17.935733252556865
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "newtons_cradle_metal_ipc",
+      "status": "completed",
+      "frames_completed": 1211,
+      "physical_steps": 7260,
+      "strictly_converged_steps": 7260,
+      "source_scene_sha256": "1ece3b5e61eb63fc8bfb98e58e04a110c95881b7be18c32c194fd7a0f739337c",
+      "trajectory_sha256": "45038a10e76454138e7732380ce4369cbfd3291fb7441c6f42824a992dc703dc",
+      "scores": {},
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task1_ipc",
+      "status": "completed",
+      "frames_completed": 137,
+      "physical_steps": 816,
+      "strictly_converged_steps": 815,
+      "source_scene_sha256": "70c16e563b2f1012fa985e53b8be7ac16bef5be893530a5ce199979f34fd4fb2",
+      "trajectory_sha256": "4af22f76438bedde4d845d5d9c7bc48d30d5838fe8c296c3f09b51103f6a1d8e",
+      "scores": {
+        "RMSE": {
+          "raw": 35.38604584950642,
+          "real_baseline": 12.938748569676477,
+          "normalized": 2.734889364218569
+        },
+        "DTW": {
+          "raw": 18.160103076542335,
+          "real_baseline": 6.475564038665054,
+          "normalized": 2.8044048314725747
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task2_ipc",
+      "status": "completed",
+      "frames_completed": 101,
+      "physical_steps": 600,
+      "strictly_converged_steps": 600,
+      "source_scene_sha256": "153b0be0f1185198542632f20a7f64ecb89d0fa8d1d0e91568dd56a2d66408a2",
+      "trajectory_sha256": "ced214b80a60bbe7d932792d7204af1ad49a136c73bb93d94d29d518559810c1",
+      "scores": {
+        "RMSE": {
+          "raw": 47.663607526021956,
+          "real_baseline": 20.352212434536177,
+          "normalized": 2.341937402596112
+        },
+        "DTW": {
+          "raw": 25.580447415582384,
+          "real_baseline": 10.540585267733572,
+          "normalized": 2.426852661956851
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_plastic_task3_ipc",
+      "status": "completed",
+      "frames_completed": 109,
+      "physical_steps": 648,
+      "strictly_converged_steps": 619,
+      "source_scene_sha256": "b00932f0cca1fb6d9f8c64bd2cb1c2cacca137fbf69109757ac01347738fbca5",
+      "trajectory_sha256": "50626de01da5ce0df3dbf27571b772ca6aba5d8da910142513f46f8e95790f94",
+      "scores": {
+        "RMSE": {
+          "raw": 20.244662166878886,
+          "real_baseline": 17.670814012037788,
+          "normalized": 1.1456553248247494
+        },
+        "DTW": {
+          "raw": 13.091084806790546,
+          "real_baseline": 8.918433671392254,
+          "normalized": 1.4678681581478759
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task1_ipc",
+      "status": "completed",
+      "frames_completed": 113,
+      "physical_steps": 672,
+      "strictly_converged_steps": 667,
+      "source_scene_sha256": "7b8d6688fcfd3df262d32a463d8da7af49dbf54711efc01a0abe3c32e899a6b6",
+      "trajectory_sha256": "fb887332e4934901738d7bed8cd69633c2ffa1db1fba4d15e0cdc6fc8dd6fc46",
+      "scores": {
+        "RMSE": {
+          "raw": 42.26429645777525,
+          "real_baseline": 12.50644325019078,
+          "normalized": 3.3794017701340096
+        },
+        "DTW": {
+          "raw": 22.603309714890486,
+          "real_baseline": 6.378818233261647,
+          "normalized": 3.543494874493838
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task2_ipc",
+      "status": "completed",
+      "frames_completed": 97,
+      "physical_steps": 576,
+      "strictly_converged_steps": 574,
+      "source_scene_sha256": "2ba32c91974e900331f5239ab393746eb5f19d227b6fd87f5348dbaa87f67881",
+      "trajectory_sha256": "ac74ef15331a8a86033add36e49a8fa1b79609df34d79d5191099e247b088cad",
+      "scores": {
+        "RMSE": {
+          "raw": 36.155688723543335,
+          "real_baseline": 14.284418353542089,
+          "normalized": 2.531127822546436
+        },
+        "DTW": {
+          "raw": 22.713434478870163,
+          "real_baseline": 7.896885391501617,
+          "normalized": 2.876252263115488
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "nonsmooth_contact_wood_task3_ipc",
+      "status": "completed",
+      "frames_completed": 99,
+      "physical_steps": 588,
+      "strictly_converged_steps": 588,
+      "source_scene_sha256": "58ef141dbad8f396d2d90420a4bf249e86516b90d692750b47819f73a1db859d",
+      "trajectory_sha256": "7e46109cb73e620e4a981fe37ef67644b2545b5ef538aa420fccf520f92571ac",
+      "scores": {
+        "RMSE": {
+          "raw": 44.64050139940001,
+          "real_baseline": 16.975563281735322,
+          "normalized": 2.629691908216706
+        },
+        "DTW": {
+          "raw": 36.846974876204776,
+          "real_baseline": 8.682876439699466,
+          "normalized": 4.2436369021370215
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "pendulum_metal_ipc",
+      "status": "completed",
+      "frames_completed": 3936,
+      "physical_steps": 23610,
+      "strictly_converged_steps": 23610,
+      "source_scene_sha256": "77ac97cdb99352444cc1b3597deef925117297f466f7a53c2710604357d6566e",
+      "trajectory_sha256": "60e73bee83542b90a25c5cdcfacc3fa82cce61df5e43738db84e0399adb02e68",
+      "scores": {},
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_contact_plastic_ipc",
+      "status": "completed",
+      "frames_completed": 145,
+      "physical_steps": 864,
+      "strictly_converged_steps": 864,
+      "source_scene_sha256": "fed454531149bddb95771fa775d924ffbd559e5d12046502ec1fecf9822104b3",
+      "trajectory_sha256": "ae9ade673942d4541053815ef966bec216b30f7c23ee0f558b978c282f414000",
+      "scores": {
+        "RMSE": {
+          "raw": 19.27786169033515,
+          "real_baseline": 9.254329733481843,
+          "normalized": 2.083118091263651
+        },
+        "DTW": {
+          "raw": 15.6856082624037,
+          "real_baseline": 6.270015258805624,
+          "normalized": 2.5016858197234524
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_contact_wood_ipc",
+      "status": "completed",
+      "frames_completed": 188,
+      "physical_steps": 1122,
+      "strictly_converged_steps": 1121,
+      "source_scene_sha256": "557092faab1708c45e43119ebbbc1d93f4defcc3e1e4391fcf8ff4956527f81e",
+      "trajectory_sha256": "6419bb3e11f19a0b7abee217a65734db505390d71ace982a0bed3e57014b8204",
+      "scores": {
+        "RMSE": {
+          "raw": 20.280522158898368,
+          "real_baseline": 12.312630570388011,
+          "normalized": 1.6471315404908848
+        },
+        "DTW": {
+          "raw": 13.95287560720995,
+          "real_baseline": 5.299266765185963,
+          "normalized": 2.6329823021695558
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_metal_task1_ipc",
+      "status": "completed",
+      "frames_completed": 256,
+      "physical_steps": 1530,
+      "strictly_converged_steps": 1093,
+      "source_scene_sha256": "205d09c99867a22523ae4148e6319880cea274ae22b3f0f26f87e1b317c5139b",
+      "trajectory_sha256": "18f4b120e9f0cb1170ecc8970ebfa343463a998f4c04808f97aa5cc46c1e9114",
+      "scores": {
+        "RMSE": {
+          "raw": 0.022462554617759704,
+          "real_baseline": 0.864680266806016,
+          "normalized": 0.025977873533222423
+        },
+        "DTW": {
+          "raw": 0.016182831165832114,
+          "real_baseline": 0.8641244039564107,
+          "normalized": 0.01872743217497238
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_metal_task2_ipc",
+      "status": "completed",
+      "frames_completed": 533,
+      "physical_steps": 3192,
+      "strictly_converged_steps": 3192,
+      "source_scene_sha256": "c79703c4274f944312342264a2c16350103d18eb7c047349d8e41cbf71f2a281",
+      "trajectory_sha256": "23bf4c3af198e4f41bbbd9a663727557eac90135645ad2425e15f6e8231a1a08",
+      "scores": {
+        "RMSE": {
+          "raw": 25.985828501219522,
+          "real_baseline": 32.06334253185057,
+          "normalized": 0.8104528863578753
+        },
+        "DTW": {
+          "raw": 5.863393636074131,
+          "real_baseline": 10.874078500346942,
+          "normalized": 0.5392083233431741
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_metal_task3_ipc",
+      "status": "completed",
+      "frames_completed": 172,
+      "physical_steps": 1026,
+      "strictly_converged_steps": 1011,
+      "source_scene_sha256": "fe7e664f597d6abfe2402324ff8c20b9ec0042e210b36e7eb4967c1c5bc85623",
+      "trajectory_sha256": "29e5006ffb9b8fb7558d48beeb69caa635c6e3edd26db486fcfd205f39ec17f8",
+      "scores": {
+        "RMSE": {
+          "raw": 17.955447479704667,
+          "real_baseline": 38.008713461186815,
+          "normalized": 0.47240345290929536
+        },
+        "DTW": {
+          "raw": 3.4991492461576357,
+          "real_baseline": 9.541725916815938,
+          "normalized": 0.36672078790178636
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_plastic_task1_ipc",
+      "status": "completed",
+      "frames_completed": 304,
+      "physical_steps": 1818,
+      "strictly_converged_steps": 1514,
+      "source_scene_sha256": "e19b5c3cd56a811cca9d28b1c599915b7f61635ae6c2a0df21e2b03e1ace7604",
+      "trajectory_sha256": "0d27c8487041e090e01ab2b8e8d6e3abc2899d8bb8b2c6227077887f219aad58",
+      "scores": {
+        "RMSE": {
+          "raw": 0.04567431077177554,
+          "real_baseline": 1.896601421594879,
+          "normalized": 0.024082187354561493
+        },
+        "DTW": {
+          "raw": 0.0407046945827096,
+          "real_baseline": 1.8960278620950124,
+          "normalized": 0.021468405289009323
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_plastic_task2_ipc",
+      "status": "completed",
+      "frames_completed": 350,
+      "physical_steps": 2094,
+      "strictly_converged_steps": 2094,
+      "source_scene_sha256": "c102eccf57572a46772ad830865b19c786ae9ff1f14944ed2fb10ac29c53bee7",
+      "trajectory_sha256": "4bfe28052689a8abe22acb1e437bf3976c14bf491d8166b73bb53b8f8a0afa8f",
+      "scores": {
+        "RMSE": {
+          "raw": 16.662238602796535,
+          "real_baseline": 25.005217027038267,
+          "normalized": 0.6663504893710609
+        },
+        "DTW": {
+          "raw": 9.826594354167574,
+          "real_baseline": 9.130023380465571,
+          "normalized": 1.076294544348306
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_plastic_task3_ipc",
+      "status": "completed",
+      "frames_completed": 280,
+      "physical_steps": 1674,
+      "strictly_converged_steps": 1666,
+      "source_scene_sha256": "278a0e67a490456c0c2b3fc09e5f0acb5c72d8d2ebaf0f5435d6b33cf70a3e8d",
+      "trajectory_sha256": "e3b35db02fcb16abdb55c82609819073fba5bc15130eac64115f1c49425ec0cb",
+      "scores": {
+        "RMSE": {
+          "raw": 34.58930444657184,
+          "real_baseline": 49.957521209941916,
+          "normalized": 0.6923743133934418
+        },
+        "DTW": {
+          "raw": 8.592508822052116,
+          "real_baseline": 12.970861193466964,
+          "normalized": 0.6624470568214781
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_wood_task1_ipc",
+      "status": "completed",
+      "frames_completed": 393,
+      "physical_steps": 2352,
+      "strictly_converged_steps": 1660,
+      "source_scene_sha256": "dfb87f9d69e3ba49d4f7c12c3f18722999b58391f8369758f308611cc1defa85",
+      "trajectory_sha256": "fca7d7d6aefb0f45e2bfd3efb07b070b63724c32fb06f063542ea64c6836f113",
+      "scores": {
+        "RMSE": {
+          "raw": 0.019624184061447947,
+          "real_baseline": 0.5930142620291788,
+          "normalized": 0.03309226323545378
+        },
+        "DTW": {
+          "raw": 0.01817430243606802,
+          "real_baseline": 0.5928057662640234,
+          "normalized": 0.030658106702648978
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_wood_task2_ipc",
+      "status": "completed",
+      "frames_completed": 263,
+      "physical_steps": 1572,
+      "strictly_converged_steps": 1572,
+      "source_scene_sha256": "a7103eb903eeacc366e2839b1a10e5bf3b5afe5ca660e514a595c4ca0cbbd528",
+      "trajectory_sha256": "68fb209771ab4c1bd8a311d9db6b003b734bc4d04b566e53fe532a9946226daa",
+      "scores": {
+        "RMSE": {
+          "raw": 12.551520636203625,
+          "real_baseline": 17.99507742879658,
+          "normalized": 0.69749745094834
+        },
+        "DTW": {
+          "raw": 10.209951640785132,
+          "real_baseline": 7.700885513907018,
+          "normalized": 1.3258152744053908
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "slope_slider_wood_task3_ipc",
+      "status": "completed",
+      "frames_completed": 155,
+      "physical_steps": 924,
+      "strictly_converged_steps": 917,
+      "source_scene_sha256": "edabb81d74d676ea6c6f0306a48a51383ddcc4e57ebeaaba9c4c44a4f3f10084",
+      "trajectory_sha256": "994010fa24f7c7781848d968221c213832dc4fb618db46334acfe3eca012e358",
+      "scores": {
+        "RMSE": {
+          "raw": 53.81685302807818,
+          "real_baseline": 24.27072718144425,
+          "normalized": 2.21735643212301
+        },
+        "DTW": {
+          "raw": 10.900837246515726,
+          "real_baseline": 6.726409997685733,
+          "normalized": 1.6206025577189367
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "status": "completed",
+      "frames_completed": 452,
+      "physical_steps": 2706,
+      "strictly_converged_steps": 415,
+      "source_scene_sha256": "a91f3bd6a352d09293b8e6d8975df16cfe5544b635f1fb3795b99063473a8e4f",
+      "trajectory_sha256": "eec59db511ce70b9f934029b356a06bd8f41412db446bc507626d6257d661b0a",
+      "scores": {
+        "RMSE": {
+          "raw": 6.634724908733958,
+          "real_baseline": 1.9446982942041835,
+          "normalized": 3.4116988370419916
+        },
+        "DTW": {
+          "raw": 5.835953190047064,
+          "real_baseline": 1.3655175440773393,
+          "normalized": 4.273803156436437
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_bending_oxford_fabric_ipc",
+      "status": "completed",
+      "frames_completed": 534,
+      "physical_steps": 3198,
+      "strictly_converged_steps": 683,
+      "source_scene_sha256": "66cdaacf928436f51635ef1ce85186415562e26dbd54f2079392df25c25de19b",
+      "trajectory_sha256": "6f9976ae283e5544f8e9a01a847b8b2d72a63de5099ceec2ed08cdedfba9791f",
+      "scores": {
+        "RMSE": {
+          "raw": 14.424939461327375,
+          "real_baseline": 2.4731359614513626,
+          "normalized": 5.832651211323652
+        },
+        "DTW": {
+          "raw": 12.56125036222784,
+          "real_baseline": 1.9571423331600173,
+          "normalized": 6.4181588377102585
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_bending_rayon_ipc",
+      "status": "completed",
+      "frames_completed": 630,
+      "physical_steps": 3774,
+      "strictly_converged_steps": 467,
+      "source_scene_sha256": "42d07621d8ef7f6f7c03537dfd824abb92604f9bedb1bb3b82c86f52216346bd",
+      "trajectory_sha256": "754e246506b6ee89f6db116679f85c40fb49ee126e6e119bb4476d8851774b63",
+      "scores": {
+        "RMSE": {
+          "raw": 32.806017859574915,
+          "real_baseline": 1.0696760316295435,
+          "normalized": 30.669115591566783
+        },
+        "DTW": {
+          "raw": 30.128342230299083,
+          "real_baseline": 0.6318533530246709,
+          "normalized": 47.682491651069405
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_bending_satin_ipc",
+      "status": "completed",
+      "frames_completed": 459,
+      "physical_steps": 2748,
+      "strictly_converged_steps": 551,
+      "source_scene_sha256": "c49b0a2cc183ad1541fc199080e4b0c6688f2a768d50af123580dc0c756df78a",
+      "trajectory_sha256": "7a710ba4ce3f7f73b4064c8cb337e3e79c7d450dd579e02f333268f4132807a8",
+      "scores": {
+        "RMSE": {
+          "raw": 13.225207320575123,
+          "real_baseline": 1.9208725421804616,
+          "normalized": 6.884999931105604
+        },
+        "DTW": {
+          "raw": 12.491236439545437,
+          "real_baseline": 1.197367793666958,
+          "normalized": 10.432246888227072
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_bending_synthetic_leather_ipc",
+      "status": "completed",
+      "frames_completed": 879,
+      "physical_steps": 5268,
+      "strictly_converged_steps": 514,
+      "source_scene_sha256": "2619d6ec27a3d778862f919ffaef9e9dca5659ad254add08846514f0e2006f2b",
+      "trajectory_sha256": "f43e59da0ed8fe46273d16961ad532e7394fbc092fcd3d8eb2f0270e22a121da",
+      "scores": {
+        "RMSE": {
+          "raw": 36.07837891412599,
+          "real_baseline": 1.7854617990783574,
+          "normalized": 20.206749275033154
+        },
+        "DTW": {
+          "raw": 33.18942686297003,
+          "real_baseline": 1.2328837897136375,
+          "normalized": 26.920158363570465
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_bending_uniform_cloth_ipc",
+      "status": "completed",
+      "frames_completed": 976,
+      "physical_steps": 5850,
+      "strictly_converged_steps": 410,
+      "source_scene_sha256": "ae60b4c71ebfba7bd10547a02cdf1838dfb32f5d2a8b11c52df31d23147ef23a",
+      "trajectory_sha256": "0bfbd0a287ddac87a59412eb7be4d08675b6605683b9c968121b8a3d41345513",
+      "scores": {
+        "RMSE": {
+          "raw": 44.87960569844006,
+          "real_baseline": 1.2820860616462149,
+          "normalized": 35.00514282232666
+        },
+        "DTW": {
+          "raw": 40.607865863824635,
+          "real_baseline": 0.48026156015918164,
+          "normalized": 84.55364583075365
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_nylon_taslan_ipc",
+      "status": "completed",
+      "frames_completed": 458,
+      "physical_steps": 2742,
+      "strictly_converged_steps": 366,
+      "source_scene_sha256": "21b090c10798c52f2de1eef44e88c1dc4d5144ac17282f4577ad1eb1aa17b1ab",
+      "trajectory_sha256": "dff709cfdb16f5d4d91691477dc00a514cdd08b83f3b7e2810fc0c8c2f18d5d1",
+      "scores": {
+        "RMSE": {
+          "raw": 0.07404111945084954,
+          "real_baseline": 0.02075496225664356,
+          "normalized": 3.567393596543369
+        },
+        "DTW": {
+          "raw": 0.07390928157040932,
+          "real_baseline": 0.009549103563961409,
+          "normalized": 7.739918315405551
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_oxford_fabric_ipc",
+      "status": "completed",
+      "frames_completed": 405,
+      "physical_steps": 2424,
+      "strictly_converged_steps": 2424,
+      "source_scene_sha256": "dfb6d96c6300a0962f1b22dd8fb66f858b170c8fcbf4dc8274034f96630d9ba3",
+      "trajectory_sha256": "eafbb0eddd4adc0ca8b661574d4faac76c71dc8a970a2a85efc29529a66d061b",
+      "scores": {
+        "RMSE": {
+          "raw": 0.06508920069679197,
+          "real_baseline": 0.012974982174628369,
+          "normalized": 5.01651561603446
+        },
+        "DTW": {
+          "raw": 0.06506626654199253,
+          "real_baseline": 0.009526211964805985,
+          "normalized": 6.8302350170640675
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_rayon_ipc",
+      "status": "completed",
+      "frames_completed": 500,
+      "physical_steps": 2994,
+      "strictly_converged_steps": 2994,
+      "source_scene_sha256": "fdb180c667fd870a0dc6e27eadae7b5a9793612f09846f830a2731cd109eb9ca",
+      "trajectory_sha256": "c11724063e548be5d412236d1b6e667947669a7ffb12843bcc5ecff6fdebb29b",
+      "scores": {
+        "RMSE": {
+          "raw": 0.21616967870989548,
+          "real_baseline": 0.023913225521632317,
+          "normalized": 9.039754110726077
+        },
+        "DTW": {
+          "raw": 0.21603587276183256,
+          "real_baseline": 0.015504059938691722,
+          "normalized": 13.934148449897073
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_satin_ipc",
+      "status": "completed",
+      "frames_completed": 699,
+      "physical_steps": 4188,
+      "strictly_converged_steps": 4188,
+      "source_scene_sha256": "63df39ab497700bb2f6d5caf4c591ecc6654a55cbd8b0e48f0bc93545e47cba7",
+      "trajectory_sha256": "9fce34cb5e4d2fa0576989295109f3faf6334701cd81d74fe4ea58bd92d9441b",
+      "scores": {
+        "RMSE": {
+          "raw": 0.14303806269518232,
+          "real_baseline": 0.016365099963525656,
+          "normalized": 8.740433178775803
+        },
+        "DTW": {
+          "raw": 0.1429674297527214,
+          "real_baseline": 0.012395846443974965,
+          "normalized": 11.533494739458563
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_synthetic_leather_ipc",
+      "status": "completed",
+      "frames_completed": 553,
+      "physical_steps": 3312,
+      "strictly_converged_steps": 3312,
+      "source_scene_sha256": "96f129c92b1724f8a56e555d2772a78ca7b83f185740946d8329d44be2eea503",
+      "trajectory_sha256": "70537eab5590c7d281a295b8cd2517e9dc0b85f39545625b83835a9a1247f435",
+      "scores": {
+        "RMSE": {
+          "raw": 0.052953468282005374,
+          "real_baseline": 0.0072434991423409555,
+          "normalized": 7.31048174941757
+        },
+        "DTW": {
+          "raw": 0.05294347428507797,
+          "real_baseline": 0.006329081459305944,
+          "normalized": 8.365111845295134
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_flinging_uniform_cloth_ipc",
+      "status": "completed",
+      "frames_completed": 642,
+      "physical_steps": 3846,
+      "strictly_converged_steps": 3846,
+      "source_scene_sha256": "5635f9f2dc02dceae1ee34c66b44dbdfefc1a6db385b572e606e246d2ac9238f",
+      "trajectory_sha256": "0364ccfb7ef3df1f37b3a4a9d0ec706617928ad63ce01ac21a647534d9021dcf",
+      "scores": {
+        "RMSE": {
+          "raw": 0.11180729411760428,
+          "real_baseline": 0.016483809730007435,
+          "normalized": 6.7828551741936325
+        },
+        "DTW": {
+          "raw": 0.11157956894471631,
+          "real_baseline": 0.01197246708268425,
+          "normalized": 9.319680578290631
+        }
+      },
+      "mapping": "compliant"
+    },
+    {
+      "case_id": "textile_stretching_nylon_taslan_ipc",
+      "status": "completed",
+      "frames_completed": 552,
+      "physical_steps": 3306,
+      "strictly_converged_steps": 2802,
+      "source_scene_sha256": "1222657b9723bc21392cca3031ff1b64cd89823e445062a0acdf7401235f7ce2",
+      "trajectory_sha256": "1f01724ac9af1f82531416ae8c5ffb07488ac7502f88180dab48e457e9ddbb3e",
+      "scores": {
+        "RMSE": {
+          "raw": 0.1482596286187053,
+          "real_baseline": 0.02693338955106042,
+          "normalized": 5.5046776915187055
+        },
+        "DTW": {
+          "raw": 0.14764076266803997,
+          "real_baseline": 0.02371304402894431,
+          "normalized": 6.226141295391203
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_stretching_oxford_fabric_ipc",
+      "status": "completed",
+      "frames_completed": 706,
+      "physical_steps": 4230,
+      "strictly_converged_steps": 4230,
+      "source_scene_sha256": "4d93319965f18d6d7a752668018b8380850ac255c892bbf202537e1f4b74b16e",
+      "trajectory_sha256": "5db58f6f0382f06c0fb7f04a49e627e62a46582d2fe2be7d1842a9f537ae295c",
+      "scores": {
+        "RMSE": {
+          "raw": 0.08795082260134104,
+          "real_baseline": 0.006091560730428653,
+          "normalized": 14.438142619510927
+        },
+        "DTW": {
+          "raw": 0.08793090191374191,
+          "real_baseline": 0.0050922119995851995,
+          "normalized": 17.26772214528864
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_stretching_rayon_ipc",
+      "status": "completed",
+      "frames_completed": 554,
+      "physical_steps": 3318,
+      "strictly_converged_steps": 2538,
+      "source_scene_sha256": "acfdca6b999a8129e2de3d2c5f3c6bd638dc7c97af9e8c799df6ecb2b0554b80",
+      "trajectory_sha256": "643cda6d0203e787dd166c27cccd794ecba64272397f8c74cc697aa4b99583ba",
+      "scores": {
+        "RMSE": {
+          "raw": 0.18137199792903652,
+          "real_baseline": 0.023981367311270735,
+          "normalized": 7.563038236097386
+        },
+        "DTW": {
+          "raw": 0.1806032710558716,
+          "real_baseline": 0.008443378523971692,
+          "normalized": 21.389929462846986
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_stretching_satin_ipc",
+      "status": "completed",
+      "frames_completed": 545,
+      "physical_steps": 3264,
+      "strictly_converged_steps": 2010,
+      "source_scene_sha256": "5b65a7bba1920c0b155a1d2d4fe1ad5f78d1c30319a84cc41979ab3f44ad3e1c",
+      "trajectory_sha256": "78215831fa243b034dad77c369315e85e1e02fca01b256486cbe613ad1f8a5ed",
+      "scores": {
+        "RMSE": {
+          "raw": 0.16627300024316646,
+          "real_baseline": 0.21276045491068252,
+          "normalized": 0.7815033123188628
+        },
+        "DTW": {
+          "raw": 0.1638358516900159,
+          "real_baseline": 0.20532141450767744,
+          "normalized": 0.7979481929971299
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_stretching_synthetic_leather_ipc",
+      "status": "completed",
+      "frames_completed": 634,
+      "physical_steps": 3798,
+      "strictly_converged_steps": 2156,
+      "source_scene_sha256": "88b5fea954f49117223542537072a87ed96e9e5b552cc4b8d9854497152ab832",
+      "trajectory_sha256": "5f35aa4601abdd0a3cac144fa6141aaaa9bd3c86b323eaa57246b5126121c326",
+      "scores": {
+        "RMSE": {
+          "raw": 0.08686397350445592,
+          "real_baseline": 0.017351387927449842,
+          "normalized": 5.006168605511804
+        },
+        "DTW": {
+          "raw": 0.08611389807956019,
+          "real_baseline": 0.008477759872848472,
+          "normalized": 10.157624109566397
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "textile_stretching_uniform_cloth_ipc",
+      "status": "completed",
+      "frames_completed": 531,
+      "physical_steps": 3180,
+      "strictly_converged_steps": 2287,
+      "source_scene_sha256": "52f275bb4479de108fe4fbd4991504dc139f2c148c8ed746d507769fd42a34af",
+      "trajectory_sha256": "b08d5d2297a9cb7394169d897fe21f3ac2d666760269fc67be1d179fa767ca6d",
+      "scores": {
+        "RMSE": {
+          "raw": 0.11125201540693185,
+          "real_baseline": 0.017675432925413143,
+          "normalized": 6.294160707485554
+        },
+        "DTW": {
+          "raw": 0.11069021413099384,
+          "real_baseline": 0.010570428312943098,
+          "normalized": 10.471686752319938
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_metal_task1_ipc",
+      "status": "completed",
+      "frames_completed": 269,
+      "physical_steps": 1608,
+      "strictly_converged_steps": 1603,
+      "source_scene_sha256": "20c5c330b0e117079bf09e083713ee8782d3bdb9f1ede72d9789d72f3f31c8c7",
+      "trajectory_sha256": "a3ceca9c01eb1f6d2d8aea363f46025142044134e545c3bc5192b344404bfc4b",
+      "scores": {
+        "RMSE": {
+          "raw": 1.9828420008569108,
+          "real_baseline": 3.1716685229812738,
+          "normalized": 0.6251731498703712
+        },
+        "DTW": {
+          "raw": 1.802992058889137,
+          "real_baseline": 1.5300081163547588,
+          "normalized": 1.1784199309901453
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_metal_task2_ipc",
+      "status": "completed",
+      "frames_completed": 125,
+      "physical_steps": 744,
+      "strictly_converged_steps": 744,
+      "source_scene_sha256": "3d831c2a7310c160c1801e213e4cad2d054fee74fd2a7c0ecf56972a2031060c",
+      "trajectory_sha256": "fcb2ba31a917d0b458d44385cc61301a8e6c630cd6aa9bbbd1747c3d6b707154",
+      "scores": {
+        "RMSE": {
+          "raw": 33.8858710525627,
+          "real_baseline": 5.757502436505252,
+          "normalized": 5.885515712109901
+        },
+        "DTW": {
+          "raw": 20.70968985743923,
+          "real_baseline": 3.5993684838409097,
+          "normalized": 5.753700947934006
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_metal_task3_ipc",
+      "status": "completed",
+      "frames_completed": 237,
+      "physical_steps": 1416,
+      "strictly_converged_steps": 1399,
+      "source_scene_sha256": "b12754fc1c5555c3ce4459a59dc84f32e201ea1156650f3af44ee1912c484df5",
+      "trajectory_sha256": "fa14864566120188b6baf382c784387c49536b95429b8f8014145d41040a2185",
+      "scores": {
+        "RMSE": {
+          "raw": 11.376584304096411,
+          "real_baseline": 13.255788897082336,
+          "normalized": 0.8582351750185501
+        },
+        "DTW": {
+          "raw": 5.477044513674837,
+          "real_baseline": 3.334435968794349,
+          "normalized": 1.6425700073212692
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_plastic_task1_ipc",
+      "status": "completed",
+      "frames_completed": 262,
+      "physical_steps": 1566,
+      "strictly_converged_steps": 1562,
+      "source_scene_sha256": "0da49b3f3e5d63549d9ee66097eda577484e4968276613d8ec78e9dd16d4e33e",
+      "trajectory_sha256": "d5be679cc0852f4f81c5216d48235d96fd80ecdf9f247bba3da55d485cce07e6",
+      "scores": {
+        "RMSE": {
+          "raw": 1.8975073814247934,
+          "real_baseline": 1.997073616541338,
+          "normalized": 0.9501439334575057
+        },
+        "DTW": {
+          "raw": 1.7377226611526937,
+          "real_baseline": 0.9660638547182634,
+          "normalized": 1.7987658400276987
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_plastic_task2_ipc",
+      "status": "completed",
+      "frames_completed": 71,
+      "physical_steps": 420,
+      "strictly_converged_steps": 419,
+      "source_scene_sha256": "20d99368913684e803044b52f012c73e87030b4276b40a1b87c3136990f0a479",
+      "trajectory_sha256": "8f793d256b84106653f36f7a3b538976862e6d4847eac5624a87066bcc11ca01",
+      "scores": {
+        "RMSE": {
+          "raw": 28.798152291351702,
+          "real_baseline": 7.860871893650797,
+          "normalized": 3.6634806775838546
+        },
+        "DTW": {
+          "raw": 19.246019070064243,
+          "real_baseline": 3.919803819445659,
+          "normalized": 4.90994446573758
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_plastic_task3_ipc",
+      "status": "completed",
+      "frames_completed": 196,
+      "physical_steps": 1170,
+      "strictly_converged_steps": 1156,
+      "source_scene_sha256": "b92332e15aade5deb6e5ea30df101dfb572a51639262ea8385a84c730e769752",
+      "trajectory_sha256": "3f164c04ed24d926cb6a67a38b4fd543d6b774a3567de32da606ed9845b4447f",
+      "scores": {
+        "RMSE": {
+          "raw": 13.276724175764947,
+          "real_baseline": 12.499059457086508,
+          "normalized": 1.0622178589795837
+        },
+        "DTW": {
+          "raw": 3.2018608471045535,
+          "real_baseline": 3.48284294221666,
+          "normalized": 0.9193239259496223
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_wood_task1_ipc",
+      "status": "completed",
+      "frames_completed": 237,
+      "physical_steps": 1416,
+      "strictly_converged_steps": 1407,
+      "source_scene_sha256": "823e5da2e4c6ffa993f28a0df2159645882bb836939110286fe23e4c0ced29a3",
+      "trajectory_sha256": "720de96b91d0a45a8285fab5cde6ee4bae05a9d9784e670e4b62595148a26972",
+      "scores": {
+        "RMSE": {
+          "raw": 2.027393578330327,
+          "real_baseline": 2.0086104987214006,
+          "normalized": 1.0093512802113118
+        },
+        "DTW": {
+          "raw": 1.851110659792203,
+          "real_baseline": 1.4026469447900631,
+          "normalized": 1.319726725722318
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_wood_task2_ipc",
+      "status": "completed",
+      "frames_completed": 85,
+      "physical_steps": 504,
+      "strictly_converged_steps": 500,
+      "source_scene_sha256": "91fa583ab5914bb0c9f248fdd010bcbb88db3b0cc49d5ab7610cacf4d12107a1",
+      "trajectory_sha256": "94c4b51dd188e26148f994477eda2357aa8bc1fbb3aae446951ef2341b8cea4e",
+      "scores": {
+        "RMSE": {
+          "raw": 31.27816752587161,
+          "real_baseline": 6.755095172316787,
+          "normalized": 4.63030745355793
+        },
+        "DTW": {
+          "raw": 21.121382505023725,
+          "real_baseline": 4.69603965409921,
+          "normalized": 4.497701054672037
+        }
+      },
+      "mapping": "strict"
+    },
+    {
+      "case_id": "turntable_wood_task3_ipc",
+      "status": "completed",
+      "frames_completed": 305,
+      "physical_steps": 1824,
+      "strictly_converged_steps": 1804,
+      "source_scene_sha256": "8fd62a30c3b53330b98f1c409cd6455866d732617f1392d5115fb5b3209f99d0",
+      "trajectory_sha256": "b877442de8aed397baa11291784348aba4aa33a25bfc82540e4faeb8206fc5f4",
+      "scores": {
+        "RMSE": {
+          "raw": 18.22213528493614,
+          "real_baseline": 27.15144701061944,
+          "normalized": 0.6711294347520087
+        },
+        "DTW": {
+          "raw": 10.68768603590276,
+          "real_baseline": 14.363089397116209,
+          "normalized": 0.7441077431467223
+        }
+      },
+      "mapping": "strict"
+    }
+  ]
+}

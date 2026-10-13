@@ -76,7 +76,9 @@ def main():
         with state.open()as f:
             for i,line in enumerate(f):
                 frame=json.loads(line);v=world_vertices(frame,groups);verts[i]=v;frame_ids.append(frame['frame'])
-                if i<evaluation['frames']:lo=np.minimum(lo,v.min(0));hi=np.maximum(hi,v.max(0))
+                # Full-process playback must also cover motion after the score
+                # window; camera framing never changes the scored recording.
+                lo=np.minimum(lo,v.min(0));hi=np.maximum(hi,v.max(0))
         verts.flush();del verts
         np.save(cache/'faces.npy',faces);np.save(cache/'vertex_body_ids.npy',ids)
         metadata={'source':str(state),'source_sha256':hashlib.sha256(state.read_bytes()).hexdigest(),'evaluation':str(folder/'evaluation.json'),'frames':frame_ids,'fps':30,'bodies':[{k:b[k]for k in ['name','body_index','kind']}for b in groups],'geometry_source':'SDK render_topology + SDK forward_kinematics + recorded q; official sphere OBJ is presentation only','status':status['status']}

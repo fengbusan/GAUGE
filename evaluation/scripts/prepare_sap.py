@@ -1,4 +1,4 @@
-"""Freeze a SAP comparison using the installed 0.5.14 SDK's native policy.
+"""Freeze a SAP comparison using the explicitly selected SDK's native policy.
 
 Only numerical solver selection changes. Original measured bodies, attachments,
 drivers, collision geometry, time step, materials and score windows stay frozen.
@@ -22,8 +22,12 @@ def load_sdk():
         if name=='xiephy_gpu' or name.startswith('xiephy_gpu.'):del sys.modules[name]
     sys.path.insert(0,str(path));importlib.invalidate_caches()
     sdk=importlib.import_module('xiephy_gpu')
-    if sdk.__version__!='0.5.14' or not Path(sdk.__file__).resolve().is_relative_to(path):
-        raise ValueError('Preparation requires the explicitly selected 0.5.14 SDK')
+    expected = os.environ.get('GAUGE_XIE_SDK_VERSION', '0.5.14')
+    if sdk.__version__ != expected or not Path(sdk.__file__).resolve().is_relative_to(path):
+        raise ValueError(f'Preparation requires the explicitly selected {expected} SDK')
+    expected_sha = os.environ.get('GAUGE_XIE_SDK_SHA256')
+    if expected_sha and hashlib.sha256(Path(sdk._C.__file__).read_bytes()).hexdigest() != expected_sha:
+        raise ValueError('Preparation SDK binary SHA256 differs from the selected release')
     return sdk
 
 def main():
