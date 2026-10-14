@@ -1,0 +1,32 @@
+{
+  "updated_utc": "2026-10-14T05:25:43.143573+00:00",
+  "coverage": {
+    "newton": {
+      "complete_process": 37,
+      "complete_score_window": 37,
+      "status_counts": {
+        "completed": 37,
+        "numerical_failure": 18
+      }
+    },
+    "isaac": {
+      "complete_process": 55,
+      "complete_score_window": 55,
+      "status_counts": {
+        "completed": 55
+      }
+    },
+    "genesis": {
+      "complete_process": 0,
+      "complete_score_window": 0,
+      "status_counts": {
+        "await_author_version_or_commit": 55
+      }
+    }
+  },
+  "baseline_combinations_both_mean_and_std_match": 48,
+  "baseline_combinations_total": 106,
+  "source_audit": "author_question2_input_audit.json",
+  "runtime_disclosure": "runtime_input_processing_disclosure.json",
+  "official_scoring_equivalence_verified": false
+}

@@ -1,0 +1,35 @@
+{
+  "adapters": [
+    {
+      "adapter": "newton_rigid.py",
+      "simulation_ast_identical_to_recorded_batch": true,
+      "only_changes": "formatting, unused imports, pre-run runtime identity check",
+      "public_source_sha256": "926fc7773161112d93ddeb38278907aaac0371be09bbccab3da235b191c42637"
+    },
+    {
+      "adapter": "newton_foam.py",
+      "simulation_ast_identical_to_recorded_batch": true,
+      "only_changes": "formatting, unused imports, pre-run runtime identity check",
+      "public_source_sha256": "1d07a3d7a89dc7500a5bc31ce89d27c47aacfee402fc6e69210366b05a28aeb9"
+    },
+    {
+      "adapter": "newton_cloth.py",
+      "simulation_ast_identical_to_recorded_batch": true,
+      "only_changes": "formatting, unused imports, pre-run runtime identity check",
+      "public_source_sha256": "5a7e376fb11e2e1a9e774d78f6743e9c440a4edc628175278194aa02ffea136f"
+    },
+    {
+      "adapter": "isaac_rigid.py",
+      "simulation_ast_identical_to_recorded_batch": true,
+      "only_changes": "formatting, unused imports, pre-run runtime identity check",
+      "public_source_sha256": "92270e4e64fc078ab032780e06b4338f8c2122e4ef104ba597573f9118278759"
+    },
+    {
+      "adapter": "isaac_soft.py",
+      "simulation_ast_identical_to_recorded_batch": true,
+      "only_changes": "formatting, unused imports, pre-run runtime identity check",
+      "public_source_sha256": "65476877d46fc47a7772900def25496aeea828da75eb9462799885248ccb4f78"
+    }
+  ],
+  "native_engine_code_modified": false
+}

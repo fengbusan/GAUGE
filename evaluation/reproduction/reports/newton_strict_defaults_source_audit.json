@@ -1,0 +1,13 @@
+{
+  "paper_material_conversion_explicit": true,
+  "material_source": "https://arxiv.org/html/2608.05948v1, Appendix A.2.2 equations10-12",
+  "material_fallback_explicit": "Ks/2.7 when not2<Ks/Ksh<4",
+  "collision_radius_half_thickness_specified_in_paper": false,
+  "current_radius_argument_omitted": true,
+  "native_default_radius_m": 0.1,
+  "native_gpu_tile_default": true,
+  "author_actual_radius_or_tile_configuration_not_explicitly_reported": true,
+  "native_solver_sources_unchanged": true,
+  "strict_default_results": "newton_strict_defaults_summary.json",
+  "old_thickness_diagnostic_not_current_default_diagnostic": true
+}

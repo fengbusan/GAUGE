@@ -53,7 +53,7 @@ def world_vertices(frame,groups):
     return result
 
 def main():
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',default='xie_sap_native_0514_v3');p.add_argument('--result-key',default='xie_sap_native_v3');p.add_argument('--case',action='append');p.add_argument('--output',default='results/sap_native_replay')
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--profile',default='sap_native_0517');p.add_argument('--result-key',default='sap_native_0517');p.add_argument('--case',action='append');p.add_argument('--output',default='results/sap_native_replay')
     a=p.parse_args();root=ROOT/a.output;root.mkdir(parents=True,exist_ok=True)
     manifest=json.loads((ROOT/'configs'/a.profile/'manifest.json').read_text());jobs=[]
     for case in manifest['cases']:

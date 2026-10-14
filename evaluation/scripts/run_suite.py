@@ -16,6 +16,14 @@ def main():
     p.add_argument('--result-key',default=None,help='Separate method result namespace, e.g. xie_sap')
     p.add_argument('--record-state',action='store_true')
     a=p.parse_args();manifest=json.loads((SOURCE/'recipes/manifest.json').read_text())
+    if a.engine != 'xiephysic':
+        # Native peers use the current, version-locked paper reproduction.
+        # Keep this legacy command as a redirect rather than a second adapter.
+        command=[sys.executable,str(SOURCE/'scripts/reproduce.py'),'run','--engine',a.engine,'--python',a.python,'--timeout',str(a.timeout)]
+        for cid in a.case or []:command+=['--case',cid]
+        if a.smoke:command+=['--smoke']
+        if a.retry:command+=['--retry']
+        return subprocess.call(command)
     cases=[c for c in manifest['cases'] if not a.case or c['case_id'] in a.case]
     if a.case and len(cases)!=len(set(a.case)):p.error('Unknown case ID')
     output='results/smoke' if a.smoke else 'results'
@@ -26,7 +34,7 @@ def main():
         if status.exists() and not a.retry and json.loads(status.read_text()).get('status') in ['completed','smoke_passed']:
             print('SKIP completed',a.engine,cid,flush=True);continue
         adapter={'rigid':'rigid','textile':'cloth','deformable':'foam'}[case['regime']]
-        script=SOURCE/'scripts/run_xie.py' if a.engine=='xiephysic' else SOURCE/f'scripts/thirdparty/{a.engine}_{adapter}.py'
+        script=SOURCE/'scripts/run_xie.py'
         cmd=[a.python,str(script),cid]+(['--smoke'] if a.smoke else [])
         if a.engine=='xiephysic':cmd+=['--profile',a.profile,'--result-key',key]+(['--record-state'] if a.record_state else [])
         print('START',a.engine,cid,flush=True)

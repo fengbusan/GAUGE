@@ -1,0 +1,49 @@
+{
+  "cpu_tests": 77,
+  "native_prepared_inputs_match_recorded_batch": 55,
+  "generated_asset_equivalence": "All mesh bytes exact; only URDF display path prefixes normalized",
+  "source_files_verified": 1156,
+  "recordings_verified": 110,
+  "recomputed_engine_metric_scores_identical_to_original_report": 176,
+  "baseline_mean_and_std_matches": 48,
+  "baseline_metric_rows": 106,
+  "sdk_smoke_runs": [
+    {
+      "engine": "newton",
+      "case_id": "turntable_metal_task3_ipc",
+      "version": "1.3.0",
+      "status": "smoke_passed",
+      "frames": 3,
+      "score_use": "excluded"
+    },
+    {
+      "engine": "isaac",
+      "case_id": "textile_stretching_satin_ipc",
+      "version": "6.0.0",
+      "status": "smoke_passed",
+      "frames": 3,
+      "score_use": "excluded"
+    },
+    {
+      "engine": "newton",
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "version": "1.3.0",
+      "status": "smoke_passed",
+      "frames": 3,
+      "score_use": "excluded"
+    }
+  ],
+  "full_cloth_failure_reproduction": {
+    "case_id": "textile_bending_nylon_taslan_ipc",
+    "status": "numerical_failure",
+    "finite_frames_before_failure": 3,
+    "trajectory_hash_matches_previous_batch": true
+  },
+  "full_all_engine_suite_rerun_after_cleanup": false,
+  "preparation_environment": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "usd-core": "26.8",
+    "pytest": "8.4.2"
+  }
+}

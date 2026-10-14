@@ -1,0 +1,38 @@
+{
+  "paper": "https://arxiv.org/html/2608.05948v1",
+  "dataset_revision": "9e0acb70fecc0d4161660264d9a4b08d8f56d45a",
+  "engines": {
+    "isaac": {
+      "version": "6.0.0",
+      "full_build": "6.0.0-rc.59+release.41464.5f2772bc.gl",
+      "archive_url": "https://downloads.isaacsim.nvidia.com/isaac-sim-standalone-6.0.0-linux-x86_64.zip",
+      "archive_md5": "40ec5248271a0c2e7bc03f1ae725ca4c",
+      "archive_sha256": "ec89264fc3251f385130cb60cd3d3f356f5e4f7454f3adecdfe1ee958e14d56b",
+      "solvers": ["PhysX", "Surface FEM", "FEM"]
+    },
+    "newton": {
+      "version": "1.3.0",
+      "python": "3.12.14",
+      "dependencies": {
+        "warp-lang": "1.14.0",
+        "mujoco": "3.8.1",
+        "mujoco-warp": "3.8.1",
+        "numpy": "2.4.3",
+        "scipy": "1.17.1",
+        "trimesh": "4.11.4"
+      },
+      "solvers": ["MuJoCo", "VBD", "implicit MPM"]
+    },
+    "genesis": {
+      "version": "1.12.0",
+      "status": "await_author_version_or_commit",
+      "note": "Literal paper version; no public tag/PyPI release found in the recorded audit. No alternate version is substituted."
+    }
+  },
+  "host": {
+    "platform": "Linux",
+    "gpu": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+    "driver": "580.178.04",
+    "differs_from_paper": "Paper reports Windows 11 / RTX 4090. Hardware equivalence has not been established."
+  }
+}

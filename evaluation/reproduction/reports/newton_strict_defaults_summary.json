@@ -1,0 +1,540 @@
+{
+  "updated_utc": "2026-10-14T05:24:57.326775+00:00",
+  "scope": "all18cloth, unmodified native defaults except GAUGE-explicit calibrated material mapping; original37noncloth retained unchanged",
+  "completed": 0,
+  "numerical_failure": 18,
+  "valid_score_windows": 0,
+  "cases_with_contact_capacity_warnings": 18,
+  "paper_material_mapping": "Appendix A.2.2 equations10-12 includes conditional Ks/2.7; it is not our custom fallback",
+  "collision_radius_argument": "omitted, ModelBuilder.default_particle_radius=0.1m",
+  "solver_options": "all SolverVBD constructor defaults; default tile enabled, self-contact disabled",
+  "previous_backend_diagnostic_applies_to": "old half-thickness policy only; not a verified root cause for native-default radius failures",
+  "equivalence_to_author_runtime_verified": false,
+  "rows": [
+    {
+      "case_id": "textile_bending_nylon_taslan_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 3,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 643 > 256.",
+        "Per-body particle contact buffer overflowed 575 > 256.",
+        "Per-body particle contact buffer overflowed 528 > 256.",
+        "Per-body particle contact buffer overflowed 503 > 256.",
+        "Per-body particle contact buffer overflowed 485 > 256.",
+        "Per-body particle contact buffer overflowed 468 > 256.",
+        "Per-body particle contact buffer overflowed 457 > 256.",
+        "Per-body particle contact buffer overflowed 449 > 256.",
+        "Per-body particle contact buffer overflowed 441 > 256.",
+        "Per-body particle contact buffer overflowed 438 > 256.",
+        "Per-body particle contact buffer overflowed 428 > 256.",
+        "Per-body particle contact buffer overflowed 421 > 256.",
+        "Per-body particle contact buffer overflowed 417 > 256.",
+        "Per-body particle contact buffer overflowed 412 > 256.",
+        "Per-body particle contact buffer overflowed 405 > 256.",
+        "Per-body particle contact buffer overflowed 399 > 256."
+      ],
+      "log_path": "newton/textile_bending_nylon_taslan_ipc/run.log (generated archive)",
+      "trajectory_sha256": "14c5efa10b7c28a3d8d4cba265592f9eb27d3c1ea6f5dae28e69a30d8c0b989a",
+      "source_scene_sha256": "5c3051e0daf6da63a0d4715bfb849c0bcfc91d086ff8997c6c32b7d5e471184e",
+      "source_evaluation_sha256": "1975e7886e4335b156a8fd9c1f82b885aa48845f837691b1f0185c73c08960aa"
+    },
+    {
+      "case_id": "textile_bending_oxford_fabric_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 680 > 256.",
+        "Per-body particle contact buffer overflowed 620 > 256.",
+        "Per-body particle contact buffer overflowed 574 > 256.",
+        "Per-body particle contact buffer overflowed 532 > 256."
+      ],
+      "log_path": "newton/textile_bending_oxford_fabric_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c122d5c8c69079a5809e1f608a4ff8978dd1bdcbefa2a4e4a4dcd35c2ee7238e",
+      "source_scene_sha256": "592f8460d20c241c35012a8056cb6bbb6c0a702cf653c1fbf47352efdf2b7b2d",
+      "source_evaluation_sha256": "7c93368bb8d235c06d953a324b2e3a1f16269e64254de161c86238a13c767921"
+    },
+    {
+      "case_id": "textile_bending_rayon_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 1257 > 256.",
+        "Per-body particle contact buffer overflowed 570 > 256.",
+        "Per-body particle contact buffer overflowed 513 > 256.",
+        "Per-body particle contact buffer overflowed 486 > 256.",
+        "Per-body particle contact buffer overflowed 461 > 256."
+      ],
+      "log_path": "newton/textile_bending_rayon_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c122d5c8c69079a5809e1f608a4ff8978dd1bdcbefa2a4e4a4dcd35c2ee7238e",
+      "source_scene_sha256": "d4b52a37db4a1850f6fa0572aea907f2581ede31c9e696d39f9f718a812cf997",
+      "source_evaluation_sha256": "7488973730e1cb42883182c030c0443301ccfac3456f6dddd57a061e8e768359"
+    },
+    {
+      "case_id": "textile_bending_satin_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 66,
+      "native_default_radius_frames": 220,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 985 > 256.",
+        "Per-body particle contact buffer overflowed 511 > 256.",
+        "Per-body particle contact buffer overflowed 477 > 256.",
+        "Per-body particle contact buffer overflowed 444 > 256.",
+        "Per-body particle contact buffer overflowed 413 > 256.",
+        "Per-body particle contact buffer overflowed 384 > 256.",
+        "Per-body particle contact buffer overflowed 355 > 256.",
+        "Per-body particle contact buffer overflowed 310 > 256.",
+        "Per-body rigid contact buffer overflowed 70 > 64.",
+        "Per-body rigid contact buffer overflowed 75 > 64.",
+        "Per-body rigid contact buffer overflowed 74 > 64.",
+        "Per-body rigid contact buffer overflowed 82 > 64.",
+        "Per-body rigid contact buffer overflowed 79 > 64.",
+        "Per-body rigid contact buffer overflowed 72 > 64.",
+        "Per-body rigid contact buffer overflowed 76 > 64.",
+        "Per-body rigid contact buffer overflowed 77 > 64.",
+        "Per-body rigid contact buffer overflowed 71 > 64.",
+        "Per-body rigid contact buffer overflowed 83 > 64.",
+        "Per-body rigid contact buffer overflowed 78 > 64.",
+        "Per-body rigid contact buffer overflowed 92 > 64.",
+        "Per-body rigid contact buffer overflowed 73 > 64."
+      ],
+      "log_path": "newton/textile_bending_satin_ipc/run.log (generated archive)",
+      "trajectory_sha256": "7c7f7dddf0064c6a39e9d6043d86163a74cc2c3fa2d4a42e9d5bd62ea84d4389",
+      "source_scene_sha256": "d524e78af7f3710c0fe46b489caadb9c0e1afe7d882bb05a4cd92574ff99d603",
+      "source_evaluation_sha256": "266f0e736d23b7b641dfb20ed6e2817860e2b5c003dd3d39409e715ee3cf2f55"
+    },
+    {
+      "case_id": "textile_bending_synthetic_leather_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 4,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 710 > 256.",
+        "Per-body particle contact buffer overflowed 651 > 256.",
+        "Per-body particle contact buffer overflowed 619 > 256.",
+        "Per-body particle contact buffer overflowed 573 > 256."
+      ],
+      "log_path": "newton/textile_bending_synthetic_leather_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c122d5c8c69079a5809e1f608a4ff8978dd1bdcbefa2a4e4a4dcd35c2ee7238e",
+      "source_scene_sha256": "b7bca9ebe07e5d83cd3686283f1ec7419455daadab0ff7cd31c2081bc448b2ae",
+      "source_evaluation_sha256": "9d91a7b138a56bb55aed60e7a9cacd7bde5e069d63b12d7ecf2efe25f17137b8"
+    },
+    {
+      "case_id": "textile_bending_uniform_cloth_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 19,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1709 > 256.",
+        "Per-body particle contact buffer overflowed 595 > 256.",
+        "Per-body particle contact buffer overflowed 519 > 256.",
+        "Per-body particle contact buffer overflowed 472 > 256.",
+        "Per-body particle contact buffer overflowed 436 > 256."
+      ],
+      "log_path": "newton/textile_bending_uniform_cloth_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c122d5c8c69079a5809e1f608a4ff8978dd1bdcbefa2a4e4a4dcd35c2ee7238e",
+      "source_scene_sha256": "08f873109df2ef5d0b9078dab7257879e2e98c66273dda8954a039118911eb3a",
+      "source_evaluation_sha256": "dfb157c23adc0358c02b8443195d317dc0e65ca77a1f296543604f41ce9737a9"
+    },
+    {
+      "case_id": "textile_flinging_nylon_taslan_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 664 > 256.",
+        "Per-body particle contact buffer overflowed 385 > 256.",
+        "Per-body particle contact buffer overflowed 333 > 256.",
+        "Per-body particle contact buffer overflowed 307 > 256.",
+        "Per-body particle contact buffer overflowed 294 > 256."
+      ],
+      "log_path": "newton/textile_flinging_nylon_taslan_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "903a2ce21bf1cc3871c17ab530cf25b47ee550f644bea577f9fd1e2553210b27",
+      "source_evaluation_sha256": "217be8d7bf9459b70a063a7e93cb265539c4a6c9e63373462a7b8f276d0f5ddc"
+    },
+    {
+      "case_id": "textile_flinging_oxford_fabric_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 83,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 753 > 256.",
+        "Per-body particle contact buffer overflowed 690 > 256.",
+        "Per-body particle contact buffer overflowed 599 > 256.",
+        "Per-body particle contact buffer overflowed 548 > 256.",
+        "Per-body particle contact buffer overflowed 539 > 256."
+      ],
+      "log_path": "newton/textile_flinging_oxford_fabric_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "5ce1add82dd1439c411938b3e3ea51c5a93f937103e85e46784010a676d08021",
+      "source_evaluation_sha256": "74bc1aa4f37ae6b83f93c0d173778232478414cb3ff49b4358517f13f1912a13"
+    },
+    {
+      "case_id": "textile_flinging_rayon_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 3,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 397 > 256.",
+        "Per-body particle contact buffer overflowed 332 > 256.",
+        "Per-body particle contact buffer overflowed 310 > 256.",
+        "Per-body particle contact buffer overflowed 297 > 256.",
+        "Per-body particle contact buffer overflowed 292 > 256."
+      ],
+      "log_path": "newton/textile_flinging_rayon_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "fe836999700c928f3419234661a8aac7963c12635399cefc0245f9c0c6263c1b",
+      "source_evaluation_sha256": "7faf5bbf85e080b672c0c5410ee4b1491880ef6afdf6068f83ac4321b889a68d"
+    },
+    {
+      "case_id": "textile_flinging_satin_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 394 > 256.",
+        "Per-body particle contact buffer overflowed 329 > 256.",
+        "Per-body particle contact buffer overflowed 302 > 256.",
+        "Per-body particle contact buffer overflowed 286 > 256.",
+        "Per-body particle contact buffer overflowed 267 > 256."
+      ],
+      "log_path": "newton/textile_flinging_satin_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "e19b44944756dfd1c8b2701b443607dd930d26da7d018bc8b04335bbb9246fbc",
+      "source_evaluation_sha256": "19e5c8cd2b827505e237591ff2059c696aaa4849f299b74527aa08da15cac7cf"
+    },
+    {
+      "case_id": "textile_flinging_synthetic_leather_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 80,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 650 > 256.",
+        "Per-body particle contact buffer overflowed 489 > 256.",
+        "Per-body particle contact buffer overflowed 411 > 256.",
+        "Per-body particle contact buffer overflowed 377 > 256.",
+        "Per-body particle contact buffer overflowed 364 > 256."
+      ],
+      "log_path": "newton/textile_flinging_synthetic_leather_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "00a837413ff02aacceee4991f65e686347e72cd2534ab0f4241ea4c8db3e06c3",
+      "source_evaluation_sha256": "77f64ac2ea57828fd452c0d03c51ea082f99ed4144a345fe446992ab4adc25bb"
+    },
+    {
+      "case_id": "textile_flinging_uniform_cloth_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 9,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 1 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 1074 > 256.",
+        "Per-body particle contact buffer overflowed 385 > 256.",
+        "Per-body particle contact buffer overflowed 275 > 256."
+      ],
+      "log_path": "newton/textile_flinging_uniform_cloth_ipc/run.log (generated archive)",
+      "trajectory_sha256": "3f70c93cffe7551b94087e7661f1bf56f8d2bf61c8b39c6f18dc6c2c30a7c1cb",
+      "source_scene_sha256": "18e62f90f81aeb1e0802f5b02947bc58f45b90dc1c17abea7ed0499b48a5f4ea",
+      "source_evaluation_sha256": "b92463c226ba8860aebad75ec90badaf510b0afb5eaccf7abb141c9c7777e284"
+    },
+    {
+      "case_id": "textile_stretching_nylon_taslan_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 3747 > 256.",
+        "Per-body particle contact buffer overflowed 2822 > 256.",
+        "Per-body particle contact buffer overflowed 2058 > 256.",
+        "Per-body particle contact buffer overflowed 1967 > 256.",
+        "Per-body particle contact buffer overflowed 1895 > 256."
+      ],
+      "log_path": "newton/textile_stretching_nylon_taslan_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "3733b4005a9d54b0d3a3e3f547263171795267cb53ce9b378501d3a16db5b94a",
+      "source_evaluation_sha256": "27f058c9f14152e875653b5b44f2be4975af41a28222b85d62b6c88816e1a273"
+    },
+    {
+      "case_id": "textile_stretching_oxford_fabric_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 3726 > 256.",
+        "Per-body particle contact buffer overflowed 2755 > 256.",
+        "Per-body particle contact buffer overflowed 2262 > 256.",
+        "Per-body particle contact buffer overflowed 2061 > 256.",
+        "Per-body particle contact buffer overflowed 1859 > 256."
+      ],
+      "log_path": "newton/textile_stretching_oxford_fabric_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "e6ef6e9b96a13168e97162e65589f25a5a48c07d0808a9d52db8ac5c38b91270",
+      "source_evaluation_sha256": "f66fbd6ed07ebfc1c96ad20e35779c2e1190d820ec2f72d092e91d26c5976ebe"
+    },
+    {
+      "case_id": "textile_stretching_rayon_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 3508 > 256.",
+        "Per-body particle contact buffer overflowed 2036 > 256.",
+        "Per-body particle contact buffer overflowed 1740 > 256.",
+        "Per-body particle contact buffer overflowed 1678 > 256.",
+        "Per-body particle contact buffer overflowed 1620 > 256."
+      ],
+      "log_path": "newton/textile_stretching_rayon_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "a173bb3c2c653c5fe80454e04bfb93c9fe0752f3a03e1d772e1700a9048f06b6",
+      "source_evaluation_sha256": "f242be1855e62c70599941638c85e5ee26a204beaea5695ff515e1134f8b00b0"
+    },
+    {
+      "case_id": "textile_stretching_satin_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 4,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 2345 > 256.",
+        "Per-body particle contact buffer overflowed 1591 > 256.",
+        "Per-body particle contact buffer overflowed 1523 > 256.",
+        "Per-body particle contact buffer overflowed 1478 > 256.",
+        "Per-body particle contact buffer overflowed 1425 > 256."
+      ],
+      "log_path": "newton/textile_stretching_satin_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "813b38d66ecd697ed1878eab97c3115a43371fa54bdfd4f4857b2ce4488d1def",
+      "source_evaluation_sha256": "65f81c300484fcad099d5ff9bd9fb108c326dfce622ee2b1a5c952b848b187fd"
+    },
+    {
+      "case_id": "textile_stretching_synthetic_leather_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 1,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 3593 > 256.",
+        "Per-body particle contact buffer overflowed 2890 > 256.",
+        "Per-body particle contact buffer overflowed 2352 > 256.",
+        "Per-body particle contact buffer overflowed 2180 > 256.",
+        "Per-body particle contact buffer overflowed 1948 > 256."
+      ],
+      "log_path": "newton/textile_stretching_synthetic_leather_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "185187e2a427399b482f7229b4846b7ae6379dea6684be21a6b63d7b189b5d89",
+      "source_evaluation_sha256": "ded740318ea2f9277f03800efcf61846b8aebb8735abc9e4cbe4eaacb880e367"
+    },
+    {
+      "case_id": "textile_stretching_uniform_cloth_ipc",
+      "status": "numerical_failure",
+      "previous_half_thickness_frames": 5,
+      "native_default_radius_frames": 1,
+      "score_window_complete": false,
+      "physics_hz": 180,
+      "sample_hz": 30,
+      "native_defaults": {
+        "particle_radius_m": 0.1,
+        "tri_kd": 10.0,
+        "edge_kd": 0.0,
+        "material_mapping": "GAUGE Appendix A.2.2 equations 10-12 including Ks/2.7"
+      },
+      "warnings": [
+        "Inertia validation corrected 2 bodies. Set validate_inertia_detailed=True for detailed per-body warnings.",
+        "Per-body particle contact buffer overflowed 4993 > 256.",
+        "Per-body particle contact buffer overflowed 3701 > 256.",
+        "Per-body particle contact buffer overflowed 2676 > 256.",
+        "Per-body particle contact buffer overflowed 2198 > 256.",
+        "Per-body particle contact buffer overflowed 2085 > 256.",
+        "Per-body particle contact buffer overflowed 1920 > 256."
+      ],
+      "log_path": "newton/textile_stretching_uniform_cloth_ipc/run.log (generated archive)",
+      "trajectory_sha256": "c9d291fd3582494c9506fb8b35598f2737bc355eed46425b1f932ac30824af16",
+      "source_scene_sha256": "325af7d65a45273aecefab4c085fd35bcce5d93e18f9b9afc76f4c7bc4aac656",
+      "source_evaluation_sha256": "f8e92d88c0c3e7020b6a06be63f01e9ee6db7aff10f2bd9bbf34c95338014735"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-> This personal fork adds an independent [SDK-only evaluation harness](evaluation/README.md) for XiePhysic, Isaac Sim, Genesis and Newton. It is a community reproduction with disclosed limitations, **not an official evaluator or certification**. The upstream project documentation follows.
+> This fork includes the [paper-version reproduction and discrepancy report](evaluation/reproduction/README.zh-CN.md): Isaac Sim 6.0.0, Newton 1.3.0, pinned inputs and literal-paper scoring. Genesis version remains awaiting author confirmation. This is a community implementation, not the official evaluator. [Optional XiePhysic SDK experiments](evaluation/README.md) are separate. The upstream documentation follows.
 
 <div align="right">
 English | <a href="README.zh-CN.md">简体中文</a>

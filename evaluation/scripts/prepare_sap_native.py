@@ -4,7 +4,7 @@ import copy
 import hashlib
 import json
 from pathlib import Path
-from prepare_sap import load_sdk
+from gauge_eval.sdk_runtime import load_sdk
 from gauge_eval.paths import ROOT, SOURCE
 from gauge_eval.scenes import obj
 from gauge_eval.mesh_topology import split_disconnected_vertex_fans
@@ -15,9 +15,9 @@ def sha(path):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--profile',default='sap_native_protocol_0514_v4')
-    p.add_argument('--moving-grip',choices=['strict','compliant'],default='strict')
-    p.add_argument('--endpoint-ccd',action=argparse.BooleanOptionalAction,default=True,
+    p.add_argument('--profile',default='sap_native_0517')
+    p.add_argument('--moving-grip',choices=['strict','compliant'],default='compliant')
+    p.add_argument('--endpoint-ccd',action=argparse.BooleanOptionalAction,default=False,
                    help='Only toggle SAP endpoint point CCD; keep the other frozen settings')
     a=p.parse_args();sdk=load_sdk();target=ROOT/'configs'/a.profile;target.mkdir(parents=True,exist_ok=True)
     records=[]

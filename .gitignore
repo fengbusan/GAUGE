@@ -11,3 +11,6 @@ __pycache__/
 .env.*
 *.so
 *.whl
+
+# Local correspondence drafts
+**/EMAIL_DRAFT.*

@@ -1,0 +1,156 @@
+[
+  {
+    "asset": "bouncing ball.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "cantilever beam.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "foam bending.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "foam compressing.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "foam shearing.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "foam stretching.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "foam twisting.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "funnel.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "newton's cradle.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "nonsmooth contact.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "pendulum.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "rope winding.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "rotating ball.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "slope contact.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "slope slider.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "stick-stack.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "tablecloth pulling.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "textile bending.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "textile flinging.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "textile stretching.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "turntable.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  },
+  {
+    "asset": "wall breaking.usd",
+    "time_sampled_attributes": [],
+    "meters_per_unit": 1.0,
+    "kilograms_per_unit": 1.0,
+    "up_axis": "Z"
+  }
+]

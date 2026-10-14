@@ -1,0 +1,260 @@
+[
+  {
+    "asset": "tablecloth pulling.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "turntable.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/joints/RevoluteJoint",
+        "attribute": "drive:angular:physics:damping",
+        "authored_value": 100000.0
+      }
+    ]
+  },
+  {
+    "asset": "funnel.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "textile bending.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:enableCCD",
+        "authored_value": true
+      },
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:solverType",
+        "authored_value": "TGS"
+      },
+      {
+        "prim": "/World/assets/rod_fixed/rod_40",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/rod_fixed/rod_40",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/rod_move/rod_40",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/rod_move/rod_40",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": 0.009999999776482582
+      },
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": 0.0
+      },
+      {
+        "prim": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+        "attribute": "omni:rtx:pt:samplesPerIteration",
+        "authored_value": 64
+      }
+    ]
+  },
+  {
+    "asset": "textile stretching.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": 0.009999999776482582
+      },
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": 0.0
+      }
+    ]
+  },
+  {
+    "asset": "stick-stack.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:enableCCD",
+        "authored_value": true
+      },
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:solverType",
+        "authored_value": "TGS"
+      },
+      {
+        "prim": "/World/assets/rod/collision_mesh",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": 0.009999999776482582
+      },
+      {
+        "prim": "/World/assets/rod/collision_mesh",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": -0.0
+      },
+      {
+        "prim": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+        "attribute": "omni:rtx:pt:samplesPerIteration",
+        "authored_value": 64
+      }
+    ]
+  },
+  {
+    "asset": "rope winding.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/joints/RevoluteJoint",
+        "attribute": "drive:angular:physics:damping",
+        "authored_value": 10000.0
+      }
+    ]
+  },
+  {
+    "asset": "slope contact.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:enableCCD",
+        "authored_value": true
+      },
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:solverType",
+        "authored_value": "TGS"
+      },
+      {
+        "prim": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+        "attribute": "omni:rtx:pt:samplesPerIteration",
+        "authored_value": 64
+      }
+    ]
+  },
+  {
+    "asset": "textile flinging.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": 0.009999999776482582
+      },
+      {
+        "prim": "/World/assets/textile/simulation_mesh",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": 0.0
+      }
+    ]
+  },
+  {
+    "asset": "wall breaking.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "foam bending.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/assets/cube/cube",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/cube/cube",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": -Infinity
+      },
+      {
+        "prim": "/World/assets/foam",
+        "attribute": "physxDeformableBody:selfCollision",
+        "authored_value": false
+      },
+      {
+        "prim": "/World/assets/foam/collision_mesh",
+        "attribute": "physxCollision:contactOffset",
+        "authored_value": 0.009999999776482582
+      },
+      {
+        "prim": "/World/assets/foam/collision_mesh",
+        "attribute": "physxCollision:restOffset",
+        "authored_value": 0.0
+      }
+    ]
+  },
+  {
+    "asset": "foam stretching.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "foam twisting.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "slope slider.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:enableCCD",
+        "authored_value": true
+      },
+      {
+        "prim": "/World/PhysicsScene",
+        "attribute": "physxScene:solverType",
+        "authored_value": "TGS"
+      },
+      {
+        "prim": "/Render/OmniverseKit/HydraTextures/omni_kit_widget_viewport_ViewportTexture_0",
+        "attribute": "omni:rtx:pt:samplesPerIteration",
+        "authored_value": 64
+      }
+    ]
+  },
+  {
+    "asset": "foam shearing.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "cantilever beam.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "pendulum.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "newton's cradle.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "rotating ball.usd",
+    "authored_physics_settings": [
+      {
+        "prim": "/World/joints/RevoluteJoint",
+        "attribute": "drive:angular:physics:damping",
+        "authored_value": 100000.0
+      }
+    ]
+  },
+  {
+    "asset": "foam compressing.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "nonsmooth contact.usd",
+    "authored_physics_settings": []
+  },
+  {
+    "asset": "bouncing ball.usd",
+    "authored_physics_settings": []
+  }
+]

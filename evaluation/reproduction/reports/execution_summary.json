@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-14",
+  "coverage": {
+    "newton": {
+      "complete_process": 37,
+      "complete_score_window": 37,
+      "status_counts": {
+        "completed": 37,
+        "numerical_failure": 18
+      }
+    },
+    "isaac": {
+      "complete_process": 55,
+      "complete_score_window": 55,
+      "status_counts": {
+        "completed": 55
+      }
+    },
+    "genesis": {
+      "complete_process": 0,
+      "complete_score_window": 0,
+      "status_counts": {
+        "await_author_version_or_commit": 55
+      }
+    }
+  },
+  "baseline_mean_and_std_matches": 48,
+  "baseline_metric_combinations": 106,
+  "native_cases": 55,
+  "case_groups": {
+    "rigid": 29,
+    "textile": 18,
+    "deformable": 8
+  },
+  "generated_archive": {
+    "name": "gauge-paper-version-recordings-20261014.zip",
+    "sha256": "bdb9b26550de44a31e735616a2aee83d211a69a88b27bcbe37dfaba22c241539",
+    "size_bytes": 5104844,
+    "recordings": 110,
+    "expected_url": "https://github.com/fengbusan/GAUGE/releases/download/reproduction-20261014/gauge-paper-version-recordings-20261014.zip"
+  },
+  "official_equivalence_verified": false,
+  "simulation_code_cleanup": "See adapter_cleanup_audit.json; observed result arrays unchanged",
+  "source_integrity": "1151 original source files rechecked in measured batch. Expanded download inventory contains1156 files, including five ancillary files."
+}

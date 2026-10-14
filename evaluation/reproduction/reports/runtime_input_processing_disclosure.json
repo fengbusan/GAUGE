@@ -1,0 +1,47 @@
+{
+  "source_audit": "author_question2_input_audit.json",
+  "source_files_unchanged": true,
+  "case_count": 55,
+  "runtime_inputs_are_not_byte_identical_to_source": true,
+  "engine_mappings": {
+    "isaac": {
+      "rigid": "Original OBJ coordinates, fan triangulation; dynamic meshes explicitly use native convexHull, static/driven meshes triangle collision. Balls native analytical sphere; pendula native revolute joints. Native cooking may differ from author runner.",
+      "soft": "Open original task USD; session layer overrides calibrated metadata material, pose, and attachment recipes, then native PhysX cooking. Includes static support represented as fixed-pose kinematic rigid. SurfaceFEM thickness and bend mapping follow paper Appendix A.2.2.",
+      "controls": "Native rigid-body kinematic targets; fixed initial pose for supports. No PD, no XiePhysic-specific gap.",
+      "non_calibrated_settings": "Rigid reconstruction uses SDK defaults. Soft reconstruction retains authored official USD collision/solver fields, except documented backend/timing and calibrated-material overrides. Example textile simulation_mesh contactOffset=0.01m, restOffset=0 inherited from original asset; this is asset-authored, not a newly tuned value. See usd_authored_solver_settings.json."
+    },
+    "newton": {
+      "rigid": "Original OBJ vertices and fan triangles to Newton Mesh; SolverMuJoCo native mesh conversion/cooking. Balls analytical sphere and native revolute joint.",
+      "cloth": "Original OBJ-derived world-space vertices and triangles; SolverVBD constructor defaults. Calibrated material stiffness uses paper Appendix A.2.2 equations 10-12, including Ks/2.7 fallback. Particle radius argument omitted: Newton 1.3.0 native default 0.1m; default GPU tile solve enabled. All18cloth rerun in results/newton_strict_defaults.",
+      "volume": "Official USD simulation tet vertices, exact-coordinate weld and duplicate-cell removal; lumped tet volume sets particle mass/radius for native SolverImplicitMPM. Native default voxel_size=0.1m, no resolution tuning. Native particles are not a FEM tet discretization.",
+      "controls": "Native kinematic bodies and zero-mass Dirichlet boundary vertices/particles; prescribed boundary end positions projected only for those particles. Free particles untouched; pre-projection drift recorded. No PD."
+    },
+    "genesis": {
+      "status": "await_actual_version_or_commit",
+      "paper_version": "1.12.0",
+      "no_replacement_used": true
+    }
+  },
+  "shared_processing": {
+    "units": "Raw measured positions mm to engine m (x0.001); scoring position inputs converted back to mm; USD metersPerUnit inspected, no arbitrary spatial scaling.",
+    "orientation": "Metadata Euler degrees to quaternions; quaternion component ordering adapted to native APIs. No estimated coordinate axis rotation.",
+    "drivers": "Arithmetic translation mean and rotational mean across supplied repeats; relative to mean initial state, registered to metadata scene anchor. Continuous interpolation at simulation dt. Unverified author trial selection/averaging.",
+    "references": "Original reference files immutable; primary audit uses all supplied trials and literal inclusive-mean formulas. Eight released cohorts contain 19..25 trials although paper §4.1 states 20; author inclusion list unconfirmed. No silent dropping or fabricated missing data. Marker identities/topology unconfirmed.",
+    "gap": "No XiePhysic 2mm cradle gap applied to these third-party runs.",
+    "material": "Measured metadata used and paper per-model physical conversions. Original USD template material numbers overridden in session; full snapshot retained.",
+    "initial_velocity": "Dynamic bodies use the zero initial velocities in frozen scene recipes; no velocity was fitted to simulator scores."
+  },
+  "equivalence_with_author_runtime_not_yet_verified": true,
+  "native_rigid_initial_frame_checks": "native_rigid_initial_frame_audit.json: all 27 generic rigid initial origins equal real initial mean within floating precision",
+  "released_trial_count_discrepancies": "released_trial_count_discrepancies.json: 8 cohorts differ from stated count20; two missing files return404 from pinned original repo",
+  "superseded_cloth_policy": "Previous explicit thickness/2 radius was our interpretation, not specified in paper; previous trajectories and reports retained as history, excluded from current cloth comparison.",
+  "current_public_adapters": {
+    "isaac_rigid.py": "92270e4e64fc078ab032780e06b4338f8c2122e4ef104ba597573f9118278759",
+    "newton_foam.py": "1d07a3d7a89dc7500a5bc31ce89d27c47aacfee402fc6e69210366b05a28aeb9",
+    "newton_cloth.py": "5a7e376fb11e2e1a9e774d78f6743e9c440a4edc628175278194aa02ffea136f",
+    "common.py": "7531ed7f2dec906b44e931d50d2bb3f021b0e97f60e4e00572e81a6c8f8df846",
+    "newton_rigid.py": "926fc7773161112d93ddeb38278907aaac0371be09bbccab3da235b191c42637",
+    "isaac_soft.py": "65476877d46fc47a7772900def25496aeea828da75eb9462799885248ccb4f78"
+  },
+  "recorded_simulation_logic_preserved": "See adapter_cleanup_audit.json: unchanged simulation AST, formatted public code and early runtime identity guards."
+}
